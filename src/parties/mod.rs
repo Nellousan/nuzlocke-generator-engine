@@ -3,8 +3,11 @@
 //! between the NGE config files and the game specific representation.
 
 pub mod emerald_expansion;
+pub mod error;
 
-mod party {
+pub mod party {
+    use super::error::PartyError;
+
     #[derive(Default, Debug)]
     pub enum PokemonGender {
         #[default]
@@ -13,60 +16,82 @@ mod party {
         Female,
     }
 
+    impl TryFrom<&str> for PokemonGender {
+        type Error = PartyError;
+        fn try_from(value: &str) -> Result<Self, PartyError> {
+            match value {
+                "" => Ok(Self::None),
+                "M" => Ok(Self::Male),
+                "F" => Ok(Self::Female),
+                _ => Err(PartyError::ParsingError(format!(
+                    "Could not convert {} to PokemonGender",
+                    value
+                ))),
+            }
+        }
+    }
+
     // All defaults to 31
     #[derive(Default, Debug)]
+    #[expect(dead_code)]
     pub struct PokemonIVs {
-        Health: Option<u8>,
-        Attack: Option<u8>,
-        Defense: Option<u8>,
-        SpAttack: Option<u8>,
-        SpDefense: Option<u8>,
-        Speed: Option<u8>,
+        health: Option<u8>,
+        attack: Option<u8>,
+        defense: Option<u8>,
+        sp_attack: Option<u8>,
+        sp_defense: Option<u8>,
+        speed: Option<u8>,
     }
 
     // All defaults to 0
     #[derive(Default, Debug)]
+    #[expect(dead_code)]
     pub struct PokemonEVs {
-        Health: Option<u8>,
-        Attack: Option<u8>,
-        Defense: Option<u8>,
-        SpAttack: Option<u8>,
-        SpDefense: Option<u8>,
-        Speed: Option<u8>,
+        health: Option<u8>,
+        attack: Option<u8>,
+        defense: Option<u8>,
+        sp_attack: Option<u8>,
+        sp_defense: Option<u8>,
+        speed: Option<u8>,
     }
 
     #[derive(Default, Debug)]
+    #[expect(dead_code)]
     pub struct Pokemon {
-        Species: String,
-        Gender: PokemonGender,
-        HeldItem: Option<String>,
-        Level: Option<u8>, // Defaults to 100
-        IVs: PokemonIVs,
-        EVs: PokemonEVs,
-        Ball: Option<String>,  // Defaults to PokeBall
-        Happiness: Option<u8>, // Defaults to 0
-        Nature: Option<u8>,    // Defaults to Hardy
-        Shiny: bool,           // Defaults to False
+        // nickname: String,
+        pub species: String,
+        pub gender: PokemonGender,
+        pub held_item: Option<String>,
+        pub level: Option<u8>,      // Defaults to 100
+        pub ivs: Option<String>,    // PokemonIVs,
+        pub evs: Option<String>,    // PokemonEVs,
+        pub ball: Option<String>,   // Defaults to PokeBall
+        pub happiness: Option<u8>,  // Defaults to 0
+        pub nature: Option<String>, // Defaults to Hardy
+        pub shiny: bool,            // Defaults to False
 
-        DynamaxLevel: Option<u8>, // Defaults to 10
-        Gigantamax: bool,         // Defaults to False
+        pub dynamax_level: Option<u8>, // Defaults to 10
+        pub gigantamax: bool,          // Defaults to False
 
-        TeraType: Option<String>, // Defaults to Normal
+        pub tera_type: Option<String>, // Defaults to Normal
     }
 }
 
 #[derive(Default, Debug)]
+#[expect(dead_code)]
 pub struct Trainer {
-    ID: String,
-    Name: String,
-    Class: Option<String>, // Defaults to PkMn Trainer
-    Pic: String,
-    Gender: String,
-    Music: String,
-    Items: String,
-    DoubleBattle: bool, // Defaults to False
-    AI: Option<String>, // If applicable
-    Party: [Option<party::Pokemon>; 6],
+    id: String,
+    name: String,
+    pic: String,
+    class: Option<String>, // Defaults to PkMn Trainer
+    gender: Option<String>,
+    music: Option<String>,
+    items: Option<String>,
+    double_battle: bool,
+    ai: Option<String>, // If applicable
+    mugshot: Option<String>,
+    starting_status: Option<String>,
+    party: [Option<party::Pokemon>; 6],
 }
 
 #[derive(Default, Debug)]

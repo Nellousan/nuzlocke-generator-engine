@@ -8,7 +8,7 @@ pub mod error;
 pub mod party {
     use super::error::PartyError;
 
-    #[derive(Default, Debug)]
+    #[derive(Default, Debug, Clone, Copy, PartialEq, Eq)]
     pub enum PokemonGender {
         #[default]
         None,
@@ -27,6 +27,16 @@ pub mod party {
                     "Could not convert {} to PokemonGender",
                     value
                 ))),
+            }
+        }
+    }
+
+    impl From<PokemonGender> for String {
+        fn from(value: PokemonGender) -> Self {
+            match value {
+                PokemonGender::None => "".to_owned(),
+                PokemonGender::Male => "M".to_owned(),
+                PokemonGender::Female => "F".to_owned(),
             }
         }
     }
@@ -74,24 +84,29 @@ pub mod party {
         pub gigantamax: bool,          // Defaults to False
 
         pub tera_type: Option<String>, // Defaults to Normal
+
+        pub move_1: Option<String>,
+        pub move_2: Option<String>,
+        pub move_3: Option<String>,
+        pub move_4: Option<String>,
     }
 }
 
 #[derive(Default, Debug)]
 #[expect(dead_code)]
 pub struct Trainer {
-    id: String,
-    name: String,
-    pic: String,
-    class: Option<String>, // Defaults to PkMn Trainer
-    gender: Option<String>,
-    music: Option<String>,
-    items: Option<String>,
-    double_battle: bool,
-    ai: Option<String>, // If applicable
-    mugshot: Option<String>,
-    starting_status: Option<String>,
-    party: [Option<party::Pokemon>; 6],
+    pub id: String,
+    pub name: String,
+    pub pic: String,
+    pub class: Option<String>, // Defaults to PkMn Trainer
+    pub gender: Option<String>,
+    pub music: Option<String>,
+    pub items: Option<String>,
+    pub double_battle: bool,
+    pub ai: Option<String>, // If applicable
+    pub mugshot: Option<String>,
+    pub starting_status: Option<String>,
+    pub party: [Option<party::Pokemon>; 6],
 }
 
 #[derive(Default, Debug)]
@@ -102,5 +117,11 @@ impl std::ops::Deref for Parties {
 
     fn deref(&self) -> &Self::Target {
         &self.0
+    }
+}
+
+impl std::ops::DerefMut for Parties {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }

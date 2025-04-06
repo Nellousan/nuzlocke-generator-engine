@@ -2,16 +2,19 @@
 //! their Pokemon parties. This is the intermediate representation that stands
 //! between the NGE config files and the game specific representation.
 
-mod emerald_expansion;
+pub mod emerald_expansion;
 
 mod party {
+    #[derive(Default, Debug)]
     pub enum PokemonGender {
+        #[default]
+        None,
         Male,
         Female,
-        None,
     }
 
     // All defaults to 31
+    #[derive(Default, Debug)]
     pub struct PokemonIVs {
         Health: Option<u8>,
         Attack: Option<u8>,
@@ -22,6 +25,7 @@ mod party {
     }
 
     // All defaults to 0
+    #[derive(Default, Debug)]
     pub struct PokemonEVs {
         Health: Option<u8>,
         Attack: Option<u8>,
@@ -31,6 +35,7 @@ mod party {
         Speed: Option<u8>,
     }
 
+    #[derive(Default, Debug)]
     pub struct Pokemon {
         Species: String,
         Gender: PokemonGender,
@@ -50,10 +55,13 @@ mod party {
     }
 }
 
+#[derive(Default, Debug)]
 pub struct Trainer {
+    ID: String,
     Name: String,
     Class: Option<String>, // Defaults to PkMn Trainer
     Pic: String,
+    Gender: String,
     Music: String,
     Items: String,
     DoubleBattle: bool, // Defaults to False
@@ -61,6 +69,7 @@ pub struct Trainer {
     Party: [Option<party::Pokemon>; 6],
 }
 
+#[derive(Default, Debug)]
 pub struct Parties(Vec<Trainer>);
 
 impl std::ops::Deref for Parties {

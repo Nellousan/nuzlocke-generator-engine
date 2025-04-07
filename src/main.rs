@@ -3,21 +3,24 @@ use std::io::Write;
 use tracing::Level;
 use tracing_subscriber::{Layer, filter, layer::SubscriberExt};
 
+mod options;
 mod parties;
 
 fn main() -> eyre::Result<()> {
-    let log_file = std::fs::File::create("log.log")?;
+    let options = options::parse_options()?;
+    let log_file = std::fs::File::create(&options.log_file.unwrap_or("log.log".into()))?;
+    let log_level = options.log_level.unwrap_or(Level::DEBUG);
     let registry = tracing_subscriber::registry()
         .with(
             tracing_subscriber::fmt::layer()
-                .with_filter(filter::LevelFilter::from_level(Level::DEBUG)),
+                .with_filter(filter::LevelFilter::from_level(log_level)),
         )
         .with(
             tracing_subscriber::fmt::layer()
                 .compact()
                 .with_ansi(false)
                 .with_writer(log_file)
-                .with_filter(filter::LevelFilter::from_level(Level::DEBUG)),
+                .with_filter(filter::LevelFilter::from_level(log_level)),
         );
     tracing::subscriber::set_global_default(registry)?;
 

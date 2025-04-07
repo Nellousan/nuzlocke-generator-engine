@@ -40,7 +40,7 @@ impl<'a> Default for ParsingConfig<'a> {
 
 fn cap_get_or_none(cap: &Captures, field: &str) -> Option<String> {
     cap.name(field)
-        .map_or(None, |c| Some(c.as_str().to_string()))
+        .map_or(None, |c| Some(c.as_str().trim_end().to_owned()))
 }
 
 fn parse_mons_fields(content: &str, re: &Regex) -> Result<[Option<Pokemon>; 6], PartyError> {

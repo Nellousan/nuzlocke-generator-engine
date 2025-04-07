@@ -93,7 +93,6 @@ pub mod party {
 }
 
 #[derive(Default, Debug)]
-#[expect(dead_code)]
 pub struct Trainer {
     pub id: String,
     pub name: String,

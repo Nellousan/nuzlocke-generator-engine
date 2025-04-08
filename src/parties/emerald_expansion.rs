@@ -129,7 +129,7 @@ pub fn from_emerald_expansion_format_config(
     let trainer_fields_re = Regex::new(config.trainer_fields_regex).unwrap();
     let pokemon_fields_re = Regex::new(config.pokemon_fields_regex).unwrap();
 
-    let mut parties = vec![];
+    let mut trainers = vec![];
 
     for (_, [id, fields, mons]) in trainer_re.captures_iter(file_content).map(|c| c.extract()) {
         tracing::debug!(mons_l = ?mons.len());
@@ -138,10 +138,10 @@ pub fn from_emerald_expansion_format_config(
         trainer.party = mons;
         tracing::debug!("{:?}", trainer);
 
-        parties.push(trainer);
+        trainers.push(trainer);
     }
 
-    Ok(Parties(parties))
+    Ok(Parties::new(trainers))
 }
 
 pub fn from_emerald_expansion_format(file_content: &str) -> Result<Parties, PartyError> {
@@ -169,7 +169,7 @@ fn write_mons_field(mons: &[Option<Pokemon>; 6]) -> Result<String, PartyError> {
     let mut result = String::new();
     let push_field_if_some = |field: &Option<String>, name: &str, res: &mut String| {
         if let Some(value) = field {
-            let line = format!("{}: {}", name, value);
+            let line = format!("{}: {}", name.trim_end(), value.trim_end());
             res.push_ln(&line);
         }
     };
@@ -242,7 +242,7 @@ fn write_trainer_fields(trainer: &Trainer) -> Result<String, PartyError> {
     let mut result = String::new();
     let push_field_if_some = |field: &Option<String>, name: &str, res: &mut String| {
         if let Some(value) = field {
-            let line = format!("{}: {}", name, value);
+            let line = format!("{}: {}", name.trim_end(), value.trim_end());
             res.push_ln(&line);
         }
     };
@@ -280,7 +280,7 @@ pub fn to_emerald_expansion_format(parties: &Parties) -> Result<String, PartyErr
         result.push_ln(&fields);
 
         let mons = write_mons_field(&trainer.party)?;
-        result.push_ln(&mons);
+        result.push_str(&mons);
     }
 
     tracing::debug!("{}", result);

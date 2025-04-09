@@ -48,7 +48,7 @@ fn main() -> eyre::Result<()> {
         for encounter_map in encounter_group.encounters.iter_mut() {
             if let Some(ref mut set) = encounter_map.land_mons {
                 for set_mon in set.mons.iter_mut() {
-                    set_mon.species = "SPECIES_MEWTWO".to_string();
+                    set_mon.species = "SPECIES_MEWTWO".to_owned();
                 }
             }
         }

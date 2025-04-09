@@ -74,7 +74,8 @@ pub mod party {
         pub species: String,
         pub gender: PokemonGender,
         pub held_item: Option<String>,
-        pub level: Option<u8>,      // Defaults to 100
+        pub level: Option<u8>, // Defaults to 100
+        // TODO: This is temporary. Parse ivs and evs properly.
         pub ivs: Option<String>,    // PokemonIVs,
         pub evs: Option<String>,    // PokemonEVs,
         pub ball: Option<String>,   // Defaults to PokeBall

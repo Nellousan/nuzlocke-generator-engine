@@ -1,10 +1,11 @@
 use std::io::Write;
 
-use encounters::emerald_expansion::EncounterFile;
+use encounters::emerald_expansion::Encounters;
 use tracing::Level;
 use tracing_subscriber::{Layer, filter, layer::SubscriberExt};
 
 mod encounters;
+mod engine;
 mod options;
 mod parties;
 
@@ -43,7 +44,7 @@ fn main() -> eyre::Result<()> {
 
     let content = std::fs::read_to_string("pokeemerald-expansion/src/data/wild_encounters.json")?;
 
-    let mut encounters: EncounterFile = serde_json::from_str(&content)?;
+    let mut encounters: Encounters = serde_json::from_str(&content)?;
     for encounter_group in encounters.wild_encounter_groups.iter_mut() {
         for encounter_map in encounter_group.encounters.iter_mut() {
             if let Some(ref mut set) = encounter_map.land_mons {

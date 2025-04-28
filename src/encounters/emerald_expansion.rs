@@ -5,7 +5,7 @@
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize)]
-pub struct EncounterFile {
+pub struct Encounters {
     pub wild_encounter_groups: Vec<WildEncounterGroup>,
 }
 
@@ -15,7 +15,7 @@ pub struct WildEncounterGroup {
     pub for_maps: bool,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub fields: Option<Vec<WildEncounterGroupFields>>,
-    pub encounters: Vec<Encounters>,
+    pub encounters: Vec<MapEncounters>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -35,28 +35,28 @@ pub struct WildEncounterGroupFieldsFishingGroups {
 }
 
 #[derive(Debug, Serialize, Deserialize)]
-pub struct Encounters {
+pub struct MapEncounters {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub map: Option<String>,
     pub base_label: String,
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub land_mons: Option<EncounterSet>,
+    pub land_mons: Option<MapEncounterSet>,
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub water_mons: Option<EncounterSet>,
+    pub water_mons: Option<MapEncounterSet>,
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub rock_smash_mons: Option<EncounterSet>,
+    pub rock_smash_mons: Option<MapEncounterSet>,
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub fishing_mons: Option<EncounterSet>,
+    pub fishing_mons: Option<MapEncounterSet>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
-pub struct EncounterSet {
+pub struct MapEncounterSet {
     pub encounter_rate: u8,
-    pub mons: Vec<EncounterSetMon>,
+    pub mons: Vec<MapEncounterSetMon>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
-pub struct EncounterSetMon {
+pub struct MapEncounterSetMon {
     pub min_level: u8,
     pub max_level: u8,
     pub species: String,

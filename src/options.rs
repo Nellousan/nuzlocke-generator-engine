@@ -20,6 +20,7 @@ pub struct Options {
 }
 
 #[derive(Debug)]
+#[expect(dead_code)]
 pub enum BaseProjectOptions {
     Expansion(ExpansionOptions),
 }
@@ -31,6 +32,7 @@ impl Default for BaseProjectOptions {
 }
 
 #[derive(Debug)]
+#[expect(dead_code)]
 pub struct ExpansionOptions {
     pub project_path: PathBuf,
     pub trainers_party_file_path: PathBuf,

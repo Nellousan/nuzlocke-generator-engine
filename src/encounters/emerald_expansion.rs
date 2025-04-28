@@ -5,7 +5,7 @@
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize)]
-pub struct Encounters {
+pub struct ExpansionEncounters {
     pub wild_encounter_groups: Vec<WildEncounterGroup>,
 }
 

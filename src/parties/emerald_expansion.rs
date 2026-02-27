@@ -5,7 +5,7 @@ use regex::{Captures, Regex};
 
 use crate::parties::party::PokemonGender;
 
-use super::{Parties, Trainer, error::PartyError, party::Pokemon};
+use super::{Parties, Trainer, error::PartyError, party::PokemonSet};
 
 //
 // ------ Parsing stuff
@@ -43,8 +43,8 @@ fn cap_get_or_none(cap: &Captures, field: &str) -> Option<String> {
         .map_or(None, |c| Some(c.as_str().trim_end().to_owned()))
 }
 
-fn parse_mons_fields(content: &str, re: &Regex) -> Result<[Option<Pokemon>; 6], PartyError> {
-    let mut mons: [Option<Pokemon>; 6] = Default::default();
+fn parse_mons_fields(content: &str, re: &Regex) -> Result<[Option<PokemonSet>; 6], PartyError> {
+    let mut mons: [Option<PokemonSet>; 6] = Default::default();
 
     for (i, cap) in re.captures_iter(content).enumerate() {
         if i > 5 {
@@ -52,7 +52,7 @@ fn parse_mons_fields(content: &str, re: &Regex) -> Result<[Option<Pokemon>; 6], 
             tracing::error!(error);
             return Err(PartyError::ParsingError(error.to_owned()));
         }
-        let mut mon = Pokemon::default();
+        let mut mon = PokemonSet::default();
         mon.species = cap_get_or_none(&cap, "species").ok_or(PartyError::ParsingError(
             "Error parsing Pokemon species.".to_owned(),
         ))?;
@@ -165,7 +165,7 @@ impl PushLn for String {
     }
 }
 
-fn write_mons_field(mons: &[Option<Pokemon>; 6]) -> Result<String, PartyError> {
+fn write_mons_field(mons: &[Option<PokemonSet>; 6]) -> Result<String, PartyError> {
     let mut result = String::new();
     let push_field_if_some = |field: &Option<String>, name: &str, res: &mut String| {
         if let Some(value) = field {

@@ -69,7 +69,7 @@ pub mod party {
 
     #[derive(Default, Debug)]
     #[expect(dead_code)]
-    pub struct Pokemon {
+    pub struct PokemonSet {
         // nickname: String,
         pub species: String,
         pub gender: PokemonGender,
@@ -108,7 +108,7 @@ pub struct Trainer {
     pub ai: Option<String>, // If applicable
     pub mugshot: Option<String>,
     pub starting_status: Option<String>,
-    pub party: [Option<party::Pokemon>; 6],
+    pub party: [Option<party::PokemonSet>; 6],
 }
 
 #[derive(Default, Debug)]

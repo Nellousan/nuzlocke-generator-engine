@@ -132,11 +132,9 @@ pub fn from_emerald_expansion_format_config(
     let mut trainers = vec![];
 
     for (_, [id, fields, mons]) in trainer_re.captures_iter(file_content).map(|c| c.extract()) {
-        tracing::debug!(mons_l = ?mons.len());
         let mut trainer = parse_trainer_fields(fields, id, &trainer_fields_re)?;
         let mons = parse_mons_fields(mons, &pokemon_fields_re)?;
         trainer.party = mons;
-        tracing::debug!("{:?}", trainer);
 
         trainers.push(trainer);
     }

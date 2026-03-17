@@ -1,4 +1,4 @@
-use std::io::Write;
+use std::{io::Write, path::Path};
 
 use encounters::emerald_expansion::Encounters;
 use tracing::Level;
@@ -29,6 +29,8 @@ fn main() -> eyre::Result<()> {
         );
     tracing::subscriber::set_global_default(registry)?;
 
+    ////
+
     let content = std::fs::read_to_string("pokeemerald-expansion/src/data/trainers.party")?;
 
     let mut parties = parties::emerald_expansion::from_emerald_expansion_format(&content)?;
@@ -38,6 +40,9 @@ fn main() -> eyre::Result<()> {
             pokemon.species = "Beldum".to_owned();
         }
     }
+
+    let bundle = bundles::load_bundle(&Path::new("bundles/default/gen6.bundle.json"))?;
+    tracing::debug!(?bundle);
 
     let result = parties::emerald_expansion::to_emerald_expansion_format(&parties)?;
 

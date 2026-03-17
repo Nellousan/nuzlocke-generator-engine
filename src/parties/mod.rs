@@ -8,6 +8,8 @@ pub mod emerald_expansion;
 pub mod error;
 
 pub mod party {
+    use serde::Deserialize;
+
     use super::error::PartyError;
 
     #[derive(Default, Debug, Clone, Copy, PartialEq, Eq)]
@@ -44,7 +46,7 @@ pub mod party {
     }
 
     // All defaults to 31
-    #[derive(Default, Debug)]
+    #[derive(Clone, Default, Debug, Deserialize)]
     #[expect(dead_code)]
     pub struct PokemonIVs {
         health: Option<u8>,
@@ -56,7 +58,7 @@ pub mod party {
     }
 
     // All defaults to 0
-    #[derive(Default, Debug)]
+    #[derive(Clone, Default, Debug, Deserialize)]
     #[expect(dead_code)]
     pub struct PokemonEVs {
         health: Option<u8>,

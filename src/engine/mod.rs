@@ -1,3 +1,5 @@
+use rand::Rng;
+
 use crate::parties::Parties;
 
 #[expect(dead_code)]
@@ -11,10 +13,13 @@ pub struct EngineBuilder<E> {
 }
 
 #[expect(dead_code)]
-pub struct Engine<E> {
+pub struct Engine<R, E>
+where
+    R: Rng + ?Sized,
+{
     parties: Parties,
     encounters: E,
-    // Random number generator
+    rng: R,
     // Pokemon set lists
     // Pokemon encounter lists
     // Parties randomization funtion
@@ -22,7 +27,7 @@ pub struct Engine<E> {
 }
 
 #[expect(dead_code)]
-impl<E: 'static> Engine<E> {
+impl<R: Rng + ?Sized, E: 'static> Engine<R, E> {
     fn randomize_encounters(&mut self, rd_fn: FnRndEncounters<E>) {
         rd_fn(&self.encounters);
         unimplemented!()

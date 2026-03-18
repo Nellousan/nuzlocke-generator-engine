@@ -1,9 +1,8 @@
 pub mod pokedex {
-    use std::collections::HashMap;
+    use std::{collections::HashMap, fs::read_to_string, path::Path};
 
     use serde::{Deserialize, Serialize};
 
-    #[expect(dead_code)]
     pub type Pokedex = HashMap<String, PokemonDatabaseEntry>;
 
     #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -47,5 +46,12 @@ pub mod pokedex {
                 + self.spd as u32
                 + self.spe as u32
         }
+    }
+
+    pub fn load_pokedex(path: &Path) -> eyre::Result<Pokedex> {
+        let content = read_to_string(path)?;
+        let result: Pokedex = serde_json::from_str(&content)?;
+
+        Ok(result)
     }
 }

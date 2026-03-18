@@ -4,6 +4,8 @@ use encounters::emerald_expansion::Encounters;
 use tracing::Level;
 use tracing_subscriber::{Layer, filter, layer::SubscriberExt};
 
+use crate::{database::pokedex, engine::Engine};
+
 mod bundles;
 mod database;
 mod encounters;
@@ -30,21 +32,25 @@ fn main() -> eyre::Result<()> {
     tracing::subscriber::set_global_default(registry)?;
 
     ////
+    let pokedex = pokedex::load_pokedex(Path::new("pokedex.json"))?;
 
+    let set_bundle = bundles::load_bundle(Path::new("bundles/default/gen6.bundle.json"))?;
     let content = std::fs::read_to_string("pokeemerald-expansion/src/data/trainers.party")?;
 
-    let mut parties = parties::emerald_expansion::from_emerald_expansion_format(&content)?;
+    let parties = parties::emerald_expansion::from_emerald_expansion_format(&content)?;
 
-    for trainer in parties.iter_mut() {
-        if let Some(ref mut pokemon) = trainer.party[0] {
-            pokemon.species = "Beldum".to_owned();
-        }
-    }
+    let rng = rand::rng();
 
-    let bundle = bundles::load_bundle(&Path::new("bundles/default/gen6.bundle.json"))?;
-    tracing::debug!(?bundle);
+    let mut engine = Engine {
+        parties,
+        pokedex,
+        set_bundle,
+        rng,
+    };
 
-    let result = parties::emerald_expansion::to_emerald_expansion_format(&parties)?;
+    engine.randomize_parties();
+
+    let result = parties::emerald_expansion::to_emerald_expansion_format(&engine.parties)?;
 
     let mut file = std::fs::File::create("pokeemerald-expansion/src/data/trainers.party")?;
     file.write_all(result.as_bytes())?;

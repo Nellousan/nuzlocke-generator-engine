@@ -1,8 +1,10 @@
 import json
 import sys
+from unidecode import unidecode
 
 if __name__ == "__main__":
     sets = json.load(open(sys.argv[1]))
+    new_sets = {}
 
     for pkmn, format in sets.items():
         transposed_sets = []
@@ -18,6 +20,11 @@ if __name__ == "__main__":
                     else:
                         pkmn_set["moves"].append([move])
 
+                for move in pkmn_set["moves"]:
+                    for i, _move in enumerate(move):
+                        if "Hidden Power" in _move:
+                            move[i] = "Hidden Power"
+
                 if "item" not in pkmn_set:
                     pkmn_set["item"] = []
                 elif type(pkmn_set["item"]) is not list:
@@ -31,6 +38,7 @@ if __name__ == "__main__":
                     pkmn_set["ivs"] = [pkmn_set["ivs"]]
 
                 transposed_sets.append(pkmn_set)
-        sets[pkmn] = transposed_sets
+        
+        new_sets[unidecode(pkmn)] = transposed_sets
 
-    print(json.dumps(sets, indent=2))
+    print(json.dumps(new_sets, indent=2))

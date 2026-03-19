@@ -79,7 +79,7 @@
           "Knock Off"
         ],
         [
-          "Hidden Power Ice",
+          "Hidden Power",
           "Grass Knot",
           "Protect"
         ]
@@ -172,7 +172,7 @@
       "name": "Mole Man"
     }
   ],
-  "Farfetch\u2019d": [
+  "Farfetch'd": [
     {
       "moves": [
         [
@@ -764,13 +764,13 @@
         [
           "Energy Ball",
           "Thunderbolt",
-          "Hidden Power Ice",
+          "Hidden Power",
           "Sludge Wave"
         ],
         [
           "Energy Ball",
           "Thunderbolt",
-          "Hidden Power Ice",
+          "Hidden Power",
           "Sludge Wave"
         ]
       ],
@@ -886,13 +886,13 @@
         [
           "Energy Ball",
           "Thunderbolt",
-          "Hidden Power Ice",
+          "Hidden Power",
           "Sludge Wave"
         ],
         [
           "Energy Ball",
           "Thunderbolt",
-          "Hidden Power Ice",
+          "Hidden Power",
           "Sludge Wave"
         ]
       ],
@@ -1541,7 +1541,7 @@
           "Volt Switch"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Signal Beam",
@@ -1606,7 +1606,7 @@
           "Volt Switch"
         ],
         [
-          "Hidden Power Grass"
+          "Hidden Power"
         ],
         [
           "Signal Beam"
@@ -1641,7 +1641,7 @@
           "Psychic"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Sleep Powder",
@@ -1986,7 +1986,7 @@
         ],
         [
           "Recover",
-          "Hidden Power Grass"
+          "Hidden Power"
         ]
       ],
       "ability": "Flame Body",
@@ -2190,7 +2190,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Volt Switch",
@@ -2222,7 +2222,7 @@
           "Volt Switch"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Shadow Ball",
@@ -2254,7 +2254,7 @@
           "Volt Switch"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Shadow Ball",
@@ -2290,7 +2290,7 @@
           "Discharge"
         ],
         [
-          "Hidden Power Ice",
+          "Hidden Power",
           "Protect",
           "Shadow Ball"
         ]
@@ -2326,7 +2326,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Substitute"
@@ -2357,7 +2357,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Shadow Ball",
@@ -2392,7 +2392,7 @@
           "Volt Switch"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -2417,7 +2417,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Extrasensory",
@@ -2452,8 +2452,8 @@
         [
           "Toxic",
           "Calm Mind",
-          "Hidden Power Fire",
-          "Hidden Power Ice"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Protect"
@@ -2496,8 +2496,8 @@
           "Shadow Ball"
         ],
         [
-          "Hidden Power Ice",
-          "Hidden Power Grass"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "ability": [
@@ -2534,8 +2534,8 @@
         ],
         [
           "Shadow Ball",
-          "Hidden Power Ice",
-          "Hidden Power Grass"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "ability": "Magnet Pull",
@@ -3066,7 +3066,7 @@
         ],
         [
           "Tailwind",
-          "Hidden Power Electric"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -3571,7 +3571,7 @@
         ],
         [
           "Knock Off",
-          "Hidden Power Grass"
+          "Hidden Power"
         ],
         [
           "U-turn"
@@ -3926,7 +3926,7 @@
           "Dazzling Gleam"
         ],
         [
-          "Hidden Power Ground",
+          "Hidden Power",
           "Shadow Ball",
           "Thunderbolt"
         ]
@@ -4432,7 +4432,7 @@
           "Giga Drain"
         ],
         [
-          "Hidden Power Rock"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -4561,8 +4561,8 @@
           "Energy Ball"
         ],
         [
-          "Hidden Power Fire",
-          "Hidden Power Rock"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Dazzling Gleam",
@@ -6151,7 +6151,7 @@
           "Ice Beam"
         ],
         [
-          "Hidden Power Ground"
+          "Hidden Power"
         ],
         [
           "Ice Shard",
@@ -6188,7 +6188,7 @@
           "Freeze-Dry"
         ],
         [
-          "Hidden Power Ground"
+          "Hidden Power"
         ]
       ],
       "ability": "Weak Armor",
@@ -6217,7 +6217,7 @@
           "Freeze-Dry"
         ],
         [
-          "Hidden Power Ground"
+          "Hidden Power"
         ],
         [
           "Flash Cannon",
@@ -6250,7 +6250,7 @@
           "Freeze-Dry"
         ],
         [
-          "Hidden Power Ground"
+          "Hidden Power"
         ],
         [
           "Flash Cannon"
@@ -6285,7 +6285,7 @@
           "Freeze-Dry"
         ],
         [
-          "Hidden Power Ground"
+          "Hidden Power"
         ]
       ],
       "ability": "Weak Armor",
@@ -6528,7 +6528,7 @@
           "Recover"
         ],
         [
-          "Hidden Power Fighting"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -6697,7 +6697,7 @@
         [
           "Grass Knot",
           "Extrasensory",
-          "Hidden Power Fire",
+          "Hidden Power",
           "Gunk Shot"
         ]
       ],
@@ -6768,9 +6768,9 @@
           "Surf"
         ],
         [
-          "Hidden Power Electric",
-          "Hidden Power Flying",
-          "Hidden Power Rock"
+          "Hidden Power",
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "ability": "Protean",
@@ -6807,10 +6807,10 @@
           "Surf"
         ],
         [
-          "Hidden Power Electric",
-          "Hidden Power Steel",
-          "Hidden Power Flying",
-          "Hidden Power Rock"
+          "Hidden Power",
+          "Hidden Power",
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "ability": "Protean",
@@ -7567,7 +7567,7 @@
         ],
         [
           "Taunt",
-          "Hidden Power Ground"
+          "Hidden Power"
         ]
       ],
       "ability": [
@@ -7929,7 +7929,7 @@
           "Vacuum Wave"
         ],
         [
-          "Hidden Power Flying",
+          "Hidden Power",
           "Fire Blast",
           "Energy Ball"
         ]
@@ -9091,7 +9091,7 @@
         ],
         [
           "Focus Blast",
-          "Hidden Power Ground",
+          "Hidden Power",
           "Encore"
         ],
         [
@@ -9165,8 +9165,8 @@
         ],
         [
           "Focus Blast",
-          "Hidden Power Fire",
-          "Hidden Power Ground"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "ability": "Trace",
@@ -9231,7 +9231,7 @@
         ],
         [
           "Shadow Ball",
-          "Hidden Power Ground",
+          "Hidden Power",
           "Focus Blast"
         ],
         [
@@ -9653,7 +9653,7 @@
           "Volt Switch"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Flash Cannon"
@@ -9685,7 +9685,7 @@
           "Volt Switch"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Flash Cannon"
@@ -9722,7 +9722,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -9750,7 +9750,7 @@
           "Flash Cannon"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Substitute"
@@ -9778,7 +9778,7 @@
           "Volt Switch"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Flash Cannon"
@@ -9809,7 +9809,7 @@
           "Volt Switch"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Flash Cannon"
@@ -9846,8 +9846,8 @@
           "Volt Switch"
         ],
         [
-          "Hidden Power Ice",
-          "Hidden Power Fire"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "ability": [
@@ -9882,8 +9882,8 @@
           "Volt Switch"
         ],
         [
-          "Hidden Power Fire",
-          "Hidden Power Ice"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "ability": [
@@ -9956,9 +9956,9 @@
         ],
         [
           "Mirror Coat",
-          "Hidden Power Rock",
-          "Hidden Power Ground",
-          "Hidden Power Ice"
+          "Hidden Power",
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "ability": "Sturdy",
@@ -10126,7 +10126,7 @@
           "Ice Beam"
         ],
         [
-          "Hidden Power Fighting"
+          "Hidden Power"
         ],
         [
           "Shadow Ball"
@@ -10162,7 +10162,7 @@
           "Shadow Ball"
         ],
         [
-          "Hidden Power Ground"
+          "Hidden Power"
         ],
         [
           "Frost Breath"
@@ -10652,7 +10652,7 @@
           "Stone Edge"
         ],
         [
-          "Hidden Power Ice",
+          "Hidden Power",
           "Taunt"
         ]
       ],
@@ -10752,7 +10752,7 @@
           "Earth Power"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Taunt"
@@ -10815,11 +10815,11 @@
         ],
         [
           "Earth Power",
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Flash Cannon",
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Eruption",
@@ -11022,7 +11022,7 @@
         ],
         [
           "Stone Edge",
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -11189,7 +11189,7 @@
         [
           "Flash Cannon",
           "Taunt",
-          "Hidden Power Ice",
+          "Hidden Power",
           "Endure"
         ]
       ],
@@ -11366,7 +11366,7 @@
         ],
         [
           "Solar Beam",
-          "Hidden Power Electric",
+          "Hidden Power",
           "Will-O-Wisp"
         ]
       ],
@@ -11400,7 +11400,7 @@
         ],
         [
           "Stealth Rock",
-          "Hidden Power Electric"
+          "Hidden Power"
         ]
       ],
       "ability": "Magnet Pull",
@@ -13068,7 +13068,7 @@
         ],
         [
           "Surf",
-          "Hidden Power Poison"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -13550,7 +13550,7 @@
           "Ice Beam"
         ],
         [
-          "Hidden Power Ground"
+          "Hidden Power"
         ],
         [
           "Trick Room"
@@ -13804,7 +13804,7 @@
           "Sleep Powder"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ]
       ],
       "ability": "Chlorophyll",
@@ -13840,7 +13840,7 @@
           "Giga Drain"
         ],
         [
-          "Hidden Power Fire",
+          "Hidden Power",
           "Sludge Bomb"
         ]
       ],
@@ -13908,7 +13908,7 @@
           "Giga Drain"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ]
       ],
       "ability": "Chlorophyll",
@@ -13949,7 +13949,7 @@
           "Giga Drain"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ]
       ],
       "ability": "Chlorophyll",
@@ -14052,7 +14052,7 @@
         ],
         [
           "Sleep Powder",
-          "Hidden Power Fire",
+          "Hidden Power",
           "Solar Beam"
         ]
       ],
@@ -14083,7 +14083,7 @@
           "Sludge Bomb"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Synthesis"
@@ -14119,7 +14119,7 @@
           "Synthesis"
         ],
         [
-          "Hidden Power Fire",
+          "Hidden Power",
           "Knock Off",
           "Leech Seed"
         ]
@@ -14223,7 +14223,7 @@
           "Giga Drain"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Knock Off",
@@ -14329,7 +14329,7 @@
           "Sludge Bomb"
         ],
         [
-          "Hidden Power Fire",
+          "Hidden Power",
           "Knock Off"
         ]
       ],
@@ -14363,7 +14363,7 @@
           "Sludge Bomb"
         ],
         [
-          "Hidden Power Fire",
+          "Hidden Power",
           "Knock Off",
           "Leech Seed"
         ]
@@ -14433,7 +14433,7 @@
           "Sludge Bomb"
         ],
         [
-          "Hidden Power Ice",
+          "Hidden Power",
           "Sleep Powder"
         ],
         [
@@ -14744,7 +14744,7 @@
           "Air Slash"
         ],
         [
-          "Hidden Power Grass",
+          "Hidden Power",
           "Focus Blast"
         ],
         [
@@ -14872,7 +14872,7 @@
         ],
         [
           "Overheat",
-          "Hidden Power Ground"
+          "Hidden Power"
         ],
         [
           "Protect"
@@ -15074,7 +15074,7 @@
         ],
         [
           "Overheat",
-          "Hidden Power Ice",
+          "Hidden Power",
           "Roost",
           "Flame Charge"
         ]
@@ -15142,7 +15142,7 @@
         ],
         [
           "Overheat",
-          "Hidden Power Ground"
+          "Hidden Power"
         ],
         [
           "Protect"
@@ -16014,7 +16014,7 @@
         ],
         [
           "Roost",
-          "Hidden Power Ground"
+          "Hidden Power"
         ],
         [
           "Defog",
@@ -16148,7 +16148,7 @@
           "Substitute"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "ability": "Big Pecks",
@@ -16532,7 +16532,7 @@
           "Focus Blast"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "ability": "Lightning Rod",
@@ -16564,7 +16564,7 @@
           "Surf"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -16631,7 +16631,7 @@
         ],
         [
           "Protect",
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "ability": "Lightning Rod",
@@ -16665,7 +16665,7 @@
           "Focus Blast"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "ability": "Lightning Rod",
@@ -16734,7 +16734,7 @@
         ],
         [
           "Protect",
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "ability": "Lightning Rod",
@@ -18030,7 +18030,7 @@
         ],
         [
           "Energy Ball",
-          "Hidden Power Electric"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -18268,7 +18268,7 @@
           "Sludge Bomb"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Sleep Powder"
@@ -18300,7 +18300,7 @@
           "Sludge Bomb"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Sleep Powder"
@@ -18370,8 +18370,8 @@
           "Moonlight"
         ],
         [
-          "Hidden Power Ground",
-          "Hidden Power Fire"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "ability": "Effect Spore",
@@ -18770,7 +18770,7 @@
           "Water Pulse"
         ],
         [
-          "Hidden Power Fire",
+          "Hidden Power",
           "Thunderbolt"
         ]
       ],
@@ -18808,7 +18808,7 @@
           "Hyper Voice"
         ],
         [
-          "Hidden Power Ghost"
+          "Hidden Power"
         ],
         [
           "Water Pulse",
@@ -18907,7 +18907,7 @@
           "Ice Beam"
         ],
         [
-          "Hidden Power Grass"
+          "Hidden Power"
         ],
         [
           "Rain Dance",
@@ -19460,8 +19460,8 @@
           "Dazzling Gleam"
         ],
         [
-          "Hidden Power Fighting",
-          "Hidden Power Fire"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Protect"
@@ -19501,8 +19501,8 @@
           "Dazzling Gleam"
         ],
         [
-          "Hidden Power Fighting",
-          "Hidden Power Fire"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Substitute"
@@ -19548,7 +19548,7 @@
           "Signal Beam"
         ],
         [
-          "Hidden Power Fighting",
+          "Hidden Power",
           "Encore"
         ]
       ],
@@ -19578,7 +19578,7 @@
           "Shadow Ball"
         ],
         [
-          "Hidden Power Fighting"
+          "Hidden Power"
         ],
         [
           "Taunt",
@@ -19612,7 +19612,7 @@
           "Signal Beam"
         ],
         [
-          "Hidden Power Ground",
+          "Hidden Power",
           "Energy Ball"
         ],
         [
@@ -19676,7 +19676,7 @@
       "moves": [
         [
           "Calm Mind",
-          "Hidden Power Fire",
+          "Hidden Power",
           "Substitute"
         ],
         [
@@ -21270,7 +21270,7 @@
         ],
         [
           "Endure",
-          "Hidden Power Ground",
+          "Hidden Power",
           "Thunderbolt"
         ]
       ],
@@ -21304,8 +21304,8 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ground",
-          "Hidden Power Grass"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "ability": [
@@ -21334,7 +21334,7 @@
           "Volt Switch"
         ],
         [
-          "Hidden Power Fighting"
+          "Hidden Power"
         ],
         [
           "Flash Cannon"
@@ -21370,7 +21370,7 @@
         [
           "Volt Switch",
           "Toxic",
-          "Hidden Power Fighting"
+          "Hidden Power"
         ],
         [
           "Magnet Rise"
@@ -21406,8 +21406,8 @@
           "Volt Switch"
         ],
         [
-          "Hidden Power Ice",
-          "Hidden Power Grass"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -21439,8 +21439,8 @@
           "Flash Cannon"
         ],
         [
-          "Hidden Power Water",
-          "Hidden Power Grass"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "ability": [
@@ -21476,7 +21476,7 @@
           "Flash Cannon"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -21509,7 +21509,7 @@
           "Return"
         ],
         [
-          "Hidden Power Fighting",
+          "Hidden Power",
           "Quick Attack"
         ]
       ],
@@ -22141,7 +22141,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Fighting"
+          "Hidden Power"
         ],
         [
           "Substitute"
@@ -22184,7 +22184,7 @@
           "Sludge Wave"
         ],
         [
-          "Hidden Power Fighting"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -22748,7 +22748,7 @@
           "Volt Switch"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "ability": [
@@ -22792,8 +22792,8 @@
         ],
         [
           "Psychic",
-          "Hidden Power Fighting",
-          "Hidden Power Fire",
+          "Hidden Power",
+          "Hidden Power",
           "Protect"
         ]
       ],
@@ -23797,7 +23797,7 @@
         ],
         [
           "Knock Off",
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Protect"
@@ -23832,7 +23832,7 @@
           "Giga Drain"
         ],
         [
-          "Hidden Power Ice",
+          "Hidden Power",
           "Ancient Power"
         ]
       ],
@@ -23865,7 +23865,7 @@
           "Synthesis"
         ],
         [
-          "Hidden Power Fire",
+          "Hidden Power",
           "Knock Off"
         ]
       ],
@@ -23899,7 +23899,7 @@
           "Sleep Powder"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ]
       ],
       "ability": "Regenerator",
@@ -23925,7 +23925,7 @@
           "Giga Drain"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Sleep Powder",
@@ -24368,8 +24368,8 @@
           "Rain Dance"
         ],
         [
-          "Hidden Power Ground",
-          "Hidden Power Grass"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -24402,7 +24402,7 @@
           "Ice Beam"
         ],
         [
-          "Hidden Power Grass"
+          "Hidden Power"
         ]
       ],
       "ability": "Sniper",
@@ -24621,7 +24621,7 @@
         ],
         [
           "Ice Beam",
-          "Hidden Power Fire"
+          "Hidden Power"
         ]
       ],
       "ability": "Analytic",
@@ -25077,7 +25077,7 @@
           "Focus Blast"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "ability": "Vital Spirit",
@@ -25104,7 +25104,7 @@
         ],
         [
           "Focus Blast",
-          "Hidden Power Grass"
+          "Hidden Power"
         ],
         [
           "Ice Punch"
@@ -25144,8 +25144,8 @@
           "Toxic"
         ],
         [
-          "Hidden Power Ice",
-          "Hidden Power Grass",
+          "Hidden Power",
+          "Hidden Power",
           "Toxic"
         ]
       ],
@@ -25181,8 +25181,8 @@
           "Focus Blast"
         ],
         [
-          "Hidden Power Ice",
-          "Hidden Power Grass",
+          "Hidden Power",
+          "Hidden Power",
           "Psychic"
         ]
       ],
@@ -25218,8 +25218,8 @@
           "Focus Blast"
         ],
         [
-          "Hidden Power Ice",
-          "Hidden Power Grass",
+          "Hidden Power",
+          "Hidden Power",
           "Psychic"
         ]
       ],
@@ -25254,7 +25254,7 @@
           "Focus Blast"
         ],
         [
-          "Hidden Power Grass"
+          "Hidden Power"
         ],
         [
           "Mach Punch",
@@ -25288,8 +25288,8 @@
           "Focus Blast"
         ],
         [
-          "Hidden Power Ice",
-          "Hidden Power Grass"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Toxic",
@@ -25329,8 +25329,8 @@
         ],
         [
           "Psychic",
-          "Hidden Power Grass",
-          "Hidden Power Ice"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "ability": [
@@ -25366,8 +25366,8 @@
         ],
         [
           "Psychic",
-          "Hidden Power Ice",
-          "Hidden Power Grass"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "ability": [
@@ -26659,7 +26659,7 @@
           "Ice Beam"
         ],
         [
-          "Hidden Power Fire",
+          "Hidden Power",
           "Signal Beam",
           "Surf"
         ]
@@ -26689,7 +26689,7 @@
           "Surf"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Ice Beam"
@@ -27092,8 +27092,8 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice",
-          "Hidden Power Grass"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Shadow Ball",
@@ -27123,8 +27123,8 @@
           "Substitute"
         ],
         [
-          "Hidden Power Ice",
-          "Hidden Power Grass"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Thunderbolt"
@@ -27158,8 +27158,8 @@
           "Signal Beam"
         ],
         [
-          "Hidden Power Ice",
-          "Hidden Power Grass"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Volt Switch"
@@ -27295,7 +27295,7 @@
           "Psychic"
         ],
         [
-          "Hidden Power Fighting",
+          "Hidden Power",
           "Ice Beam"
         ],
         [
@@ -27337,8 +27337,8 @@
           "Psychic"
         ],
         [
-          "Hidden Power Fighting",
-          "Hidden Power Fire",
+          "Hidden Power",
+          "Hidden Power",
           "Ice Beam"
         ],
         [
@@ -27424,7 +27424,7 @@
         ],
         [
           "Earth Power",
-          "Hidden Power Fire",
+          "Hidden Power",
           "Substitute"
         ]
       ],
@@ -27504,7 +27504,7 @@
           "Ice Beam"
         ],
         [
-          "Hidden Power Electric"
+          "Hidden Power"
         ]
       ],
       "ability": "Weak Armor",
@@ -27537,7 +27537,7 @@
           "Ice Beam"
         ],
         [
-          "Hidden Power Grass"
+          "Hidden Power"
         ]
       ],
       "ability": "Weak Armor",
@@ -27667,8 +27667,8 @@
           "Ice Beam"
         ],
         [
-          "Hidden Power Grass",
-          "Hidden Power Electric"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -27735,7 +27735,7 @@
           "Ice Beam"
         ],
         [
-          "Hidden Power Grass"
+          "Hidden Power"
         ]
       ],
       "ability": "Weak Armor",
@@ -28594,7 +28594,7 @@
           "Hurricane"
         ],
         [
-          "Hidden Power Fighting"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -28731,7 +28731,7 @@
           "Roost"
         ],
         [
-          "Hidden Power Ice",
+          "Hidden Power",
           "Defog"
         ]
       ],
@@ -28766,7 +28766,7 @@
           "Roost"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Defog",
@@ -28865,7 +28865,7 @@
           "Tailwind"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Roost"
@@ -28906,7 +28906,7 @@
         ],
         [
           "Toxic",
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "ability": [
@@ -28939,7 +28939,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice",
+          "Hidden Power",
           "Heat Wave"
         ],
         [
@@ -28973,8 +28973,8 @@
           "Heat Wave"
         ],
         [
-          "Hidden Power Ice",
-          "Hidden Power Steel"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Hyper Beam"
@@ -29089,7 +29089,7 @@
           "Hurricane"
         ],
         [
-          "Hidden Power Grass",
+          "Hidden Power",
           "Will-O-Wisp"
         ],
         [
@@ -29125,7 +29125,7 @@
           "U-turn"
         ],
         [
-          "Hidden Power Water",
+          "Hidden Power",
           "Sleep Talk"
         ]
       ],
@@ -29738,7 +29738,7 @@
         ],
         [
           "Fire Blast",
-          "Hidden Power Steel"
+          "Hidden Power"
         ]
       ],
       "ability": "Multiscale",
@@ -30601,8 +30601,8 @@
           "Giga Drain"
         ],
         [
-          "Hidden Power Fire",
-          "Hidden Power Fighting"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -30731,8 +30731,8 @@
           "Extrasensory"
         ],
         [
-          "Hidden Power Ground",
-          "Hidden Power Grass"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Fire Blast"
@@ -30771,7 +30771,7 @@
           "Fire Blast"
         ],
         [
-          "Hidden Power Grass"
+          "Hidden Power"
         ],
         [
           "Focus Blast"
@@ -31272,7 +31272,7 @@
           "Ice Beam"
         ],
         [
-          "Hidden Power Grass",
+          "Hidden Power",
           "Sucker Punch",
           "Thunder Wave"
         ]
@@ -31313,8 +31313,8 @@
           "Ice Beam"
         ],
         [
-          "Hidden Power Grass",
-          "Hidden Power Fire",
+          "Hidden Power",
+          "Hidden Power",
           "Sucker Punch"
         ]
       ],
@@ -31354,7 +31354,7 @@
         ],
         [
           "Thunderbolt",
-          "Hidden Power Fire"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -31488,8 +31488,8 @@
           "Ice Beam"
         ],
         [
-          "Hidden Power Fire",
-          "Hidden Power Grass"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -31556,8 +31556,8 @@
           "Signal Beam"
         ],
         [
-          "Hidden Power Grass",
-          "Hidden Power Fire",
+          "Hidden Power",
+          "Hidden Power",
           "Thunderbolt"
         ]
       ],
@@ -32274,7 +32274,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ground"
+          "Hidden Power"
         ],
         [
           "Thunder Wave",
@@ -32351,7 +32351,7 @@
           "Volt Switch"
         ],
         [
-          "Hidden Power Ice",
+          "Hidden Power",
           "Thunderbolt"
         ],
         [
@@ -32420,8 +32420,8 @@
           "Solar Beam"
         ],
         [
-          "Hidden Power Fire",
-          "Hidden Power Rock"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Moonblast"
@@ -33241,7 +33241,7 @@
           "Ice Beam"
         ],
         [
-          "Hidden Power Electric"
+          "Hidden Power"
         ],
         [
           "Encore"
@@ -33385,12 +33385,12 @@
         ],
         [
           "Protect",
-          "Hidden Power Grass"
+          "Hidden Power"
         ],
         [
           "Encore",
           "Toxic",
-          "Hidden Power Grass"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -33418,7 +33418,7 @@
           "Ice Beam"
         ],
         [
-          "Hidden Power Grass"
+          "Hidden Power"
         ],
         [
           "Scald"
@@ -33563,7 +33563,7 @@
           "Surf"
         ],
         [
-          "Hidden Power Grass",
+          "Hidden Power",
           "Rain Dance",
           "Encore"
         ]
@@ -33806,8 +33806,8 @@
           "Earth Power"
         ],
         [
-          "Hidden Power Ice",
-          "Hidden Power Fire",
+          "Hidden Power",
+          "Hidden Power",
           "Sludge Bomb"
         ],
         [
@@ -34081,7 +34081,7 @@
         ],
         [
           "Dazzling Gleam",
-          "Hidden Power Fighting"
+          "Hidden Power"
         ],
         [
           "Morning Sun",
@@ -34151,7 +34151,7 @@
         [
           "Grass Knot",
           "Shadow Ball",
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Trick"
@@ -34291,7 +34291,7 @@
         ],
         [
           "Heat Wave",
-          "Hidden Power Grass"
+          "Hidden Power"
         ],
         [
           "Pursuit",
@@ -34330,7 +34330,7 @@
           "Pursuit"
         ],
         [
-          "Hidden Power Fighting",
+          "Hidden Power",
           "Thunder Wave"
         ]
       ],
@@ -34718,7 +34718,7 @@
           "Shadow Ball"
         ],
         [
-          "Hidden Power Fighting",
+          "Hidden Power",
           "Dazzling Gleam",
           "Thunderbolt"
         ],
@@ -34779,7 +34779,7 @@
     {
       "moves": [
         [
-          "Hidden Power Psychic"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -34944,7 +34944,7 @@
         ],
         [
           "Shadow Ball",
-          "Hidden Power Fighting"
+          "Hidden Power"
         ]
       ],
       "ability": "Sap Sipper",
@@ -38116,7 +38116,7 @@
           "Taunt",
           "Protect",
           "Destiny Bond",
-          "Hidden Power Grass"
+          "Hidden Power"
         ]
       ],
       "ability": "Flash Fire",
@@ -38180,8 +38180,8 @@
           "Dark Pulse"
         ],
         [
-          "Hidden Power Water",
-          "Hidden Power Steel"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "ability": "Flash Fire",
@@ -38248,7 +38248,7 @@
         ],
         [
           "Destiny Bond",
-          "Hidden Power Grass",
+          "Hidden Power",
           "Taunt"
         ]
       ],
@@ -38964,7 +38964,7 @@
         ],
         [
           "Discharge",
-          "Hidden Power Fire"
+          "Hidden Power"
         ]
       ],
       "ability": "Download",
@@ -39134,8 +39134,8 @@
         ],
         [
           "Tri Attack",
-          "Hidden Power Ground",
-          "Hidden Power Fire"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "ability": [
@@ -39172,7 +39172,7 @@
         ],
         [
           "Tri Attack",
-          "Hidden Power Ground",
+          "Hidden Power",
           "Recover"
         ]
       ],
@@ -39418,7 +39418,7 @@
           "Spore"
         ],
         [
-          "Hidden Power Steel"
+          "Hidden Power"
         ]
       ],
       "ability": "Technician",
@@ -39692,7 +39692,7 @@
           "Psychic"
         ],
         [
-          "Hidden Power Fighting",
+          "Hidden Power",
           "Shadow Ball"
         ],
         [
@@ -39729,7 +39729,7 @@
           "Ice Beam"
         ],
         [
-          "Hidden Power Fighting",
+          "Hidden Power",
           "Shadow Ball"
         ],
         [
@@ -39767,8 +39767,8 @@
           "Cross Chop"
         ],
         [
-          "Hidden Power Ground",
-          "Hidden Power Grass"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -41554,7 +41554,7 @@
         ],
         [
           "Earth Power",
-          "Hidden Power Fire"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -41620,7 +41620,7 @@
         ],
         [
           "Earth Power",
-          "Hidden Power Fire"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -41685,7 +41685,7 @@
           "Nasty Plot"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Earth Power"
@@ -41766,7 +41766,7 @@
         ],
         [
           "Focus Blast",
-          "Hidden Power Fire"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -41863,7 +41863,7 @@
         ],
         [
           "Focus Blast",
-          "Hidden Power Fire"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -41891,8 +41891,8 @@
           "Focus Blast"
         ],
         [
-          "Hidden Power Flying",
-          "Hidden Power Ice"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Giga Drain"
@@ -41926,7 +41926,7 @@
           "Earthquake"
         ],
         [
-          "Hidden Power Fire",
+          "Hidden Power",
           "Focus Blast"
         ]
       ],
@@ -41988,7 +41988,7 @@
         ],
         [
           "Focus Blast",
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Protect",
@@ -42022,7 +42022,7 @@
         ],
         [
           "Quick Guard",
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Detect"
@@ -42056,7 +42056,7 @@
           "Fire Blast"
         ],
         [
-          "Hidden Power Grass"
+          "Hidden Power"
         ],
         [
           "Rock Slide"
@@ -42097,8 +42097,8 @@
           "Focus Blast"
         ],
         [
-          "Hidden Power Ice",
-          "Hidden Power Electric"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Protect"
@@ -42133,7 +42133,7 @@
           "Protect"
         ],
         [
-          "Hidden Power Electric"
+          "Hidden Power"
         ]
       ],
       "ability": "Speed Boost",
@@ -42201,7 +42201,7 @@
           "Low Kick"
         ],
         [
-          "Hidden Power Ice",
+          "Hidden Power",
           "Stone Edge"
         ]
       ],
@@ -42234,7 +42234,7 @@
         ],
         [
           "Stone Edge",
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Protect"
@@ -42299,7 +42299,7 @@
           "Overheat"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Superpower",
@@ -42377,7 +42377,7 @@
           "Superpower"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Protect"
@@ -43718,7 +43718,7 @@
         ],
         [
           "Heat Wave",
-          "Hidden Power Fighting"
+          "Hidden Power"
         ],
         [
           "U-turn"
@@ -43871,7 +43871,7 @@
         ],
         [
           "Protect",
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Leech Seed",
@@ -46758,7 +46758,7 @@
           "Flamethrower"
         ],
         [
-          "Hidden Power Grass",
+          "Hidden Power",
           "Thunderbolt"
         ],
         [
@@ -46798,7 +46798,7 @@
           "Overheat"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "ability": "Lightning Rod",
@@ -46832,7 +46832,7 @@
           "Overheat"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "ability": "Lightning Rod",
@@ -46865,7 +46865,7 @@
           "Flamethrower"
         ],
         [
-          "Hidden Power Grass"
+          "Hidden Power"
         ]
       ],
       "ability": "Lightning Rod",
@@ -46891,7 +46891,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Magnet Rise"
@@ -46970,7 +46970,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Flamethrower",
@@ -47004,7 +47004,7 @@
           "Flamethrower"
         ],
         [
-          "Hidden Power Ice",
+          "Hidden Power",
           "Volt Switch",
           "Snarl"
         ],
@@ -47039,7 +47039,7 @@
           "Overheat"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Protect"
@@ -47075,7 +47075,7 @@
           "Flamethrower"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "ability": "Lightning Rod",
@@ -47108,7 +47108,7 @@
           "Flamethrower"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "ability": "Lightning Rod",
@@ -47135,7 +47135,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Overheat",
@@ -47216,7 +47216,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "ability": "Lightning Rod",
@@ -47346,11 +47346,11 @@
         ],
         [
           "Sleep Powder",
-          "Hidden Power Ground"
+          "Hidden Power"
         ],
         [
           "Spikes",
-          "Hidden Power Ground"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -47930,7 +47930,7 @@
           "Ice Beam"
         ],
         [
-          "Hidden Power Grass"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -48145,7 +48145,7 @@
           "Ancient Power"
         ],
         [
-          "Hidden Power Grass",
+          "Hidden Power",
           "Will-O-Wisp"
         ]
       ],
@@ -48179,7 +48179,7 @@
         ],
         [
           "Toxic",
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "ability": "Solid Rock",
@@ -48211,7 +48211,7 @@
           "Earth Power"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "ability": "Solid Rock",
@@ -48310,7 +48310,7 @@
           "Lava Plume"
         ],
         [
-          "Hidden Power Electric"
+          "Hidden Power"
         ]
       ],
       "ability": "Solid Rock",
@@ -48339,7 +48339,7 @@
           "Earth Power"
         ],
         [
-          "Hidden Power Ice",
+          "Hidden Power",
           "Ancient Power"
         ],
         [
@@ -48383,7 +48383,7 @@
         ],
         [
           "Toxic",
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "ability": "Solid Rock",
@@ -49162,7 +49162,7 @@
         ],
         [
           "Tailwind",
-          "Hidden Power Ground"
+          "Hidden Power"
         ],
         [
           "Protect"
@@ -49303,7 +49303,7 @@
           "Hyper Voice"
         ],
         [
-          "Hidden Power Rock"
+          "Hidden Power"
         ]
       ],
       "ability": "Pixilate",
@@ -50409,7 +50409,7 @@
         ],
         [
           "Dazzling Gleam",
-          "Hidden Power Fighting"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -50514,7 +50514,7 @@
         ],
         [
           "Knock Off",
-          "Hidden Power Fighting",
+          "Hidden Power",
           "Will-O-Wisp"
         ]
       ],
@@ -51005,7 +51005,7 @@
           "Ice Beam"
         ],
         [
-          "Hidden Power Ground"
+          "Hidden Power"
         ],
         [
           "Ice Shard"
@@ -51044,7 +51044,7 @@
         ],
         [
           "Freeze-Dry",
-          "Hidden Power Ground"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -51348,8 +51348,8 @@
         ],
         [
           "Substitute",
-          "Hidden Power Grass",
-          "Hidden Power Fire"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -51456,7 +51456,7 @@
           "Signal Beam"
         ],
         [
-          "Hidden Power Grass"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -53927,7 +53927,7 @@
         ],
         [
           "Roost",
-          "Hidden Power Fire",
+          "Hidden Power",
           "Surf"
         ]
       ],
@@ -54038,7 +54038,7 @@
         ],
         [
           "Defog",
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Lunar Dance",
@@ -54150,7 +54150,7 @@
         ],
         [
           "Roost",
-          "Hidden Power Fire",
+          "Hidden Power",
           "Memento"
         ]
       ],
@@ -54183,7 +54183,7 @@
           "Grass Knot"
         ],
         [
-          "Hidden Power Fire",
+          "Hidden Power",
           "Thunder"
         ]
       ],
@@ -54217,7 +54217,7 @@
         ],
         [
           "Roost",
-          "Hidden Power Fire"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -54247,7 +54247,7 @@
         ],
         [
           "Surf",
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Defog",
@@ -54286,7 +54286,7 @@
         ],
         [
           "Surf",
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Trick"
@@ -54318,7 +54318,7 @@
         ],
         [
           "Defog",
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Trick"
@@ -54385,7 +54385,7 @@
         [
           "Defog",
           "Calm Mind",
-          "Hidden Power Fire",
+          "Hidden Power",
           "Surf"
         ]
       ],
@@ -54453,7 +54453,7 @@
         ],
         [
           "Tailwind",
-          "Hidden Power Ground"
+          "Hidden Power"
         ],
         [
           "Protect"
@@ -54484,7 +54484,7 @@
           "Psyshock"
         ],
         [
-          "Hidden Power Fire",
+          "Hidden Power",
           "Grass Knot",
           "Roost"
         ],
@@ -54552,7 +54552,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Rock"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -54591,7 +54591,7 @@
           "Surf"
         ],
         [
-          "Hidden Power Poison"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -54624,7 +54624,7 @@
           "Draco Meteor"
         ],
         [
-          "Hidden Power Rock"
+          "Hidden Power"
         ],
         [
           "Psychic"
@@ -54669,7 +54669,7 @@
         [
           "Tailwind",
           "Helping Hand",
-          "Hidden Power Ground"
+          "Hidden Power"
         ],
         [
           "Protect"
@@ -54702,11 +54702,11 @@
         ],
         [
           "Dragon Pulse",
-          "Hidden Power Ground"
+          "Hidden Power"
         ],
         [
           "Trick",
-          "Hidden Power Ground"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -56715,8 +56715,8 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ground",
-          "Hidden Power Fire"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -56844,8 +56844,8 @@
           "Icy Wind"
         ],
         [
-          "Hidden Power Ground",
-          "Hidden Power Fire"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Thunderbolt",
@@ -57832,7 +57832,7 @@
           "Focus Blast"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -58183,7 +58183,7 @@
         ],
         [
           "Grass Knot",
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -58351,7 +58351,7 @@
           "U-turn"
         ],
         [
-          "Hidden Power Grass",
+          "Hidden Power",
           "Steel Wing"
         ]
       ],
@@ -58807,7 +58807,7 @@
           "Protect"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Sleep Powder",
@@ -58847,7 +58847,7 @@
         ],
         [
           "Sleep Powder",
-          "Hidden Power Fire"
+          "Hidden Power"
         ]
       ],
       "ability": [
@@ -58925,8 +58925,8 @@
           "Sleep Powder"
         ],
         [
-          "Hidden Power Fire",
-          "Hidden Power Ice",
+          "Hidden Power",
+          "Hidden Power",
           "Sleep Powder"
         ]
       ],
@@ -59166,7 +59166,7 @@
           "Air Slash"
         ],
         [
-          "Hidden Power Ground"
+          "Hidden Power"
         ],
         [
           "U-turn"
@@ -59198,7 +59198,7 @@
           "Air Slash"
         ],
         [
-          "Hidden Power Ground"
+          "Hidden Power"
         ],
         [
           "U-turn"
@@ -59368,7 +59368,7 @@
           "Ice Beam"
         ],
         [
-          "Hidden Power Electric"
+          "Hidden Power"
         ],
         [
           "Surf",
@@ -59439,7 +59439,7 @@
           "Focus Blast"
         ],
         [
-          "Hidden Power Electric",
+          "Hidden Power",
           "Taunt"
         ]
       ],
@@ -60038,7 +60038,7 @@
           "Shadow Ball"
         ],
         [
-          "Hidden Power Fighting",
+          "Hidden Power",
           "Thunderbolt"
         ],
         [
@@ -61123,7 +61123,7 @@
           "Fire Blast"
         ],
         [
-          "Hidden Power Grass",
+          "Hidden Power",
           "Acid Spray"
         ],
         [
@@ -61549,7 +61549,7 @@
           "Psychic"
         ],
         [
-          "Hidden Power Fighting"
+          "Hidden Power"
         ],
         [
           "Healing Wish"
@@ -61586,7 +61586,7 @@
           "Heat Wave"
         ],
         [
-          "Hidden Power Fighting"
+          "Hidden Power"
         ],
         [
           "U-turn"
@@ -61618,7 +61618,7 @@
           "Heat Wave"
         ],
         [
-          "Hidden Power Fighting"
+          "Hidden Power"
         ],
         [
           "U-turn"
@@ -61650,7 +61650,7 @@
           "Heat Wave"
         ],
         [
-          "Hidden Power Grass"
+          "Hidden Power"
         ],
         [
           "U-turn"
@@ -64094,7 +64094,7 @@
         ],
         [
           "Dark Pulse",
-          "Hidden Power Ice",
+          "Hidden Power",
           "Focus Blast"
         ]
       ],
@@ -64197,7 +64197,7 @@
           "U-turn"
         ],
         [
-          "Hidden Power Fighting"
+          "Hidden Power"
         ]
       ],
       "ability": "Storm Drain",
@@ -64266,8 +64266,8 @@
           "Air Slash"
         ],
         [
-          "Hidden Power Ground",
-          "Hidden Power Grass"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -64335,9 +64335,9 @@
           "Ice Shard"
         ],
         [
-          "Hidden Power Rock",
-          "Hidden Power Ground",
-          "Hidden Power Fire"
+          "Hidden Power",
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -64368,9 +64368,9 @@
           "Ice Shard"
         ],
         [
-          "Hidden Power Rock",
-          "Hidden Power Ground",
-          "Hidden Power Fire"
+          "Hidden Power",
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -65265,7 +65265,7 @@
           "Knock Off"
         ],
         [
-          "Hidden Power Fire",
+          "Hidden Power",
           "Leech Seed"
         ]
       ],
@@ -65300,8 +65300,8 @@
           "Earthquake"
         ],
         [
-          "Hidden Power Ice",
-          "Hidden Power Fire"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "ability": "Regenerator",
@@ -65335,7 +65335,7 @@
           "Earthquake"
         ],
         [
-          "Hidden Power Grass"
+          "Hidden Power"
         ]
       ],
       "ability": [
@@ -65369,7 +65369,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Grass",
+          "Hidden Power",
           "Focus Blast"
         ],
         [
@@ -65403,7 +65403,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Grass",
+          "Hidden Power",
           "Focus Blast"
         ],
         [
@@ -65799,8 +65799,8 @@
         ],
         [
           "Shadow Ball",
-          "Hidden Power Ice",
-          "Hidden Power Steel",
+          "Hidden Power",
+          "Hidden Power",
           "Ancient Power"
         ]
       ],
@@ -65903,7 +65903,7 @@
           "Bug Buzz"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Giga Drain"
@@ -66662,7 +66662,7 @@
         ],
         [
           "Dark Pulse",
-          "Hidden Power Fire"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -66734,7 +66734,7 @@
           "Trick"
         ],
         [
-          "Hidden Power Ground"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -66838,7 +66838,7 @@
         ],
         [
           "Earth Power",
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Magnet Rise"
@@ -67275,8 +67275,8 @@
         ],
         [
           "Thunderbolt",
-          "Hidden Power Grass",
-          "Hidden Power Ice"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Trick"
@@ -67307,7 +67307,7 @@
           "Overheat"
         ],
         [
-          "Hidden Power Ice",
+          "Hidden Power",
           "Will-O-Wisp",
           "Thunderbolt"
         ],
@@ -67476,7 +67476,7 @@
         [
           "Thunderbolt",
           "Discharge",
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -67507,7 +67507,7 @@
           "Volt Switch"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Trick",
@@ -67540,7 +67540,7 @@
           "Overheat"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Trick",
@@ -67608,7 +67608,7 @@
           "Overheat"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Protect",
@@ -68111,7 +68111,7 @@
         ],
         [
           "Thunderbolt",
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -68144,7 +68144,7 @@
         ],
         [
           "Thunderbolt",
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -68175,7 +68175,7 @@
           "Trick"
         ],
         [
-          "Hidden Power Ice",
+          "Hidden Power",
           "Will-O-Wisp",
           "Thunderbolt"
         ]
@@ -68308,7 +68308,7 @@
         ],
         [
           "Trick",
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -68463,7 +68463,7 @@
           "Air Slash"
         ],
         [
-          "Hidden Power Water"
+          "Hidden Power"
         ],
         [
           "Will-O-Wisp"
@@ -68495,8 +68495,8 @@
           "Air Slash"
         ],
         [
-          "Hidden Power Water",
-          "Hidden Power Grass"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Will-O-Wisp"
@@ -68563,7 +68563,7 @@
         ],
         [
           "Thunderbolt",
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Trick"
@@ -68824,7 +68824,7 @@
           "Ice Beam"
         ],
         [
-          "Hidden Power Ground",
+          "Hidden Power",
           "Energy Ball"
         ],
         [
@@ -68923,7 +68923,7 @@
           "Psychic"
         ],
         [
-          "Hidden Power Ground",
+          "Hidden Power",
           "Ice Beam"
         ],
         [
@@ -69028,7 +69028,7 @@
         ],
         [
           "Skill Swap",
-          "Hidden Power Steel",
+          "Hidden Power",
           "Iron Tail"
         ],
         [
@@ -69913,7 +69913,7 @@
         ],
         [
           "Ancient Power",
-          "Hidden Power Fire"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -70120,8 +70120,8 @@
           "Seed Flare"
         ],
         [
-          "Hidden Power Rock",
-          "Hidden Power Ice"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Healing Wish"
@@ -70152,7 +70152,7 @@
           "Seed Flare"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Healing Wish"
@@ -70764,8 +70764,8 @@
           "Glare"
         ],
         [
-          "Hidden Power Ice",
-          "Hidden Power Flying"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "ability": "Contrary",
@@ -70798,7 +70798,7 @@
           "Leaf Storm"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Substitute"
@@ -70834,8 +70834,8 @@
           "Leaf Storm"
         ],
         [
-          "Hidden Power Rock",
-          "Hidden Power Ground"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Knock Off",
@@ -70868,7 +70868,7 @@
           "Synthesis"
         ],
         [
-          "Hidden Power Ice",
+          "Hidden Power",
           "Knock Off"
         ],
         [
@@ -70900,8 +70900,8 @@
           "Leaf Storm"
         ],
         [
-          "Hidden Power Ice",
-          "Hidden Power Fire",
+          "Hidden Power",
+          "Hidden Power",
           "Glare"
         ],
         [
@@ -70939,7 +70939,7 @@
           "Energy Ball"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Glare",
@@ -70974,8 +70974,8 @@
           "Leaf Storm"
         ],
         [
-          "Hidden Power Fire",
-          "Hidden Power Ground"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Substitute"
@@ -71005,8 +71005,8 @@
           "Leaf Storm"
         ],
         [
-          "Hidden Power Rock",
-          "Hidden Power Fire",
+          "Hidden Power",
+          "Hidden Power",
           "Knock Off"
         ],
         [
@@ -71041,7 +71041,7 @@
           "Leaf Storm"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Glare",
@@ -71108,8 +71108,8 @@
           "Leaf Storm"
         ],
         [
-          "Hidden Power Rock",
-          "Hidden Power Fire"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Glare"
@@ -71148,7 +71148,7 @@
           "Leaf Storm"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ]
       ],
       "ability": "Contrary",
@@ -71177,8 +71177,8 @@
           "Dragon Pulse"
         ],
         [
-          "Hidden Power Fire",
-          "Hidden Power Ground"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Glare",
@@ -71222,7 +71222,7 @@
         ],
         [
           "Glare",
-          "Hidden Power Rock",
+          "Hidden Power",
           "Taunt"
         ]
       ],
@@ -71249,8 +71249,8 @@
           "Leaf Storm"
         ],
         [
-          "Hidden Power Fire",
-          "Hidden Power Ground"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Dragon Pulse"
@@ -72277,7 +72277,7 @@
           "Focus Blast"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "ability": "Overgrow",
@@ -72343,8 +72343,8 @@
           "Focus Blast"
         ],
         [
-          "Hidden Power Ice",
-          "Hidden Power Flying"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "ability": "Overgrow",
@@ -72485,7 +72485,7 @@
           "Fire Blast"
         ],
         [
-          "Hidden Power Grass"
+          "Hidden Power"
         ],
         [
           "Flame Charge",
@@ -72597,7 +72597,7 @@
           "Ice Beam"
         ],
         [
-          "Hidden Power Grass",
+          "Hidden Power",
           "Knock Off"
         ]
       ],
@@ -72638,7 +72638,7 @@
           "Ice Beam"
         ],
         [
-          "Hidden Power Grass"
+          "Hidden Power"
         ],
         [
           "Superpower",
@@ -72671,7 +72671,7 @@
           "Ice Beam"
         ],
         [
-          "Hidden Power Electric"
+          "Hidden Power"
         ],
         [
           "Superpower",
@@ -72739,7 +72739,7 @@
           "Ice Beam"
         ],
         [
-          "Hidden Power Grass",
+          "Hidden Power",
           "Substitute"
         ]
       ],
@@ -72783,7 +72783,7 @@
         ],
         [
           "Superpower",
-          "Hidden Power Grass"
+          "Hidden Power"
         ]
       ],
       "ability": "Torrent",
@@ -73037,7 +73037,7 @@
           "Overheat"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "ability": [
@@ -73110,7 +73110,7 @@
         [
           "Shadow Ball",
           "Trick",
-          "Hidden Power Ground"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -74957,8 +74957,8 @@
           "Energy Ball"
         ],
         [
-          "Hidden Power Fire",
-          "Hidden Power Rock"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Air Slash"
@@ -75402,7 +75402,7 @@
           "Giga Drain"
         ],
         [
-          "Hidden Power Fighting",
+          "Hidden Power",
           "Memento"
         ]
       ],
@@ -75854,8 +75854,8 @@
           "Healing Wish"
         ],
         [
-          "Hidden Power Fire",
-          "Hidden Power Ice",
+          "Hidden Power",
+          "Hidden Power",
           "Stun Spore"
         ]
       ],
@@ -75887,9 +75887,9 @@
           "Giga Drain"
         ],
         [
-          "Hidden Power Rock",
-          "Hidden Power Fire",
-          "Hidden Power Ice"
+          "Hidden Power",
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Sleep Powder"
@@ -75917,7 +75917,7 @@
           "Leaf Storm"
         ],
         [
-          "Hidden Power Rock",
+          "Hidden Power",
           "Giga Drain"
         ],
         [
@@ -77013,7 +77013,7 @@
           "Nasty Plot"
         ],
         [
-          "Hidden Power Fighting",
+          "Hidden Power",
           "Will-O-Wisp"
         ]
       ],
@@ -77124,7 +77124,7 @@
           "Shadow Ball"
         ],
         [
-          "Hidden Power Fighting"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -77805,7 +77805,7 @@
         ],
         [
           "U-turn",
-          "Hidden Power Fighting",
+          "Hidden Power",
           "Knock Off"
         ]
       ],
@@ -78384,7 +78384,7 @@
           "Shadow Ball"
         ],
         [
-          "Hidden Power Fighting"
+          "Hidden Power"
         ]
       ],
       "ability": [
@@ -78470,7 +78470,7 @@
           "Shadow Ball"
         ],
         [
-          "Hidden Power Fighting"
+          "Hidden Power"
         ]
       ],
       "ability": "Magic Guard",
@@ -78866,7 +78866,7 @@
         ],
         [
           "Shadow Ball",
-          "Hidden Power Fire",
+          "Hidden Power",
           "Energy Ball"
         ],
         [
@@ -79514,8 +79514,8 @@
         ],
         [
           "Synthesis",
-          "Hidden Power Fire",
-          "Hidden Power Fighting"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "ability": "Regenerator",
@@ -79632,7 +79632,7 @@
           "Stun Spore"
         ],
         [
-          "Hidden Power Fire",
+          "Hidden Power",
           "Sludge Bomb"
         ]
       ],
@@ -80339,7 +80339,7 @@
           "Energy Ball"
         ],
         [
-          "Hidden Power Ice",
+          "Hidden Power",
           "Toxic",
           "Thunder Wave"
         ]
@@ -80379,7 +80379,7 @@
         ],
         [
           "Energy Ball",
-          "Hidden Power Ice",
+          "Hidden Power",
           "Thunder Wave",
           "Toxic"
         ]
@@ -81328,7 +81328,7 @@
         ],
         [
           "Giga Drain",
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Knock Off",
@@ -81363,7 +81363,7 @@
           "Recover"
         ],
         [
-          "Hidden Power Fighting"
+          "Hidden Power"
         ],
         [
           "Thunderbolt",
@@ -81434,7 +81434,7 @@
           "Signal Beam"
         ],
         [
-          "Hidden Power Ground"
+          "Hidden Power"
         ],
         [
           "Trick",
@@ -81501,7 +81501,7 @@
           "Signal Beam"
         ],
         [
-          "Hidden Power Ground"
+          "Hidden Power"
         ],
         [
           "Trick",
@@ -81540,7 +81540,7 @@
         ],
         [
           "Energy Ball",
-          "Hidden Power Ground",
+          "Hidden Power",
           "Memento"
         ]
       ],
@@ -81816,7 +81816,7 @@
         ],
         [
           "Energy Ball",
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "ability": [
@@ -81891,7 +81891,7 @@
         ],
         [
           "Energy Ball",
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Overheat"
@@ -82644,7 +82644,7 @@
           "Bug Buzz"
         ],
         [
-          "Hidden Power Ground"
+          "Hidden Power"
         ],
         [
           "Focus Blast"
@@ -82958,7 +82958,7 @@
           "Poison Jab",
           "Stone Edge",
           "Fake Out",
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "ability": [
@@ -83986,7 +83986,7 @@
         [
           "Defog",
           "Heat Wave",
-          "Hidden Power Grass"
+          "Hidden Power"
         ]
       ],
       "ability": "Weak Armor",
@@ -84020,7 +84020,7 @@
         ],
         [
           "U-turn",
-          "Hidden Power Fighting"
+          "Hidden Power"
         ]
       ],
       "ability": "Weak Armor",
@@ -84369,7 +84369,7 @@
         [
           "Focus Blast",
           "Sucker Punch",
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "ability": "Flash Fire",
@@ -85343,7 +85343,7 @@
         ],
         [
           "Bug Buzz",
-          "Hidden Power Ground"
+          "Hidden Power"
         ],
         [
           "Giga Drain"
@@ -85380,7 +85380,7 @@
         ],
         [
           "Giga Drain",
-          "Hidden Power Ground"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -85597,11 +85597,11 @@
         ],
         [
           "Bug Buzz",
-          "Hidden Power Ground"
+          "Hidden Power"
         ],
         [
           "Giga Drain",
-          "Hidden Power Ground"
+          "Hidden Power"
         ]
       ],
       "ability": [
@@ -85704,8 +85704,8 @@
           "Giga Drain"
         ],
         [
-          "Hidden Power Ice",
-          "Hidden Power Ground",
+          "Hidden Power",
+          "Hidden Power",
           "Giga Drain"
         ]
       ],
@@ -86029,7 +86029,7 @@
           "Flash Cannon"
         ],
         [
-          "Hidden Power Ghost",
+          "Hidden Power",
           "Substitute",
           "Magnet Rise"
         ]
@@ -86686,7 +86686,7 @@
           "Focus Blast"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -86943,7 +86943,7 @@
         [
           "Heat Wave",
           "Superpower",
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Knock Off"
@@ -87111,7 +87111,7 @@
           "Thunder Wave"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Focus Blast"
@@ -87144,7 +87144,7 @@
           "Thunder Wave"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Knock Off",
@@ -87178,7 +87178,7 @@
           "Nasty Plot"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Focus Blast"
@@ -87210,7 +87210,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Grass Knot"
@@ -87277,7 +87277,7 @@
           "Grass Knot"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Thunder Wave",
@@ -87322,7 +87322,7 @@
         [
           "Dark Pulse",
           "Grass Knot",
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -87357,7 +87357,7 @@
         ],
         [
           "Thunder Wave",
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Protect"
@@ -87386,7 +87386,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Thunder Wave"
@@ -87422,7 +87422,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Grass Knot",
@@ -87456,7 +87456,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Taunt",
@@ -87490,7 +87490,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Thunder Wave",
@@ -87558,7 +87558,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Thunder Wave"
@@ -87593,7 +87593,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Thunder Wave",
@@ -87697,7 +87697,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Focus Blast",
@@ -87733,7 +87733,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -87762,7 +87762,7 @@
           "Grass Knot"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Focus Blast",
@@ -87800,7 +87800,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Focus Blast"
@@ -87832,8 +87832,8 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Flying",
-          "Hidden Power Ice"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Focus Blast"
@@ -87864,7 +87864,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Focus Blast",
@@ -87895,7 +87895,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Focus Blast",
@@ -87928,7 +87928,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Focus Blast",
@@ -87962,7 +87962,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Volt Switch"
@@ -87997,7 +87997,7 @@
           "Thunder"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Psychic"
@@ -88441,7 +88441,7 @@
           "Earth Power"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Grass Knot",
@@ -88479,7 +88479,7 @@
           "Rock Slide"
         ],
         [
-          "Hidden Power Ice",
+          "Hidden Power",
           "Sludge Wave"
         ]
       ],
@@ -88513,7 +88513,7 @@
         [
           "Rock Slide",
           "Focus Blast",
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Protect"
@@ -88542,7 +88542,7 @@
           "Earth Power"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Stone Edge"
@@ -88643,8 +88643,8 @@
           "Grass Knot"
         ],
         [
-          "Hidden Power Ice",
-          "Hidden Power Rock"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Sludge Wave"
@@ -88756,7 +88756,7 @@
         [
           "Stone Edge",
           "Knock Off",
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -89504,7 +89504,7 @@
           "Earth Power"
         ],
         [
-          "Hidden Power Fire",
+          "Hidden Power",
           "Focus Blast"
         ]
       ],
@@ -89911,7 +89911,7 @@
         [
           "Focus Blast",
           "Shadow Ball",
-          "Hidden Power Fire"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -90401,7 +90401,7 @@
         [
           "Vacuum Wave",
           "Icy Wind",
-          "Hidden Power Bug"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -90434,8 +90434,8 @@
         ],
         [
           "Icy Wind",
-          "Hidden Power Electric",
-          "Hidden Power Bug"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -90626,7 +90626,7 @@
           "Scald"
         ],
         [
-          "Hidden Power Ground",
+          "Hidden Power",
           "Icy Wind"
         ]
       ],
@@ -90660,7 +90660,7 @@
           "Hydro Pump"
         ],
         [
-          "Hidden Power Ground",
+          "Hidden Power",
           "Icy Wind"
         ]
       ],
@@ -90689,7 +90689,7 @@
           "Secret Sword"
         ],
         [
-          "Hidden Power Ground",
+          "Hidden Power",
           "Substitute"
         ],
         [
@@ -91090,7 +91090,7 @@
         [
           "Psyshock",
           "Dazzling Gleam",
-          "Hidden Power Fire",
+          "Hidden Power",
           "Focus Blast"
         ]
       ],
@@ -91956,7 +91956,7 @@
           "Psychic"
         ],
         [
-          "Hidden Power Ground",
+          "Hidden Power",
           "Will-O-Wisp"
         ]
       ],
@@ -92057,8 +92057,8 @@
           "U-turn"
         ],
         [
-          "Hidden Power Grass",
-          "Hidden Power Ground"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "ability": "Protean",
@@ -92097,8 +92097,8 @@
           "U-turn"
         ],
         [
-          "Hidden Power Ground",
-          "Hidden Power Grass"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "ability": "Protean",
@@ -92134,7 +92134,7 @@
           "U-turn"
         ],
         [
-          "Hidden Power Grass"
+          "Hidden Power"
         ]
       ],
       "ability": "Protean",
@@ -92202,7 +92202,7 @@
         ],
         [
           "Dark Pulse",
-          "Hidden Power Grass"
+          "Hidden Power"
         ],
         [
           "U-turn"
@@ -92237,7 +92237,7 @@
         ],
         [
           "Toxic Spikes",
-          "Hidden Power Grass",
+          "Hidden Power",
           "Taunt"
         ]
       ],
@@ -92272,7 +92272,7 @@
         ],
         [
           "Toxic Spikes",
-          "Hidden Power Grass"
+          "Hidden Power"
         ]
       ],
       "ability": "Protean",
@@ -92617,7 +92617,7 @@
         ],
         [
           "Overheat",
-          "Hidden Power Grass"
+          "Hidden Power"
         ],
         [
           "Swords Dance",
@@ -93422,7 +93422,7 @@
           "Hyper Voice"
         ],
         [
-          "Hidden Power Grass"
+          "Hidden Power"
         ],
         [
           "Will-O-Wisp"
@@ -93458,7 +93458,7 @@
           "Hyper Voice"
         ],
         [
-          "Hidden Power Grass"
+          "Hidden Power"
         ],
         [
           "Will-O-Wisp",
@@ -93485,7 +93485,7 @@
       "name": "Special Attacker"
     }
   ],
-  "Flabe\u0301be\u0301": [
+  "Flabebe": [
     {
       "moves": [
         [
@@ -93499,8 +93499,8 @@
         ],
         [
           "Psychic",
-          "Hidden Power Fire",
-          "Hidden Power Ground"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -93964,7 +93964,7 @@
           "Psychic"
         ],
         [
-          "Hidden Power Fighting"
+          "Hidden Power"
         ],
         [
           "Shadow Ball"
@@ -94003,7 +94003,7 @@
           "Dark Pulse"
         ],
         [
-          "Hidden Power Fighting"
+          "Hidden Power"
         ]
       ],
       "ability": "Competitive",
@@ -94695,8 +94695,8 @@
           "Hydro Pump"
         ],
         [
-          "Hidden Power Fire",
-          "Hidden Power Psychic"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Scald",
@@ -94804,7 +94804,7 @@
         ],
         [
           "Focus Blast",
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Toxic Spikes"
@@ -94871,7 +94871,7 @@
         ],
         [
           "Focus Blast",
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Scald"
@@ -94903,7 +94903,7 @@
           "Sludge Wave"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Focus Blast",
@@ -94937,7 +94937,7 @@
         ],
         [
           "Focus Blast",
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Protect",
@@ -95050,7 +95050,7 @@
         ],
         [
           "Surf",
-          "Hidden Power Ground"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -95118,7 +95118,7 @@
           "Grass Knot"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ],
         [
           "Toxic",
@@ -95349,7 +95349,7 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Fire",
+          "Hidden Power",
           "Hyper Beam"
         ]
       ],
@@ -95526,7 +95526,7 @@
           "Psyshock"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Shadow Ball"
@@ -95590,8 +95590,8 @@
           "Psyshock"
         ],
         [
-          "Hidden Power Fire",
-          "Hidden Power Ground"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Shadow Ball"
@@ -95690,8 +95690,8 @@
           "Shadow Ball"
         ],
         [
-          "Hidden Power Fire",
-          "Hidden Power Ground"
+          "Hidden Power",
+          "Hidden Power"
         ]
       ],
       "ability": "Pixilate",
@@ -95726,7 +95726,7 @@
         [
           "Snore",
           "Psyshock",
-          "Hidden Power Fire"
+          "Hidden Power"
         ]
       ],
       "ability": "Pixilate",
@@ -95759,7 +95759,7 @@
         ],
         [
           "Shadow Ball",
-          "Hidden Power Ground"
+          "Hidden Power"
         ],
         [
           "Moonblast",
@@ -95793,7 +95793,7 @@
           "Psyshock"
         ],
         [
-          "Hidden Power Ground",
+          "Hidden Power",
           "Shadow Ball"
         ],
         [
@@ -95828,7 +95828,7 @@
           "Hyper Beam"
         ],
         [
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Shadow Ball"
@@ -96096,7 +96096,7 @@
         ],
         [
           "Sludge Wave",
-          "Hidden Power Fighting"
+          "Hidden Power"
         ],
         [
           "Rest"
@@ -97173,7 +97173,7 @@
         ],
         [
           "Focus Blast",
-          "Hidden Power Ground"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -97232,7 +97232,7 @@
           "Moonblast"
         ],
         [
-          "Hidden Power Fire",
+          "Hidden Power",
           "Focus Blast"
         ],
         [
@@ -97599,7 +97599,7 @@
         ],
         [
           "Focus Blast",
-          "Hidden Power Ground"
+          "Hidden Power"
         ],
         [
           "Thunder",
@@ -98381,7 +98381,7 @@
         ],
         [
           "Earth Power",
-          "Hidden Power Fire",
+          "Hidden Power",
           "Stealth Rock"
         ]
       ],
@@ -98510,8 +98510,8 @@
           "Protect"
         ],
         [
-          "Hidden Power Ice",
-          "Hidden Power Fire",
+          "Hidden Power",
+          "Hidden Power",
           "Earth Power"
         ]
       ],
@@ -98577,7 +98577,7 @@
           "Diamond Storm"
         ],
         [
-          "Hidden Power Fire",
+          "Hidden Power",
           "Earth Power"
         ],
         [
@@ -98673,11 +98673,11 @@
         ],
         [
           "Earth Power",
-          "Hidden Power Fire"
+          "Hidden Power"
         ],
         [
           "Protect",
-          "Hidden Power Fire"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -98709,7 +98709,7 @@
         ],
         [
           "Earth Power",
-          "Hidden Power Fire"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -99393,7 +99393,7 @@
           "Sludge Bomb"
         ],
         [
-          "Hidden Power Grass",
+          "Hidden Power",
           "Toxic"
         ]
       ],
@@ -99460,7 +99460,7 @@
           "Sludge Bomb"
         ],
         [
-          "Hidden Power Ice"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -99533,7 +99533,7 @@
           "Sludge Bomb"
         ],
         [
-          "Hidden Power Grass"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -99637,7 +99637,7 @@
           "Sludge Wave"
         ],
         [
-          "Hidden Power Grass",
+          "Hidden Power",
           "Earth Power"
         ]
       ],
@@ -99669,7 +99669,7 @@
           "Sludge Wave"
         ],
         [
-          "Hidden Power Grass"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -99742,7 +99742,7 @@
           "Earth Power"
         ],
         [
-          "Hidden Power Grass",
+          "Hidden Power",
           "Overheat"
         ]
       ],
@@ -99916,7 +99916,7 @@
           "Sludge Wave"
         ],
         [
-          "Hidden Power Ground",
+          "Hidden Power",
           "Thunderbolt"
         ],
         [
@@ -99953,7 +99953,7 @@
           "Recover"
         ],
         [
-          "Hidden Power Ground",
+          "Hidden Power",
           "Thunderbolt",
           "Calm Mind"
         ]
@@ -100273,7 +100273,7 @@
         ],
         [
           "U-turn",
-          "Hidden Power Ground"
+          "Hidden Power"
         ]
       ],
       "item": [
@@ -100301,8 +100301,8 @@
           "Sludge Bomb"
         ],
         [
-          "Hidden Power Fire",
-          "Hidden Power Ice"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Haze"
@@ -100337,8 +100337,8 @@
           "Thunderbolt"
         ],
         [
-          "Hidden Power Fire",
-          "Hidden Power Ice"
+          "Hidden Power",
+          "Hidden Power"
         ],
         [
           "Encore",

@@ -3,7 +3,7 @@ pub mod pokedex {
 
     use serde::{Deserialize, Serialize};
 
-    pub type Pokedex = HashMap<String, PokemonDatabaseEntry>;
+    pub struct Pokedex(HashMap<String, PokemonDatabaseEntry>);
 
     #[derive(Debug, Clone, Serialize, Deserialize)]
     pub struct PokemonDatabaseEntry {
@@ -46,12 +46,51 @@ pub mod pokedex {
                 + self.spd as u32
                 + self.spe as u32
         }
+
+        pub fn is_within_range(&self, bst: u32, plus: u32, minus: u32) -> bool {
+            let diff = i32::abs(self.total() as i32 - bst as i32);
+            (diff as u32) < (plus + minus)
+        }
+    }
+
+    impl std::ops::Deref for Pokedex {
+        type Target = HashMap<String, PokemonDatabaseEntry>;
+
+        fn deref(&self) -> &Self::Target {
+            &self.0
+        }
+    }
+
+    impl std::ops::DerefMut for Pokedex {
+        fn deref_mut(&mut self) -> &mut Self::Target {
+            &mut self.0
+        }
+    }
+
+    impl Pokedex {
+        // TODO: Return an iterator over reference instead ?
+        pub fn get_all_within_bst_range(
+            &self,
+            bst: u32,
+            plus: u32,
+            minus: u32,
+        ) -> Vec<PokemonDatabaseEntry> {
+            let mut mons = vec![];
+
+            for (_, value) in self.0.iter() {
+                if value.base_stats.is_within_range(bst, plus, minus) {
+                    mons.push(value.clone());
+                }
+            }
+
+            mons
+        }
     }
 
     pub fn load_pokedex(path: &Path) -> eyre::Result<Pokedex> {
         let content = read_to_string(path)?;
-        let result: Pokedex = serde_json::from_str(&content)?;
+        let result: HashMap<_, _> = serde_json::from_str(&content)?;
 
-        Ok(result)
+        Ok(Pokedex(result))
     }
 }

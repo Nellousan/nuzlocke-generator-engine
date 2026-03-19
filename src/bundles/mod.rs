@@ -10,7 +10,7 @@ pub type Species = String;
 pub type SetBundle = HashMap<Species, Vec<PokemonBundleSet>>;
 
 // TODO: Implement tera types, dynamax level
-#[derive(Debug, Deserialize)]
+#[derive(Clone, Debug, Deserialize)]
 pub struct PokemonBundleSet {
     pub format: String,
     pub name: String,
@@ -26,7 +26,7 @@ pub struct PokemonBundleSet {
 impl PokemonBundleSet {
     pub fn generate_set<R: Rng + ?Sized>(
         &self,
-        species: Species,
+        species: &str,
         level: u8,
         rng: &mut R,
     ) -> PokemonSet {
@@ -48,10 +48,11 @@ impl PokemonBundleSet {
             };
         }
 
-        let held_item = self
-            .item
-            .get(rng.next_u32() as usize % self.item.len())
-            .expect("modulo len");
+        let held_item = if !self.item.is_empty() {
+            self.item.get(rng.next_u32() as usize % self.item.len())
+        } else {
+            None
+        };
 
         let _evs = if let Some(ref evs) = self.evs {
             Some(
@@ -69,9 +70,9 @@ impl PokemonBundleSet {
             .expect("modulo len");
 
         PokemonSet {
-            species,
+            species: species.to_owned(),
             gender: PokemonGender::None,
-            held_item: Some(held_item.clone()),
+            held_item: held_item.cloned(),
             level: Some(level),
             ivs: None, // TODO: Implement ivs
             evs: None, // TODO: implement evs

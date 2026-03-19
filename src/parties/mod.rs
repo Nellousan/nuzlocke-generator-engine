@@ -69,7 +69,7 @@ pub mod party {
         speed: Option<u8>,
     }
 
-    #[derive(Default, Debug)]
+    #[derive(Clone, Default, Debug)]
     #[expect(dead_code)]
     pub struct PokemonSet {
         // nickname: String,
@@ -97,7 +97,7 @@ pub mod party {
     }
 }
 
-#[derive(Default, Debug)]
+#[derive(Clone, Default, Debug)]
 pub struct Trainer {
     pub id: String,
     pub name: String,
@@ -113,7 +113,7 @@ pub struct Trainer {
     pub party: [Option<party::PokemonSet>; 6],
 }
 
-#[derive(Default, Debug)]
+#[derive(Clone, Default, Debug)]
 pub struct Parties {
     parties: Vec<Trainer>,
     name_map: HashMap<String, usize>, // Map of trainer id to the index

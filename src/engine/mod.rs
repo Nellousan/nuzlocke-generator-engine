@@ -1,6 +1,10 @@
 use rand::Rng;
 
-use crate::{bundles::SetBundle, database::pokedex::Pokedex, parties::Parties};
+use crate::{
+    bundles::{PokemonBundleSet, SetBundle},
+    database::pokedex::{Pokedex, PokemonDatabaseEntry},
+    parties::{Parties, party::PokemonSet},
+};
 
 #[expect(dead_code)]
 type FnRndParties<P> = Box<dyn Fn(&P) -> P>;
@@ -39,20 +43,64 @@ impl<R: Rng + ?Sized> Engine<R> {
     //     unimplemented!()
     // }
 
-    pub fn randomize_parties(&mut self) {
-        let squirtle_sets = self.set_bundle.get("Squirtle").unwrap();
-        let set = squirtle_sets
-            .get(self.rng.next_u32() as usize % squirtle_sets.len())
-            .expect("modulo len");
+    fn get_random_mon_within_bst_range(&mut self, set: &PokemonSet) -> PokemonDatabaseEntry {
+        tracing::debug!(?set);
+        let set_database_entry = self
+            .pokedex
+            .get(&set.species.to_lowercase().replace('-', ""))
+            .unwrap();
+        let all_within_range =
+            self.pokedex
+                .get_all_within_bst_range(set_database_entry.base_stats.total(), 30, 30);
+        all_within_range
+            .get(self.rng.next_u32() as usize % all_within_range.len())
+            .expect("modulo len")
+            .clone()
+    }
 
-        for party in self.parties.iter_mut() {
+    fn get_random_bundle_set(
+        &mut self,
+        database_entry: &PokemonDatabaseEntry,
+    ) -> Option<PokemonBundleSet> {
+        let Some(mon_sets) = self.set_bundle.get(&database_entry.name) else {
+            return None;
+        };
+
+        Some(
+            mon_sets
+                .get(self.rng.next_u32() as usize % mon_sets.len())
+                .expect("modulo len")
+                .clone(),
+        )
+    }
+
+    fn generate_new_pokemon_set(&mut self, pkmn_set: &PokemonSet) -> PokemonSet {
+        let mut database_entry = self.get_random_mon_within_bst_range(&pkmn_set);
+        let mut random_bundle_set = self.get_random_bundle_set(&database_entry);
+
+        while let None = random_bundle_set {
+            tracing::debug!("Rerolling pokemon species");
+            database_entry = self.get_random_mon_within_bst_range(&pkmn_set);
+            random_bundle_set = self.get_random_bundle_set(&database_entry);
+        }
+
+        let random_bundle_set = random_bundle_set.unwrap();
+
+        random_bundle_set.generate_set(&database_entry.name, pkmn_set.level.unwrap(), &mut self.rng)
+    }
+
+    pub fn randomize_parties(&mut self) {
+        let mut new_parties = self.parties.clone();
+        for party in new_parties.iter_mut() {
             for maybe_mon in party.party.iter_mut() {
                 if let Some(mon) = maybe_mon {
-                    *mon =
-                        set.generate_set("Squirtle".to_owned(), mon.level.unwrap(), &mut self.rng);
+                    *mon = self.generate_new_pokemon_set(mon);
+                    tracing::debug!("{:?}", *mon);
                 }
             }
         }
+
+        self.parties = new_parties;
     }
 }
 

@@ -32,6 +32,8 @@ if __name__ == "__main__":
 
                 if "nature" in pkmn_set and type(pkmn_set["nature"]) is not list:
                     pkmn_set["nature"] = [pkmn_set["nature"]]
+                if "ability" in pkmn_set and type(pkmn_set["ability"]) is not list:
+                    pkmn_set["ability"] = [pkmn_set["ability"]]
                 if "evs" in pkmn_set and type(pkmn_set["evs"]) is not list:
                     pkmn_set["evs"] = [pkmn_set["evs"]]
                 if "ivs" in pkmn_set and type(pkmn_set["ivs"]) is not list:

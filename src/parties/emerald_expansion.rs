@@ -70,6 +70,7 @@ fn parse_mons_fields(content: &str, re: &Regex) -> Result<[Option<PokemonSet>; 6
         mon.ivs = cap_get_or_none(&cap, "individual_values");
         mon.evs = cap_get_or_none(&cap, "effort_values");
         mon.ball = cap_get_or_none(&cap, "ball");
+        mon.ability = cap_get_or_none(&cap, "ability");
         mon.happiness = cap_get_or_none(&cap, "happiness")
             .and_then(|h| Some(h.parse()))
             .transpose()?;
@@ -205,6 +206,8 @@ fn write_mons_field(mons: &[Option<PokemonSet>; 6]) -> Result<String, PartyError
         push_field_if_some(&pokemon.evs, "EVs", &mut mon_fields);
 
         push_field_if_some(&pokemon.ball, "Ball", &mut mon_fields);
+
+        push_field_if_some(&pokemon.ability, "Ability", &mut mon_fields);
 
         if let Some(value) = pokemon.happiness {
             let happiness = format!("Happiness: {}", value);

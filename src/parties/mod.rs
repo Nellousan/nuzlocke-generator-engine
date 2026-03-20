@@ -78,9 +78,10 @@ pub mod party {
         pub held_item: Option<String>,
         pub level: Option<u8>, // Defaults to 100
         // TODO: This is temporary. Parse ivs and evs properly.
-        pub ivs: Option<String>,    // PokemonIVs,
-        pub evs: Option<String>,    // PokemonEVs,
-        pub ball: Option<String>,   // Defaults to PokeBall
+        pub ivs: Option<String>,  // PokemonIVs,
+        pub evs: Option<String>,  // PokemonEVs,
+        pub ball: Option<String>, // Defaults to PokeBall
+        pub ability: Option<String>,
         pub happiness: Option<u8>,  // Defaults to 0
         pub nature: Option<String>, // Defaults to Hardy
         pub shiny: bool,            // Defaults to False

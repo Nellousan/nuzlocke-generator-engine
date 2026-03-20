@@ -16,7 +16,6 @@ pub struct EngineBuilder<E> {
     encounters: E,
 }
 
-#[expect(dead_code)]
 pub struct Engine<R>
 where
     R: Rng + ?Sized,
@@ -90,7 +89,7 @@ impl<R: Rng + ?Sized> Engine<R> {
     }
 
     pub fn randomize_parties(&mut self) {
-        let mut new_parties = self.parties.clone();
+        let mut new_parties = std::mem::take(&mut self.parties);
         for party in new_parties.iter_mut() {
             for maybe_mon in party.party.iter_mut() {
                 if let Some(mon) = maybe_mon {

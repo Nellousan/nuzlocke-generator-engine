@@ -17,6 +17,7 @@ pub struct PokemonBundleSet {
     pub moves: Vec<Vec<String>>,
     pub item: Vec<String>,
     pub nature: Vec<String>,
+    pub ability: Option<Vec<String>>,
     #[serde(default)]
     pub evs: Option<Vec<PokemonEVs>>,
     #[serde(default)]
@@ -69,6 +70,17 @@ impl PokemonBundleSet {
             .get(rng.next_u32() as usize % self.nature.len())
             .expect("modulo len");
 
+        let ability = if let Some(ref ability) = self.ability {
+            Some(
+                ability
+                    .get(rng.next_u32() as usize % ability.len())
+                    .expect("modulo len")
+                    .clone(),
+            )
+        } else {
+            None
+        };
+
         PokemonSet {
             species: species.to_owned(),
             gender: PokemonGender::None,
@@ -77,6 +89,7 @@ impl PokemonBundleSet {
             ivs: None, // TODO: Implement ivs
             evs: None, // TODO: implement evs
             ball: None,
+            ability,
             happiness: Some(255),
             nature: Some(nature.clone()),
             shiny: false,

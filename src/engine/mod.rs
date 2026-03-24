@@ -47,7 +47,7 @@ impl<R: Rng + ?Sized> Engine<R> {
         let set_database_entry = self
             .pokedex
             .get(&set.species.to_lowercase().replace('-', ""))
-            .unwrap();
+            .expect("pokemon should exist");
         let all_within_range =
             self.pokedex
                 .get_all_within_bst_range(set_database_entry.base_stats.total(), 30, 30);
@@ -64,6 +64,8 @@ impl<R: Rng + ?Sized> Engine<R> {
         let Some(mon_sets) = self.set_bundle.get(&database_entry.name) else {
             return None;
         };
+
+        tracing::debug!(?mon_sets, ?database_entry);
 
         Some(
             mon_sets

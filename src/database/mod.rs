@@ -79,7 +79,9 @@ pub mod pokedex {
 
             for (_, value) in self.0.iter() {
                 if value.base_stats.is_within_range(bst, plus, minus) {
-                    mons.push(value.clone());
+                    if value.forme.is_none() {
+                        mons.push(value.clone());
+                    }
                 }
             }
 

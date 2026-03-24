@@ -110,3 +110,31 @@ pub fn load_bundle(path: &Path) -> eyre::Result<SetBundle> {
 
     Ok(bundle)
 }
+
+pub fn load_bundles<'a>(paths: impl AsRef<[&'a Path]>) -> eyre::Result<SetBundle> {
+    let mut bundles = vec![];
+
+    for path in paths.as_ref().iter() {
+        let content = std::fs::read_to_string(path)?;
+        let bundle: SetBundle = serde_json::from_str(&content)?;
+
+        bundles.push(bundle);
+    }
+
+    let mut merged_bundles: SetBundle = HashMap::new();
+
+    for bundle in bundles.iter() {
+        for (key, value) in bundle.iter() {
+            if merged_bundles.contains_key(key) {
+                merged_bundles
+                    .get_mut(key)
+                    .expect("Contains checked")
+                    .extend(value.clone());
+            } else {
+                merged_bundles.insert(key.to_owned(), value.clone());
+            }
+        }
+    }
+
+    Ok(merged_bundles)
+}

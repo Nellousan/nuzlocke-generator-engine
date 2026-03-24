@@ -34,7 +34,12 @@ fn main() -> eyre::Result<()> {
     ////
     let pokedex = pokedex::load_pokedex(Path::new("pokedex.json"))?;
 
-    let set_bundle = bundles::load_bundle(Path::new("bundles/default/gen6.bundle.json"))?;
+    let set_bundle = bundles::load_bundles(vec![
+        Path::new("bundles/default/gen6.bundle.json"),
+        Path::new("bundles/default/gen7.bundle.json"),
+        Path::new("bundles/default/gen8.bundle.json"),
+        // Path::new("bundles/default/gen9.bundle.json"),
+    ])?;
     let content = std::fs::read_to_string("pokeemerald-expansion/src/data/trainers.party")?;
 
     let parties = parties::emerald_expansion::from_emerald_expansion_format(&content)?;

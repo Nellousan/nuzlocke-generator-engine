@@ -9,6 +9,8 @@ if __name__ == "__main__":
     for pkmn, format in sets.items():
         transposed_sets = []
         for format_name, format_sets in format.items():
+            if "hackmon" in format_name:
+                continue
             for set_name, pkmn_set in format_sets.items():
                 pkmn_set["format"] = format_name
                 pkmn_set["name"] = set_name
@@ -29,6 +31,8 @@ if __name__ == "__main__":
                     pkmn_set["item"] = []
                 elif type(pkmn_set["item"]) is not list:
                     pkmn_set["item"] = [pkmn_set["item"]]
+
+                pkmn_set["item"] = [x for x in pkmn_set["item"] if x != "No Item"]
 
                 if "nature" in pkmn_set and type(pkmn_set["nature"]) is not list:
                     pkmn_set["nature"] = [pkmn_set["nature"]]

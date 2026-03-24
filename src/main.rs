@@ -41,41 +41,29 @@ fn main() -> eyre::Result<()> {
         // Path::new("bundles/default/gen9.bundle.json"),
     ])?;
     let content = std::fs::read_to_string("pokeemerald-expansion/src/data/trainers.party")?;
-
     let parties = parties::emerald_expansion::from_emerald_expansion_format(&content)?;
 
+    let content = std::fs::read_to_string("pokeemerald-expansion/src/data/wild_encounters.json")?;
+    let encounters: Encounters = serde_json::from_str(&content)?;
     let rng = rand::rng();
 
     let mut engine = Engine {
         parties,
+        encounters,
         pokedex,
         set_bundle,
         rng,
     };
 
     engine.randomize_parties();
+    engine.randomize_encounters();
 
     let result = parties::emerald_expansion::to_emerald_expansion_format(&engine.parties)?;
 
     let mut file = std::fs::File::create("pokeemerald-expansion/src/data/trainers.party")?;
     file.write_all(result.as_bytes())?;
 
-    let content = std::fs::read_to_string("pokeemerald-expansion/src/data/wild_encounters.json")?;
-
-    let mut encounters: Encounters = serde_json::from_str(&content)?;
-    for encounter_group in encounters.wild_encounter_groups.iter_mut() {
-        for encounter_map in encounter_group.encounters.iter_mut() {
-            if let Some(ref mut set) = encounter_map.land_mons {
-                for set_mon in set.mons.iter_mut() {
-                    set_mon.species = "SPECIES_MEWTWO".to_owned();
-                }
-            }
-        }
-    }
-
-    tracing::debug!(?encounters);
-
-    let result = serde_json::to_string(&encounters)?;
+    let result = serde_json::to_string(&engine.encounters)?;
 
     let mut file = std::fs::File::create("pokeemerald-expansion/src/data/wild_encounters.json")?;
     file.write_all(result.as_bytes())?;

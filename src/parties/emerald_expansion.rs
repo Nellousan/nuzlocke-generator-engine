@@ -285,7 +285,5 @@ pub fn to_emerald_expansion_format(parties: &Parties) -> Result<String, PartyErr
         result.push_str(&mons);
     }
 
-    tracing::debug!("{}", result);
-
     Ok(result)
 }

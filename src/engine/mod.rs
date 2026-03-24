@@ -3,6 +3,7 @@ use rand::Rng;
 use crate::{
     bundles::{PokemonBundleSet, SetBundle},
     database::pokedex::{Pokedex, PokemonDatabaseEntry},
+    encounters::Encounters,
     parties::{Parties, party::PokemonSet},
 };
 
@@ -16,12 +17,13 @@ pub struct EngineBuilder<E> {
     encounters: E,
 }
 
-pub struct Engine<R>
+pub struct Engine<R, E>
 where
     R: Rng + ?Sized,
+    E: Encounters<R>,
 {
     pub parties: Parties,
-    // encounters: E,
+    pub encounters: E,
     pub pokedex: Pokedex,
     pub set_bundle: SetBundle,
     pub rng: R,
@@ -30,7 +32,7 @@ where
     // Encounter randomization function
 }
 
-impl<R: Rng + ?Sized> Engine<R> {
+impl<R: Rng + ?Sized, E: Encounters<R>> Engine<R, E> {
     // pub fn randomize_encounters(&mut self, rd_fn: FnRndEncounters<E>) {
     //     rd_fn(&self.encounters);
     //     unimplemented!()
@@ -46,7 +48,7 @@ impl<R: Rng + ?Sized> Engine<R> {
         tracing::debug!(?set);
         let set_database_entry = self
             .pokedex
-            .get(&set.species.to_lowercase().replace('-', ""))
+            .get(&set.species.to_lowercase().replace('-', "").replace(' ', ""))
             .expect("pokemon should exist");
         let all_within_range =
             self.pokedex
@@ -102,6 +104,10 @@ impl<R: Rng + ?Sized> Engine<R> {
         }
 
         self.parties = new_parties;
+    }
+
+    pub fn randomize_encounters(&mut self) {
+        self.encounters.randomize(&self.pokedex, &mut self.rng);
     }
 }
 

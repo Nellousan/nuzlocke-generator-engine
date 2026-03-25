@@ -79,7 +79,6 @@ impl<R: Rng + ?Sized> crate::encounters::Encounters<R> for Encounters {
 
                     let mut replace_mon = vec![];
                     for species in hash_set.iter() {
-                        // tracing::debug!(?species);
                         let mon_db_entry = pokedex
                             .get(
                                 &species
@@ -110,18 +109,14 @@ impl<R: Rng + ?Sized> crate::encounters::Encounters<R> for Encounters {
                     for set in encounter_set.mons.iter_mut() {
                         set.species = format!(
                             "SPECIES_{}",
-                            replace_map[&set.species]
-                                .replace("é", "e")
-                                .replace('’', "_")
+                            unidecode::unidecode(&replace_map[&set.species])
+                                .replace('\'', "_")
                                 .replace(". ", "_")
                                 .replace('-', "_")
                                 .replace(' ', "_")
                                 .replace('.', "")
                                 .to_uppercase()
                         );
-                        if set.species.contains("FLAB") {
-                            tracing::debug!(?set.species);
-                        }
                     }
                 }
             }

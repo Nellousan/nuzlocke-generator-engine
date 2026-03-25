@@ -75,9 +75,10 @@ impl MapEncounterSet {
                         .replace("SPECIES_", "")
                         .to_lowercase()
                         .replace('-', "")
-                        .replace(' ', ""),
+                        .replace(' ', "")
+                        .replace('_', ""),
                 )
-                .unwrap();
+                .unwrap(); // TODO: Error handling
             let candidates =
                 pokedex.get_all_within_bst_range(mon_db_entry.base_stats.total(), 30, 30);
 
@@ -97,7 +98,7 @@ impl MapEncounterSet {
             set.species = format!(
                 "SPECIES_{}",
                 unidecode::unidecode(&replace_map[&set.species])
-                    .replace('\'', "_")
+                    .replace('\'', "")
                     .replace(". ", "_")
                     .replace('-', "_")
                     .replace(' ', "_")

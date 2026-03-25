@@ -48,7 +48,13 @@ impl<R: Rng + ?Sized, E: Encounters<R>> Engine<R, E> {
         tracing::debug!(?set);
         let set_database_entry = self
             .pokedex
-            .get(&set.species.to_lowercase().replace('-', "").replace(' ', ""))
+            .get(
+                &set.species
+                    .to_lowercase()
+                    .replace('-', "")
+                    .replace(' ', "")
+                    .replace(':', ""),
+            )
             .expect("pokemon should exist");
         let all_within_range =
             self.pokedex

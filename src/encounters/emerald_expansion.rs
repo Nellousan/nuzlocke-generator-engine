@@ -60,6 +60,54 @@ pub struct MapEncounterSet {
     pub mons: Vec<MapEncounterSetMon>,
 }
 
+impl MapEncounterSet {
+    pub fn randomize<R: Rng + ?Sized>(&mut self, pokedex: &Pokedex, rng: &mut R) {
+        let mut hash_set = HashSet::new();
+        for mon in self.mons.iter() {
+            hash_set.insert(mon.species.clone());
+        }
+
+        let mut replace_mon = vec![];
+        for species in hash_set.iter() {
+            let mon_db_entry = pokedex
+                .get(
+                    &species
+                        .replace("SPECIES_", "")
+                        .to_lowercase()
+                        .replace('-', "")
+                        .replace(' ', ""),
+                )
+                .unwrap();
+            let candidates =
+                pokedex.get_all_within_bst_range(mon_db_entry.base_stats.total(), 30, 30);
+
+            let chosen = candidates
+                .get(rng.next_u32() as usize % candidates.len())
+                .expect("modulo len");
+
+            replace_mon.push(chosen.clone());
+        }
+
+        let mut replace_map = HashMap::new();
+        for (to_replace, replacement) in hash_set.iter().zip(replace_mon.iter()) {
+            replace_map.insert(to_replace, replacement.name.clone());
+        }
+
+        for set in self.mons.iter_mut() {
+            set.species = format!(
+                "SPECIES_{}",
+                unidecode::unidecode(&replace_map[&set.species])
+                    .replace('\'', "_")
+                    .replace(". ", "_")
+                    .replace('-', "_")
+                    .replace(' ', "_")
+                    .replace('.', "")
+                    .to_uppercase()
+            );
+        }
+    }
+}
+
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MapEncounterSetMon {
     pub min_level: u8,
@@ -72,52 +120,16 @@ impl<R: Rng + ?Sized> crate::encounters::Encounters<R> for Encounters {
         for encounter_group in self.wild_encounter_groups.iter_mut() {
             for map_encouters in encounter_group.encounters.iter_mut() {
                 if let Some(ref mut encounter_set) = map_encouters.land_mons {
-                    let mut hash_set = HashSet::new();
-                    for mon in encounter_set.mons.iter() {
-                        hash_set.insert(mon.species.clone());
-                    }
-
-                    let mut replace_mon = vec![];
-                    for species in hash_set.iter() {
-                        let mon_db_entry = pokedex
-                            .get(
-                                &species
-                                    .replace("SPECIES_", "")
-                                    .to_lowercase()
-                                    .replace('-', "")
-                                    .replace(' ', ""),
-                            )
-                            .unwrap();
-                        let candidates = pokedex.get_all_within_bst_range(
-                            mon_db_entry.base_stats.total(),
-                            30,
-                            30,
-                        );
-
-                        let chosen = candidates
-                            .get(rng.next_u32() as usize % candidates.len())
-                            .expect("modulo len");
-
-                        replace_mon.push(chosen.clone());
-                    }
-
-                    let mut replace_map = HashMap::new();
-                    for (to_replace, replacement) in hash_set.iter().zip(replace_mon.iter()) {
-                        replace_map.insert(to_replace, replacement.name.clone());
-                    }
-
-                    for set in encounter_set.mons.iter_mut() {
-                        set.species = format!(
-                            "SPECIES_{}",
-                            unidecode::unidecode(&replace_map[&set.species])
-                                .replace('\'', "_")
-                                .replace(". ", "_")
-                                .replace('-', "_")
-                                .replace(' ', "_")
-                                .replace('.', "")
-                                .to_uppercase()
-                        );
-                    }
+                    encounter_set.randomize(pokedex, rng);
+                }
+                if let Some(ref mut encounter_set) = map_encouters.water_mons {
+                    encounter_set.randomize(pokedex, rng);
+                }
+                if let Some(ref mut encounter_set) = map_encouters.fishing_mons {
+                    encounter_set.randomize(pokedex, rng);
+                }
+                if let Some(ref mut encounter_set) = map_encouters.rock_smash_mons {
+                    encounter_set.randomize(pokedex, rng);
                 }
             }
         }

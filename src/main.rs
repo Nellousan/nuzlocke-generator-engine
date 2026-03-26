@@ -38,7 +38,7 @@ fn main() -> eyre::Result<()> {
         Path::new("bundles/default/gen6.bundle.json"),
         Path::new("bundles/default/gen7.bundle.json"),
         Path::new("bundles/default/gen8.bundle.json"),
-        // Path::new("bundles/default/gen9.bundle.json"),
+        Path::new("bundles/default/gen9.bundle.json"),
     ])?;
     let content = std::fs::read_to_string("pokeemerald-expansion/src/data/trainers.party")?;
     let parties = parties::emerald_expansion::from_emerald_expansion_format(&content)?;

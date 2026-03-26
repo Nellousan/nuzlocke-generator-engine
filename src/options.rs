@@ -36,6 +36,7 @@ impl Default for BaseProjectOptions {
 pub struct ExpansionOptions {
     pub project_path: PathBuf,
     pub trainers_party_file_path: PathBuf,
+    pub encounters_file_path: PathBuf,
 }
 
 impl Default for ExpansionOptions {
@@ -43,6 +44,7 @@ impl Default for ExpansionOptions {
         Self {
             project_path: PathBuf::from("pokeemerald-expansion"),
             trainers_party_file_path: PathBuf::from("/src/data/trainers.party"),
+            encounters_file_path: PathBuf::from("src/data/wild_encounters.json"),
         }
     }
 }

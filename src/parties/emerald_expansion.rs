@@ -260,6 +260,8 @@ fn write_trainer_fields(trainer: &Trainer) -> Result<String, PartyError> {
     push_field_if_some(&trainer.music, "Music", &mut result);
     push_field_if_some(&trainer.items, "Items", &mut result);
 
+    result.push_ln("AI: Smart Trainer");
+
     let line = format!(
         "Double Battle: {}",
         if trainer.double_battle { "Yes" } else { "No" }

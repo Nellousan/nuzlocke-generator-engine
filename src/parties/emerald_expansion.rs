@@ -21,7 +21,7 @@ static DEFAULT_TRAINER_FIELDS_REGEX: &str = r"(?:(?:Name: ?(?<name>[\w ]+)?\n?)|
 // TODO: Improve to handle Nicknames and Happiness
 /// https://regex101.com/r/oC2CeP
 /// https://regex101.com/r/2v9kpN/1
-static DEFAULT_POKEMON_FIELDS_REGEX: &str = r"(?<species>[\w :-]+)(?: (?:\((?<gender>[MF])\))? ?(?:@ (?<item>[\w\- ]+)))?\n(?:(?:Level+: (?<level>[0-9]+\s*))\n|(?:Happiness+: (?<happiness>[0-9]+\s*))\n|(?:Ability: (?<ability>[\w ]+\s*))\n|(?:Tera Type: (?<tera_type>[\w]+\s*))\n|(?:EVs: (?<effort_values>[\w/ ]+\s*))\n|(?:IVs: (?<individual_values>[\w/ ]+\s*))\n|(?:Shiny: (?<Shiny>[\w]+\s*))\n|(?:Ball: (?<Ball>[\w]+\s*))\n|(?:(?<nature>[\w]+) Nature[\s]*\n))+(?:- (?<move_1>[\w\- ]+)\n?)?(?:- (?<move_2>[\w\- ]+)\n?)?(?:- (?<move_3>[\w\- ]+)\n?)?(?:- (?<move_4>[\w\- ]+)\n?)?";
+static DEFAULT_POKEMON_FIELDS_REGEX: &str = r"(?<species>[\w :-]+)(?: (?:\((?<gender>[MF])\))? ?(?:@ (?<item>[\w\- ]+)))?\n(?:(?:Level+: (?<level>[0-9]+\s*))\n|(?:Happiness+: (?<happiness>[0-9]+\s*))\n|(?:Ability: (?<ability>[\w -]+\s*))\n|(?:Tera Type: (?<tera_type>[\w]+\s*))\n|(?:EVs: (?<effort_values>[\w/ ]+\s*))\n|(?:IVs: (?<individual_values>[\w/ ]+\s*))\n|(?:Shiny: (?<Shiny>[\w]+\s*))\n|(?:Ball: (?<Ball>[\w]+\s*))\n|(?:(?<nature>[\w]+) Nature[\s]*\n))+(?:- (?<move_1>[\w\- ]+)\n?)?(?:- (?<move_2>[\w\- ]+)\n?)?(?:- (?<move_3>[\w\- ]+)\n?)?(?:- (?<move_4>[\w\- ]+)\n?)?";
 
 pub struct ParsingConfig<'a> {
     trainer_regex: &'a str,
@@ -50,6 +50,7 @@ fn parse_mons_fields(content: &str, re: &Regex) -> Result<[Option<PokemonSet>; 6
     for (i, cap) in re.captures_iter(content).enumerate() {
         if i > 5 {
             let error = "More than 6 pokemon found in party";
+            tracing::debug!(?mons);
             tracing::error!(error);
             return Err(PartyError::ParsingError(error.to_owned()));
         }

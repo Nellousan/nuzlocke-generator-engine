@@ -36,7 +36,6 @@ pub mod pokedex {
         pub spe: u8,
     }
 
-    #[expect(dead_code)]
     impl PokemonDatabaseEntryBaseStats {
         pub fn total(&self) -> u32 {
             self.hp as u32

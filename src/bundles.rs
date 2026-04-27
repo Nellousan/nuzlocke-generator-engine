@@ -1,4 +1,7 @@
-use std::{collections::HashMap, path::Path};
+use std::{
+    collections::HashMap,
+    path::{Path, PathBuf},
+};
 
 use rand::Rng;
 use serde::Deserialize;
@@ -117,7 +120,7 @@ pub fn load_bundle(path: &Path) -> eyre::Result<SetBundle> {
     Ok(bundle)
 }
 
-pub fn load_bundles<'a>(paths: impl AsRef<[&'a Path]>) -> eyre::Result<SetBundle> {
+pub fn load_bundles(paths: impl AsRef<[PathBuf]>) -> eyre::Result<SetBundle> {
     let mut bundles = vec![];
 
     for path in paths.as_ref().iter() {

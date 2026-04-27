@@ -1,22 +1,22 @@
 use std::{io::Write, path::Path};
 
+use clap::Parser;
 use encounters::emerald_expansion::Encounters;
-use tracing::Level;
 use tracing_subscriber::{Layer, filter, layer::SubscriberExt};
 
 use crate::{database::pokedex, engine::Engine};
 
 mod bundles;
+mod cli;
 mod database;
 mod encounters;
 mod engine;
-mod options;
 mod parties;
 
 fn main() -> eyre::Result<()> {
-    let options = options::parse_options()?;
-    let log_file = std::fs::File::create(&options.log_file.unwrap_or("log.log".into()))?;
-    let log_level = options.log_level.unwrap_or(Level::DEBUG);
+    let cli = cli::Cli::parse();
+    let log_file = std::fs::File::create(&cli.log_file)?;
+    let log_level = cli.log_level.into();
     let registry = tracing_subscriber::registry()
         .with(
             tracing_subscriber::fmt::layer()
@@ -32,14 +32,9 @@ fn main() -> eyre::Result<()> {
     tracing::subscriber::set_global_default(registry)?;
 
     ////
-    let pokedex = pokedex::load_pokedex(Path::new("pokedex.json"))?;
+    let pokedex = pokedex::load_pokedex(Path::new(&cli.pokedex))?;
 
-    let set_bundle = bundles::load_bundles(vec![
-        Path::new("bundles/default/gen6.bundle.json"),
-        Path::new("bundles/default/gen7.bundle.json"),
-        Path::new("bundles/default/gen8.bundle.json"),
-        Path::new("bundles/default/gen9.bundle.json"),
-    ])?;
+    let set_bundle = bundles::load_bundles(&cli.bundles)?;
     let content = std::fs::read_to_string("pokeemerald-expansion/src/data/trainers.party")?;
     let parties = parties::emerald_expansion::from_emerald_expansion_format(&content)?;
 

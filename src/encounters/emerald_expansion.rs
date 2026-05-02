@@ -135,4 +135,8 @@ impl<R: Rng + ?Sized> crate::encounters::Encounters<R> for Encounters {
             }
         }
     }
+
+    fn serialize(&self) -> Result<String, serde_json::Error> {
+        serde_json::to_string(self)
+    }
 }

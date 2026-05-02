@@ -4,6 +4,8 @@
 
 use std::collections::HashMap;
 
+use crate::cli::ProjectOption;
+
 pub mod emerald_expansion;
 pub mod error;
 
@@ -98,6 +100,8 @@ pub mod party {
     }
 }
 
+// TODO: These two structs should be emerald-expansion specific
+// and parties should be a trait
 #[derive(Clone, Default, Debug)]
 pub struct Trainer {
     pub id: String,
@@ -173,5 +177,19 @@ impl std::ops::Deref for Parties {
 impl std::ops::DerefMut for Parties {
     fn deref_mut(&mut self) -> &mut Self::Target {
         &mut self.parties
+    }
+}
+
+pub fn load_parties(project_options: &ProjectOption) -> eyre::Result<Parties> {
+    match project_options {
+        ProjectOption::EmeraldExpansion(ee_options) => {
+            let parties_file_path = ee_options
+                .project_path
+                .join(&ee_options.trainers_party_file_path);
+
+            let content = std::fs::read_to_string(parties_file_path)?;
+
+            Ok(emerald_expansion::from_emerald_expansion_format(&content)?)
+        }
     }
 }

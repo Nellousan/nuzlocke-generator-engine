@@ -8,42 +8,24 @@ use crate::{
 };
 
 #[expect(dead_code)]
-type FnRndParties<P> = Box<dyn Fn(&P) -> P>;
-type FnRndEncounters<E> = Box<dyn Fn(&E) -> E>;
-
-#[expect(dead_code)]
 pub struct EngineBuilder<E> {
     parties: Parties,
     encounters: E,
 }
 
-pub struct Engine<R, E>
+pub struct Engine<R>
 where
     R: Rng + ?Sized,
-    E: Encounters<R>,
 {
     pub parties: Parties,
-    pub encounters: E,
+    pub encounters: Box<dyn Encounters<R>>,
     pub pokedex: Pokedex,
     pub set_bundle: SetBundle,
-    pub rng: R,
-    // Pokemon set lists
-    // Parties randomization funtion
-    // Encounter randomization function
+    pub cli_options: crate::cli::Cli,
+    pub rng: Box<R>,
 }
 
-impl<R: Rng + ?Sized, E: Encounters<R>> Engine<R, E> {
-    // pub fn randomize_encounters(&mut self, rd_fn: FnRndEncounters<E>) {
-    //     rd_fn(&self.encounters);
-    //     unimplemented!()
-    // }
-
-    // pub fn randomize_all(&mut self) {
-    //     let f: FnRndEncounters<E> = Box::new(expansion_encounter_randomizer);
-    //     self.randomize_encounters(f);
-    //     unimplemented!()
-    // }
-
+impl<R: Rng + ?Sized> Engine<R> {
     fn get_random_mon_within_bst_range(&mut self, set: &PokemonSet) -> PokemonDatabaseEntry {
         tracing::debug!(?set);
         let set_database_entry = self
@@ -93,7 +75,7 @@ impl<R: Rng + ?Sized, E: Encounters<R>> Engine<R, E> {
             random_bundle_set = self.get_random_bundle_set(&database_entry);
         }
 
-        let random_bundle_set = random_bundle_set.unwrap();
+        let random_bundle_set = random_bundle_set.expect("Cannot be None");
 
         random_bundle_set.generate_set(&database_entry.name, pkmn_set.level.unwrap(), &mut self.rng)
     }
@@ -115,8 +97,4 @@ impl<R: Rng + ?Sized, E: Encounters<R>> Engine<R, E> {
     pub fn randomize_encounters(&mut self) {
         self.encounters.randomize(&self.pokedex, &mut self.rng);
     }
-}
-
-fn expansion_encounter_randomizer<E>(_: &E) -> E {
-    unimplemented!()
 }

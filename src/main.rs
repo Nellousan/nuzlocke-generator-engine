@@ -1,7 +1,6 @@
 use std::{io::Write, path::Path};
 
 use clap::Parser;
-use encounters::emerald_expansion::Encounters;
 use tracing_subscriber::{Layer, filter, layer::SubscriberExt};
 
 use crate::{database::pokedex, engine::Engine};
@@ -35,11 +34,10 @@ fn main() -> eyre::Result<()> {
     let pokedex = pokedex::load_pokedex(Path::new(&cli.pokedex))?;
 
     let set_bundle = bundles::load_bundles(&cli.bundles)?;
-    let content = std::fs::read_to_string("pokeemerald-expansion/src/data/trainers.party")?;
-    let parties = parties::emerald_expansion::from_emerald_expansion_format(&content)?;
 
-    let content = std::fs::read_to_string("pokeemerald-expansion/src/data/wild_encounters.json")?;
-    let encounters: Encounters = serde_json::from_str(&content)?;
+    let parties = parties::load_parties(&cli.project)?;
+
+    let encounters = encounters::load_encounter(&cli.project)?;
     let rng = rand::rng();
 
     let mut engine = Engine {
@@ -47,7 +45,8 @@ fn main() -> eyre::Result<()> {
         encounters,
         pokedex,
         set_bundle,
-        rng,
+        cli_options: cli,
+        rng: Box::new(rng),
     };
 
     engine.randomize_parties();
@@ -58,7 +57,7 @@ fn main() -> eyre::Result<()> {
     let mut file = std::fs::File::create("pokeemerald-expansion/src/data/trainers.party")?;
     file.write_all(result.as_bytes())?;
 
-    let result = serde_json::to_string(&engine.encounters)?;
+    let result = encounters::Encounters::serialize(engine.encounters.as_ref())?;
 
     let mut file = std::fs::File::create("pokeemerald-expansion/src/data/wild_encounters.json")?;
     file.write_all(result.as_bytes())?;

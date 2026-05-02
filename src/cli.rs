@@ -1,6 +1,6 @@
 use std::path::PathBuf;
 
-use clap::{Parser, Subcommand, ValueEnum};
+use clap::{Args, Parser, Subcommand, ValueEnum};
 
 #[derive(Parser, Debug)]
 #[command(version, about, long_about = None)]
@@ -45,24 +45,27 @@ impl From<LogLevel> for tracing::Level {
     }
 }
 
-#[derive(Subcommand, Debug)]
-pub enum ProjectOption {
-    #[command(version, about, long_about = None)]
-    EmeraldExpansion {
+#[derive(Args, Debug)]
+pub struct EmeraldExpansionOption {
         /// Path to the decompilation project
         #[arg(value_name = "path", default_value = "pokeemerald-expansion")]
-        project_path: PathBuf,
+        pub project_path: PathBuf,
         /// Path to trainers.party file (relative to project path)
         #[arg(value_name = "trainers", default_value = "src/data/trainers.party")]
-        trainers_party_file_path: PathBuf,
+        pub trainers_party_file_path: PathBuf,
         /// Path to wild_encounters.json file (relative to project path)
         #[arg(
             value_name = "encounters",
             default_value = "src/data/wild_encounters.json"
         )]
-        encounters_file_path: PathBuf,
+        pub encounters_file_path: PathBuf,
         /// Encounters will be replaced globally instead of locally.
         #[arg(long, value_name = "global-encounter-rng", default_value_t = false)]
-        global_encounter_randomization: bool,
-    },
+        pub global_encounter_randomization: bool,
+}
+
+#[derive(Subcommand, Debug)]
+pub enum ProjectOption {
+    #[command(version, about, long_about = None)]
+    EmeraldExpansion(EmeraldExpansionOption),
 }

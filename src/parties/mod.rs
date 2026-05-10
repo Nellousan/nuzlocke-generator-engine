@@ -2,7 +2,7 @@
 //! their Pokemon parties. This is the intermediate representation that stands
 //! between the NGE config files and the game specific representation.
 
-use std::collections::HashMap;
+use std::{collections::HashMap, io::Write};
 
 use crate::cli::ProjectOption;
 
@@ -190,6 +190,23 @@ pub fn load_parties(project_options: &ProjectOption) -> eyre::Result<Parties> {
             let content = std::fs::read_to_string(parties_file_path)?;
 
             Ok(emerald_expansion::from_emerald_expansion_format(&content)?)
+        }
+    }
+}
+
+pub fn save_parties(project_options: &ProjectOption, parties: &Parties) -> eyre::Result<()> {
+    match project_options {
+        ProjectOption::EmeraldExpansion(ee_options) => {
+            let parties_file_path = ee_options
+                .project_path
+                .join(&ee_options.trainers_party_file_path);
+
+            let result = crate::parties::emerald_expansion::to_emerald_expansion_format(&parties)?;
+
+            let mut file = std::fs::File::create(parties_file_path)?;
+            file.write_all(result.as_bytes())?;
+
+            Ok(())
         }
     }
 }

@@ -52,15 +52,9 @@ fn main() -> eyre::Result<()> {
     engine.randomize_parties();
     engine.randomize_encounters();
 
-    let result = parties::emerald_expansion::to_emerald_expansion_format(&engine.parties)?;
+    parties::save_parties(&engine.cli_options.project, &engine.parties)?;
 
-    let mut file = std::fs::File::create("pokeemerald-expansion/src/data/trainers.party")?;
-    file.write_all(result.as_bytes())?;
-
-    let result = encounters::Encounters::serialize(engine.encounters.as_ref())?;
-
-    let mut file = std::fs::File::create("pokeemerald-expansion/src/data/wild_encounters.json")?;
-    file.write_all(result.as_bytes())?;
+    encounters::save_encounter(&engine.cli_options.project, &engine.encounters)?;
 
     Ok(())
 }

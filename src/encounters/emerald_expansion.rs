@@ -7,7 +7,7 @@ use std::collections::{HashMap, HashSet};
 use rand::Rng;
 use serde::{Deserialize, Serialize};
 
-use crate::database::pokedex::Pokedex;
+use crate::database::pokedex::{Pokedex, PokemonName};
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Encounters {
@@ -61,7 +61,15 @@ pub struct MapEncounterSet {
 }
 
 impl MapEncounterSet {
-    pub fn randomize<R: Rng + ?Sized>(&mut self, pokedex: &Pokedex, rng: &mut R) {
+    // TODO: Do something about having to convert pokemon names from pokedex entry
+    // name to pokedex key because those conversion are too confusing and the code
+    // is fucking ugly
+    pub fn randomize<R: Rng + ?Sized>(
+        &mut self,
+        pokedex: &Pokedex,
+        rng: &mut R,
+        global_replace_table: &mut Option<HashMap<String, String>>,
+    ) {
         let mut hash_set = HashSet::new();
         for mon in self.mons.iter() {
             hash_set.insert(mon.species.clone());
@@ -69,22 +77,44 @@ impl MapEncounterSet {
 
         let mut replace_mon = vec![];
         for species in hash_set.iter() {
-            let mon_db_entry = pokedex
-                .get(
-                    &species
-                        .replace("SPECIES_", "")
-                        .to_lowercase()
-                        .replace('-', "")
-                        .replace(' ', "")
-                        .replace('_', ""),
-                )
-                .unwrap(); // TODO: Error handling
-            let candidates =
-                pokedex.get_all_within_bst_range(mon_db_entry.base_stats.total(), 30, 30);
+            let species_normalized = species
+                .replace("SPECIES_", "")
+                .to_lowercase()
+                .replace('-', "")
+                .replace(' ', "")
+                .replace('_', "");
+
+            let mon_db_entry = pokedex.get(&species_normalized).unwrap(); // TODO: Error handling
+
+            // TODO: find a way to avoid ugly code duplication involving the global replace map
+            let candidates = if let Some(map) = global_replace_table {
+                if let Some(mon) = map.get(&species_normalized) {
+                    vec![pokedex.get(mon).unwrap().clone()]
+                } else {
+                    pokedex.get_all_within_bst_range(mon_db_entry.base_stats.total(), 30, 30)
+                }
+            } else {
+                pokedex.get_all_within_bst_range(mon_db_entry.base_stats.total(), 30, 30)
+            };
 
             let chosen = candidates
                 .get(rng.next_u32() as usize % candidates.len())
                 .expect("modulo len");
+
+            if let Some(map) = global_replace_table {
+                let chosen_name_normalized = unidecode::unidecode(&chosen.name)
+                    .to_lowercase()
+                    .replace('\'', "")
+                    .replace(". ", "_")
+                    .replace('-', "_")
+                    .replace(' ', "_")
+                    .replace('.', "")
+                    .replace(':', "")
+                    .replace('_', "");
+                if let None = map.get(&chosen_name_normalized) {
+                    map.insert(species_normalized, chosen_name_normalized);
+                }
+            }
 
             replace_mon.push(chosen.clone());
         }
@@ -103,6 +133,7 @@ impl MapEncounterSet {
                     .replace('-', "_")
                     .replace(' ', "_")
                     .replace('.', "")
+                    .replace(':', "")
                     .to_uppercase()
             );
         }
@@ -117,20 +148,28 @@ pub struct MapEncounterSetMon {
 }
 
 impl<R: Rng + ?Sized> crate::encounters::Encounters<R> for Encounters {
-    fn randomize(&mut self, pokedex: &Pokedex, rng: &mut R) {
+    fn randomize(&mut self, pokedex: &Pokedex, rng: &mut R, global_replace_table: bool) {
+        let mut global_replace_table = if global_replace_table {
+            Some(HashMap::new())
+        } else {
+            None
+        };
+
         for encounter_group in self.wild_encounter_groups.iter_mut() {
             for map_encouters in encounter_group.encounters.iter_mut() {
                 if let Some(ref mut encounter_set) = map_encouters.land_mons {
-                    encounter_set.randomize(pokedex, rng);
+                    encounter_set.randomize(pokedex, rng, &mut global_replace_table);
                 }
                 if let Some(ref mut encounter_set) = map_encouters.water_mons {
-                    encounter_set.randomize(pokedex, rng);
+                    encounter_set.randomize(pokedex, rng, &mut global_replace_table);
                 }
                 if let Some(ref mut encounter_set) = map_encouters.fishing_mons {
-                    encounter_set.randomize(pokedex, rng);
+                    encounter_set.randomize(pokedex, rng, &mut global_replace_table);
                 }
                 if let Some(ref mut encounter_set) = map_encouters.rock_smash_mons {
-                    encounter_set.randomize(pokedex, rng);
+                    tracing::debug!("BEFORE\n{:?}", encounter_set);
+                    encounter_set.randomize(pokedex, rng, &mut global_replace_table);
+                    tracing::debug!("AFTER\n{:?}", encounter_set);
                 }
             }
         }

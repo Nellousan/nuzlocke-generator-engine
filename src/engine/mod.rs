@@ -95,6 +95,14 @@ impl<R: Rng + ?Sized> Engine<R> {
     }
 
     pub fn randomize_encounters(&mut self) {
-        self.encounters.randomize(&self.pokedex, &mut self.rng);
+        let options = match self.cli_options.project {
+            crate::cli::ProjectOption::EmeraldExpansion(ref options) => options,
+        };
+
+        self.encounters.randomize(
+            &self.pokedex,
+            &mut self.rng,
+            options.global_encounter_randomization,
+        );
     }
 }

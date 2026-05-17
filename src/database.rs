@@ -5,10 +5,12 @@ pub mod pokedex {
 
     pub struct Pokedex(HashMap<String, PokemonDatabaseEntry>);
 
+    pub type PokemonName = String;
+
     #[derive(Debug, Clone, Serialize, Deserialize)]
     pub struct PokemonDatabaseEntry {
         pub num: u64,
-        pub name: String,
+        pub name: PokemonName,
         #[serde(rename = "baseSpecies")]
         pub base_species: Option<String>,
         pub forme: Option<String>,

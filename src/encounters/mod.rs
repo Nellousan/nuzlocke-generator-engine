@@ -7,7 +7,7 @@ use crate::{cli::ProjectOption, database::pokedex::Pokedex};
 pub mod emerald_expansion;
 
 pub trait Encounters<R: Rng + ?Sized> {
-    fn randomize(&mut self, pokedex: &Pokedex, rng: &mut R);
+    fn randomize(&mut self, pokedex: &Pokedex, rng: &mut R, global_replace_table: bool);
     // Mandatory due to serde::Serialize not being dyn-compatible
     fn serialize(&self) -> Result<String, serde_json::Error>;
 }

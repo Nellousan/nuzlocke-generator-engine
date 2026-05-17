@@ -269,7 +269,7 @@ fn write_trainer_fields(trainer: &Trainer) -> Result<String, PartyError> {
     );
     result.push_ln(&line);
 
-    push_field_if_some(&trainer.ai, "AI", &mut result);
+    // push_field_if_some(&trainer.ai, "AI", &mut result);
     push_field_if_some(&trainer.mugshot, "Mugshot", &mut result);
     push_field_if_some(&trainer.starting_status, "Starting Status", &mut result);
 

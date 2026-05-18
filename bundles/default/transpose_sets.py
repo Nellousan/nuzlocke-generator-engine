@@ -2,6 +2,9 @@ import json
 import sys
 from unidecode import unidecode
 
+# This file is used to transpose pokemon sets gotten from https://github.com/pkmn/smogon
+# into something more usable in the project 
+
 if __name__ == "__main__":
     sets = json.load(open(sys.argv[1]))
     new_sets = {}

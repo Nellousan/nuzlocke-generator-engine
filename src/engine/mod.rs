@@ -27,7 +27,6 @@ where
 
 impl<R: Rng + ?Sized> Engine<R> {
     fn get_random_mon_within_bst_range(&mut self, set: &PokemonSet) -> PokemonDatabaseEntry {
-        tracing::debug!(?set);
         let set_database_entry = self
             .pokedex
             .get(
@@ -54,8 +53,6 @@ impl<R: Rng + ?Sized> Engine<R> {
         let Some(mon_sets) = self.set_bundle.get(&database_entry.name) else {
             return None;
         };
-
-        tracing::debug!(?mon_sets, ?database_entry);
 
         Some(
             mon_sets

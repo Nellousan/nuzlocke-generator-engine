@@ -167,9 +167,7 @@ impl<R: Rng + ?Sized> crate::encounters::Encounters<R> for Encounters {
                     encounter_set.randomize(pokedex, rng, &mut global_replace_table);
                 }
                 if let Some(ref mut encounter_set) = map_encouters.rock_smash_mons {
-                    tracing::debug!("BEFORE\n{:?}", encounter_set);
                     encounter_set.randomize(pokedex, rng, &mut global_replace_table);
-                    tracing::debug!("AFTER\n{:?}", encounter_set);
                 }
             }
         }

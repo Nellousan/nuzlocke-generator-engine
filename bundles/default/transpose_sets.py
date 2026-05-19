@@ -45,6 +45,8 @@ if __name__ == "__main__":
                     pkmn_set["evs"] = [pkmn_set["evs"]]
                 if "ivs" in pkmn_set and type(pkmn_set["ivs"]) is not list:
                     pkmn_set["ivs"] = [pkmn_set["ivs"]]
+                if "teratypes" in pkmn_set and type(pkmn_set["teratypes"]) is not list:
+                    pkmn_set["teratypes"] = [pkmn_set["teratypes"]]
 
                 transposed_sets.append(pkmn_set)
         

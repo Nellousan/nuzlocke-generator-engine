@@ -25,9 +25,27 @@ pub struct PokemonBundleSet {
     pub evs: Option<Vec<PokemonEVs>>,
     #[serde(default)]
     pub ivs: Option<Vec<PokemonIVs>>,
+    #[serde(rename = "teratypes")]
+    pub tera_types: Option<Vec<String>>,
 }
 
 impl PokemonBundleSet {
+    fn pick_one_if_some<R: Rng + ?Sized, T: Clone>(
+        field: &Option<Vec<T>>,
+        rng: &mut R,
+    ) -> Option<T> {
+        if let Some(content) = field {
+            Some(
+                content
+                    .get(rng.next_u32() as usize % content.len())
+                    .expect("modulo len")
+                    .clone(),
+            )
+        } else {
+            None
+        }
+    }
+
     pub fn generate_set<R: Rng + ?Sized>(
         &self,
         species: &str,
@@ -58,45 +76,19 @@ impl PokemonBundleSet {
             None
         };
 
-        let _evs = if let Some(ref evs) = self.evs {
-            Some(
-                evs.get(rng.next_u32() as usize % evs.len())
-                    .expect("modulo len")
-                    .clone(),
-            )
-        } else {
-            None
-        };
+        let evs = Self::pick_one_if_some(&self.evs, rng);
+        let ivs = Self::pick_one_if_some(&self.ivs, rng);
 
-        let nature = if let Some(ref natures) = self.nature {
-            Some(
-                natures
-                    .get(rng.next_u32() as usize % natures.len())
-                    .expect("modulo len")
-                    .clone(),
-            )
-        } else {
-            None
-        };
-
-        let ability = if let Some(ref ability) = self.ability {
-            Some(
-                ability
-                    .get(rng.next_u32() as usize % ability.len())
-                    .expect("modulo len")
-                    .clone(),
-            )
-        } else {
-            None
-        };
+        let nature = Self::pick_one_if_some(&self.nature, rng);
+        let ability = Self::pick_one_if_some(&self.ability, rng);
 
         PokemonSet {
             species: species.to_owned(),
             gender: PokemonGender::None,
             held_item: held_item.cloned(),
             level: Some(level),
-            ivs: None, // TODO: Implement ivs
-            evs: None, // TODO: implement evs
+            ivs,
+            evs,
             ball: None,
             ability,
             happiness: Some(255),

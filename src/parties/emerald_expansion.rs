@@ -274,49 +274,26 @@ fn write_mons_field(mons: &[Option<PokemonSet>; 6]) -> Result<String, PartyError
 
         let push_ivs_if_some = |ivs: &Option<PokemonIVs>, prepend: &str, res: &mut String| {
             if let Some(value) = ivs {
+                let push_stat =
+                    |stat: &Option<u8>, stat_str: &str, first: &mut bool, res: &mut String| {
+                        if let Some(stat) = stat {
+                            if *first {
+                                *first = false;
+                                *res = format!("{} {} {}", res, stat, stat_str);
+                            } else {
+                                *res = format!("{} / {} {}", res, stat, stat_str);
+                            }
+                        }
+                    };
+
                 let mut iv_result = format!("{}:", prepend);
                 let mut first = true;
-                if let Some(health) = value.health {
-                    first = false;
-                    iv_result = format!("{} {} HP", iv_result, health);
-                }
-                if let Some(attack) = value.attack {
-                    if first {
-                        first = false;
-                        iv_result = format!("{} {} Atk", iv_result, attack);
-                    } else {
-                        iv_result = format!("{} / {} Atk", iv_result, attack);
-                    }
-                }
-                if let Some(defense) = value.defense {
-                    if first {
-                        first = false;
-                        iv_result = format!("{} {} Def", iv_result, defense);
-                    } else {
-                        iv_result = format!("{} / {} Def", iv_result, defense);
-                    }
-                }
-                if let Some(sp_attack) = value.sp_attack {
-                    if first {
-                        first = false;
-                        iv_result = format!("{} {} SpA", iv_result, sp_attack);
-                    } else {
-                        iv_result = format!("{} / {} SpA", iv_result, sp_attack);
-                    }
-                }
-                if let Some(sp_defense) = value.sp_defense {
-                    if first {
-                        first = false;
-                        iv_result = format!("{} {} SpD", iv_result, sp_defense);
-                    }
-                    iv_result = format!("{} / {} SpD", iv_result, sp_defense);
-                }
-                if let Some(speed) = value.speed {
-                    if first {
-                        iv_result = format!("{} {} Spe", iv_result, speed);
-                    }
-                    iv_result = format!("{} / {} Spe", iv_result, speed);
-                }
+                push_stat(&value.health, "HP", &mut first, &mut iv_result);
+                push_stat(&value.attack, "Atk", &mut first, &mut iv_result);
+                push_stat(&value.defense, "Def", &mut first, &mut iv_result);
+                push_stat(&value.sp_attack, "SpA", &mut first, &mut iv_result);
+                push_stat(&value.sp_defense, "SpD", &mut first, &mut iv_result);
+                push_stat(&value.speed, "Spe", &mut first, &mut iv_result);
                 res.push_ln(&iv_result);
             }
         };

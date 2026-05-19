@@ -7,7 +7,7 @@ use std::collections::{HashMap, HashSet};
 use rand::Rng;
 use serde::{Deserialize, Serialize};
 
-use crate::database::pokedex::{Pokedex, PokemonName};
+use crate::database::pokedex::Pokedex;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Encounters {

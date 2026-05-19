@@ -3,7 +3,7 @@
 
 use regex::{Captures, Regex};
 
-use crate::parties::party::PokemonGender;
+use crate::parties::party::{PokemonGender, PokemonIVs};
 
 use super::{Parties, Trainer, error::PartyError, party::PokemonSet};
 
@@ -23,10 +23,14 @@ static DEFAULT_TRAINER_FIELDS_REGEX: &str = r"(?:(?:Name: ?(?<name>[\w ]+)?\n?)|
 /// https://regex101.com/r/2v9kpN/1
 static DEFAULT_POKEMON_FIELDS_REGEX: &str = r"(?<species>[\w :-]+)(?: (?:\((?<gender>[MF])\))? ?(?:@ (?<item>[\w\- ]+)))?\n(?:(?:Level+: (?<level>[0-9]+\s*))\n|(?:Happiness+: (?<happiness>[0-9]+\s*))\n|(?:Ability: (?<ability>[\w -]+\s*))\n|(?:Tera Type: (?<tera_type>[\w]+\s*))\n|(?:EVs: (?<effort_values>[\w/ ]+\s*))\n|(?:IVs: (?<individual_values>[\w/ ]+\s*))\n|(?:Shiny: (?<Shiny>[\w]+\s*))\n|(?:Ball: (?<Ball>[\w]+\s*))\n|(?:(?<nature>[\w]+) Nature[\s]*\n))+(?:- (?<move_1>[\w\- ]+)\n?)?(?:- (?<move_2>[\w\- ]+)\n?)?(?:- (?<move_3>[\w\- ]+)\n?)?(?:- (?<move_4>[\w\- ]+)\n?)?";
 
+/// https://regex101.com/r/GMoBaW/1
+static DEFAULT_POKEMON_IVS_EVS_FIELD_REGEX: &str = r"(?:(?<hp>[0-9]+) HP(?: / )?)?(?:(?<atk>[0-9]+) Atk(?: / )?)?(?:(?<def>[0-9]+) Def(?: / )?)?(?:(?<spa>[0-9]+) SpA(?: / )?)?(?:(?<spd>[0-9]+) SpD(?: / )?)?(?:(?<spe>[0-9]+) Spe(?: / )?)?";
+
 pub struct ParsingConfig<'a> {
     trainer_regex: &'a str,
     trainer_fields_regex: &'a str,
     pokemon_fields_regex: &'a str,
+    pokemon_ivs_evs_field_regex: &'a str,
 }
 
 impl<'a> Default for ParsingConfig<'a> {
@@ -35,8 +39,45 @@ impl<'a> Default for ParsingConfig<'a> {
             trainer_regex: DEFAULT_TRAINER_REGEX_DELIMITER,
             trainer_fields_regex: DEFAULT_TRAINER_FIELDS_REGEX,
             pokemon_fields_regex: DEFAULT_POKEMON_FIELDS_REGEX,
+            pokemon_ivs_evs_field_regex: DEFAULT_POKEMON_IVS_EVS_FIELD_REGEX,
         }
     }
+}
+
+fn parse_ivs_evs(content: &str, re: &Regex) -> eyre::Result<PokemonIVs> {
+    let Some(cap) = re.captures(content) else {
+        let error = "Could not parse IVs or EVs fields, regex did not match";
+        tracing::error!(error);
+        return Err(PartyError::ParsingError(error.to_owned()))?;
+    };
+
+    let health = cap_get_or_none(&cap, "hp")
+        .and_then(|v| Some(v.parse()))
+        .transpose()?;
+    let attack = cap_get_or_none(&cap, "atk")
+        .and_then(|v| Some(v.parse()))
+        .transpose()?;
+    let defense = cap_get_or_none(&cap, "def")
+        .and_then(|v| Some(v.parse()))
+        .transpose()?;
+    let sp_attack = cap_get_or_none(&cap, "spa")
+        .and_then(|v| Some(v.parse()))
+        .transpose()?;
+    let sp_defense = cap_get_or_none(&cap, "spd")
+        .and_then(|v| Some(v.parse()))
+        .transpose()?;
+    let speed = cap_get_or_none(&cap, "spe")
+        .and_then(|v| Some(v.parse()))
+        .transpose()?;
+
+    Ok(PokemonIVs {
+        health,
+        attack,
+        defense,
+        sp_attack,
+        sp_defense,
+        speed,
+    })
 }
 
 fn cap_get_or_none(cap: &Captures, field: &str) -> Option<String> {
@@ -44,7 +85,11 @@ fn cap_get_or_none(cap: &Captures, field: &str) -> Option<String> {
         .map_or(None, |c| Some(c.as_str().trim_end().to_owned()))
 }
 
-fn parse_mons_fields(content: &str, re: &Regex) -> Result<[Option<PokemonSet>; 6], PartyError> {
+fn parse_mons_fields(
+    content: &str,
+    re: &Regex,
+    ivs_evs_re: &Regex,
+) -> eyre::Result<[Option<PokemonSet>; 6]> {
     let mut mons: [Option<PokemonSet>; 6] = Default::default();
 
     for (i, cap) in re.captures_iter(content).enumerate() {
@@ -52,42 +97,66 @@ fn parse_mons_fields(content: &str, re: &Regex) -> Result<[Option<PokemonSet>; 6
             let error = "More than 6 pokemon found in party";
             tracing::debug!(?mons);
             tracing::error!(error);
-            return Err(PartyError::ParsingError(error.to_owned()));
+            return Err(PartyError::ParsingError(error.to_owned()))?;
         }
-        let mut mon = PokemonSet::default();
-        mon.species = cap_get_or_none(&cap, "species").ok_or(PartyError::ParsingError(
+        let species = cap_get_or_none(&cap, "species").ok_or(PartyError::ParsingError(
             "Error parsing Pokemon species.".to_owned(),
         ))?;
         // This is weird, maybe rework the gender field into an option and remove
         // the None variant in PokemonGender
-        mon.gender = cap_get_or_none(&cap, "gender")
+        let gender = cap_get_or_none(&cap, "gender")
             .unwrap_or("".to_owned())
             .as_str()
             .try_into()?;
-        mon.held_item = cap_get_or_none(&cap, "held_item");
-        mon.level = cap_get_or_none(&cap, "level")
+        let held_item = cap_get_or_none(&cap, "held_item");
+        let level = cap_get_or_none(&cap, "level")
             .and_then(|lv| Some(lv.parse()))
             .transpose()?;
-        mon.ivs = cap_get_or_none(&cap, "individual_values");
-        mon.evs = cap_get_or_none(&cap, "effort_values");
-        mon.ball = cap_get_or_none(&cap, "ball");
-        mon.ability = cap_get_or_none(&cap, "ability");
-        mon.happiness = cap_get_or_none(&cap, "happiness")
+        let ivs = cap_get_or_none(&cap, "individual_values")
+            .and_then(|ivs| Some(parse_ivs_evs(&ivs, ivs_evs_re)))
+            .transpose()?;
+        let evs = cap_get_or_none(&cap, "effort_values")
+            .and_then(|evs| Some(parse_ivs_evs(&evs, ivs_evs_re)))
+            .transpose()?;
+        let ball = cap_get_or_none(&cap, "ball");
+        let ability = cap_get_or_none(&cap, "ability");
+        let happiness = cap_get_or_none(&cap, "happiness")
             .and_then(|h| Some(h.parse()))
             .transpose()?;
-        mon.nature = cap_get_or_none(&cap, "nature");
-        mon.shiny = if cap_get_or_none(&cap, "shiny").unwrap_or("No".to_owned()) == "Yes" {
+        let nature = cap_get_or_none(&cap, "nature");
+        let shiny = if cap_get_or_none(&cap, "shiny").unwrap_or("No".to_owned()) == "Yes" {
             true
         } else {
             false
         };
         // TODO: dynamax and gigantamax
-        mon.tera_type = cap_get_or_none(&cap, "tera_type");
+        let tera_type = cap_get_or_none(&cap, "tera_type");
 
-        mon.move_1 = cap_get_or_none(&cap, "move_1");
-        mon.move_2 = cap_get_or_none(&cap, "move_2");
-        mon.move_3 = cap_get_or_none(&cap, "move_3");
-        mon.move_4 = cap_get_or_none(&cap, "move_4");
+        let move_1 = cap_get_or_none(&cap, "move_1");
+        let move_2 = cap_get_or_none(&cap, "move_2");
+        let move_3 = cap_get_or_none(&cap, "move_3");
+        let move_4 = cap_get_or_none(&cap, "move_4");
+
+        let mon = PokemonSet {
+            species,
+            gender,
+            held_item,
+            level,
+            ivs,
+            evs,
+            ball,
+            ability,
+            happiness,
+            nature,
+            shiny,
+            dynamax_level: None,
+            gigantamax: false,
+            tera_type,
+            move_1,
+            move_2,
+            move_3,
+            move_4,
+        };
 
         mons[i] = Some(mon);
     }
@@ -95,14 +164,14 @@ fn parse_mons_fields(content: &str, re: &Regex) -> Result<[Option<PokemonSet>; 6
     Ok(mons)
 }
 
-fn parse_trainer_fields(content: &str, id: &str, re: &Regex) -> Result<Trainer, PartyError> {
+fn parse_trainer_fields(content: &str, id: &str, re: &Regex) -> eyre::Result<Trainer> {
     let mut trainer = Trainer::default();
     trainer.id = id.to_owned();
 
     let Some(cap) = re.captures(content) else {
         let error = "Could not parse trainer fields, regex did not match";
         tracing::error!(error);
-        return Err(PartyError::ParsingError(error.to_owned()));
+        return Err(PartyError::ParsingError(error.to_owned()).into());
     };
 
     trainer.name = cap_get_or_none(&cap, "name").unwrap_or_default();
@@ -127,16 +196,17 @@ fn parse_trainer_fields(content: &str, id: &str, re: &Regex) -> Result<Trainer, 
 pub fn from_emerald_expansion_format_config(
     file_content: &str,
     config: &ParsingConfig,
-) -> Result<Parties, PartyError> {
-    let trainer_re = Regex::new(config.trainer_regex).unwrap();
-    let trainer_fields_re = Regex::new(config.trainer_fields_regex).unwrap();
-    let pokemon_fields_re = Regex::new(config.pokemon_fields_regex).unwrap();
+) -> eyre::Result<Parties> {
+    let trainer_re = Regex::new(config.trainer_regex).expect("regex is valid");
+    let trainer_fields_re = Regex::new(config.trainer_fields_regex).expect("regex is valid");
+    let pokemon_fields_re = Regex::new(config.pokemon_fields_regex).expect("regex is valid");
+    let pokemon_iv_ev_re = Regex::new(config.pokemon_ivs_evs_field_regex).expect("regex is valid");
 
     let mut trainers = vec![];
 
     for (_, [id, fields, mons]) in trainer_re.captures_iter(file_content).map(|c| c.extract()) {
         let mut trainer = parse_trainer_fields(fields, id, &trainer_fields_re)?;
-        let mons = parse_mons_fields(mons, &pokemon_fields_re)?;
+        let mons = parse_mons_fields(mons, &pokemon_fields_re, &pokemon_iv_ev_re)?;
         trainer.party = mons;
 
         trainers.push(trainer);
@@ -145,7 +215,7 @@ pub fn from_emerald_expansion_format_config(
     Ok(Parties::new(trainers))
 }
 
-pub fn from_emerald_expansion_format(file_content: &str) -> Result<Parties, PartyError> {
+pub fn from_emerald_expansion_format(file_content: &str) -> eyre::Result<Parties> {
     let parsing_config = ParsingConfig::default();
     from_emerald_expansion_format_config(file_content, &parsing_config)
 }
@@ -202,9 +272,58 @@ fn write_mons_field(mons: &[Option<PokemonSet>; 6]) -> Result<String, PartyError
             mon_fields.push_ln(&level);
         }
 
+        let push_ivs_if_some = |ivs: &Option<PokemonIVs>, prepend: &str, res: &mut String| {
+            if let Some(value) = ivs {
+                let mut iv_result = format!("{}:", prepend);
+                let mut first = true;
+                if let Some(health) = value.health {
+                    first = false;
+                    iv_result = format!("{} {} HP", iv_result, health);
+                }
+                if let Some(attack) = value.attack {
+                    if first {
+                        first = false;
+                        iv_result = format!("{} {} Atk", iv_result, attack);
+                    } else {
+                        iv_result = format!("{} / {} Atk", iv_result, attack);
+                    }
+                }
+                if let Some(defense) = value.defense {
+                    if first {
+                        first = false;
+                        iv_result = format!("{} {} Def", iv_result, defense);
+                    } else {
+                        iv_result = format!("{} / {} Def", iv_result, defense);
+                    }
+                }
+                if let Some(sp_attack) = value.sp_attack {
+                    if first {
+                        first = false;
+                        iv_result = format!("{} {} SpA", iv_result, sp_attack);
+                    } else {
+                        iv_result = format!("{} / {} SpA", iv_result, sp_attack);
+                    }
+                }
+                if let Some(sp_defense) = value.sp_defense {
+                    if first {
+                        first = false;
+                        iv_result = format!("{} {} SpD", iv_result, sp_defense);
+                    }
+                    iv_result = format!("{} / {} SpD", iv_result, sp_defense);
+                }
+                if let Some(speed) = value.speed {
+                    if first {
+                        iv_result = format!("{} {} Spe", iv_result, speed);
+                    }
+                    iv_result = format!("{} / {} Spe", iv_result, speed);
+                }
+                res.push_ln(&iv_result);
+            }
+        };
+
         // Temporary
-        push_field_if_some(&pokemon.ivs, "IVs", &mut mon_fields);
-        push_field_if_some(&pokemon.evs, "EVs", &mut mon_fields);
+        push_ivs_if_some(&pokemon.ivs, "IVs", &mut mon_fields);
+        push_ivs_if_some(&pokemon.evs, "EVs", &mut mon_fields);
 
         push_field_if_some(&pokemon.ball, "Ball", &mut mon_fields);
 

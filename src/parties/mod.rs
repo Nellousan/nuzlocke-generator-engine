@@ -47,29 +47,23 @@ pub mod party {
         }
     }
 
-    // All defaults to 31
     #[derive(Clone, Default, Debug, Deserialize)]
-    #[expect(dead_code)]
     pub struct PokemonIVs {
-        health: Option<u8>,
-        attack: Option<u8>,
-        defense: Option<u8>,
-        sp_attack: Option<u8>,
-        sp_defense: Option<u8>,
-        speed: Option<u8>,
+        #[serde(rename = "hp")]
+        pub health: Option<u8>,
+        #[serde(rename = "atk")]
+        pub attack: Option<u8>,
+        #[serde(rename = "def")]
+        pub defense: Option<u8>,
+        #[serde(rename = "spa")]
+        pub sp_attack: Option<u8>,
+        #[serde(rename = "spd")]
+        pub sp_defense: Option<u8>,
+        #[serde(rename = "spe")]
+        pub speed: Option<u8>,
     }
 
-    // All defaults to 0
-    #[derive(Clone, Default, Debug, Deserialize)]
-    #[expect(dead_code)]
-    pub struct PokemonEVs {
-        health: Option<u8>,
-        attack: Option<u8>,
-        defense: Option<u8>,
-        sp_attack: Option<u8>,
-        sp_defense: Option<u8>,
-        speed: Option<u8>,
-    }
+    pub type PokemonEVs = PokemonIVs;
 
     #[derive(Clone, Default, Debug)]
     #[expect(dead_code)]
@@ -80,9 +74,9 @@ pub mod party {
         pub held_item: Option<String>,
         pub level: Option<u8>, // Defaults to 100
         // TODO: This is temporary. Parse ivs and evs properly.
-        pub ivs: Option<String>,  // PokemonIVs,
-        pub evs: Option<String>,  // PokemonEVs,
-        pub ball: Option<String>, // Defaults to PokeBall
+        pub ivs: Option<PokemonIVs>, // PokemonIVs,
+        pub evs: Option<PokemonEVs>, // PokemonEVs,
+        pub ball: Option<String>,    // Defaults to PokeBall
         pub ability: Option<String>,
         pub happiness: Option<u8>,  // Defaults to 0
         pub nature: Option<String>, // Defaults to Hardy

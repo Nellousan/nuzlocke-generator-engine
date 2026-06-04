@@ -15,7 +15,9 @@ pub type SetBundle = HashMap<Species, Vec<PokemonBundleSet>>;
 // TODO: Implement tera types, dynamax level
 #[derive(Clone, Debug, Deserialize)]
 pub struct PokemonBundleSet {
+    #[expect(dead_code)]
     pub format: String,
+    #[expect(dead_code)]
     pub name: String,
     pub moves: Vec<Vec<String>>,
     pub item: Vec<String>,
@@ -82,6 +84,8 @@ impl PokemonBundleSet {
         let nature = Self::pick_one_if_some(&self.nature, rng);
         let ability = Self::pick_one_if_some(&self.ability, rng);
 
+        let tera_type = Self::pick_one_if_some(&self.tera_types, rng);
+
         PokemonSet {
             species: species.to_owned(),
             gender: PokemonGender::None,
@@ -96,7 +100,7 @@ impl PokemonBundleSet {
             shiny: false,
             dynamax_level: None,
             gigantamax: false,
-            tera_type: None,
+            tera_type,
             move_1,
             move_2,
             move_3,

@@ -83,6 +83,9 @@ impl<R: Rng + ?Sized> Engine<R> {
             for maybe_mon in party.party.iter_mut() {
                 if let Some(mon) = maybe_mon {
                     *mon = self.generate_new_pokemon_set(mon);
+                    if self.cli_options.disable_evs {
+                        mon.evs = None;
+                    }
                     tracing::debug!(?mon);
                 }
             }

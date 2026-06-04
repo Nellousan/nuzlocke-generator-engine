@@ -22,6 +22,8 @@ pub struct Cli {
         clap::builder::OsStr::from("bundles/default/gen9.bundle.json"),
     ])]
     pub bundles: Vec<PathBuf>,
+    #[arg(long, value_name = "disable-evs", default_value_t = false)]
+    pub disable_evs: bool,
 }
 
 #[derive(Debug, Copy, Clone, PartialEq, Eq, PartialOrd, Ord, ValueEnum)]

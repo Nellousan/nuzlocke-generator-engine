@@ -68,7 +68,7 @@ impl PokemonBundleSet {
                 1 => move_2 = Some(r#move.clone()),
                 2 => move_3 = Some(r#move.clone()),
                 3 => move_4 = Some(r#move.clone()),
-                _ => unreachable!(),
+                _ => panic!("More than four moves in bundle set ???"),
             };
         }
 
@@ -109,6 +109,7 @@ impl PokemonBundleSet {
     }
 }
 
+#[expect(dead_code)]
 pub fn load_bundle(path: &Path) -> eyre::Result<SetBundle> {
     let content = std::fs::read_to_string(path)?;
     let bundle: SetBundle = serde_json::from_str(&content)?;

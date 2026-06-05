@@ -24,6 +24,8 @@ pub struct Cli {
     pub bundles: Vec<PathBuf>,
     #[arg(long, value_name = "disable-evs", default_value_t = false)]
     pub disable_evs: bool,
+    #[arg(long, value_name = "seed")]
+    pub seed: Option<u64>,
 }
 
 #[derive(Debug, Copy, Clone, PartialEq, Eq, PartialOrd, Ord, ValueEnum)]

@@ -28,6 +28,30 @@ pub mod pokedex {
         pub r#gen: Option<u8>,
     }
 
+    impl PartialEq for PokemonDatabaseEntry {
+        fn eq(&self, other: &Self) -> bool {
+            self.name.eq(&other.name)
+        }
+
+        fn ne(&self, other: &Self) -> bool {
+            self.name.ne(&other.name)
+        }
+    }
+
+    impl Eq for PokemonDatabaseEntry {}
+
+    impl PartialOrd for PokemonDatabaseEntry {
+        fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
+            self.name.partial_cmp(&other.name)
+        }
+    }
+
+    impl Ord for PokemonDatabaseEntry {
+        fn cmp(&self, other: &Self) -> std::cmp::Ordering {
+            self.name.cmp(&other.name)
+        }
+    }
+
     #[derive(Debug, Clone, Serialize, Deserialize)]
     pub struct PokemonDatabaseEntryBaseStats {
         pub hp: u8,
@@ -85,6 +109,8 @@ pub mod pokedex {
                     }
                 }
             }
+
+            mons.sort();
 
             mons
         }

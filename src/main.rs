@@ -1,6 +1,7 @@
-use std::{io::Write, path::Path};
+use std::path::Path;
 
 use clap::Parser;
+use rand::{SeedableRng, rngs::SmallRng};
 use tracing_subscriber::{Layer, filter, layer::SubscriberExt};
 
 use crate::{database::pokedex, engine::Engine};
@@ -38,7 +39,11 @@ fn main() -> eyre::Result<()> {
     let parties = parties::load_parties(&cli.project)?;
 
     let encounters = encounters::load_encounter(&cli.project)?;
-    let rng = rand::rng();
+    let rng: SmallRng = if let Some(seed) = cli.seed {
+        SmallRng::seed_from_u64(seed)
+    } else {
+        rand::make_rng()
+    };
 
     let mut engine = Engine {
         parties,

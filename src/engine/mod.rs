@@ -1,3 +1,5 @@
+use std::process::exit;
+
 use rand::Rng;
 
 use crate::{

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<style>
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+  }
+</style>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <td colspan="7">{{ name }}</td>
+    <td rowspan=12><img src="../pokeemerald-expansion/graphics/trainers/front_pics/hiker.png"></td>
+  </tr>
+  <tr>
+    <th rowspan="2">Pokemon</th>
+    <td>-- Image1 --</td>
+    <td>-- Image2 --</td>
+    <td>-- Image3 --</td>
+    <td>-- Image4 --</td>
+    <td>-- Image5 --</td>
+    <td>-- Image6 --</td>
+  </tr>
+  <tr>
+    {% for maybe_pokemon in party.iter() %}
+      {% if let Some(pokemon) = maybe_pokemon %}
+        <th>{{ pokemon.species }}</th>
+      {% else %}
+        <th></th>
+      {% endif %}
+    {% endfor %}
+  </tr>
+  <tr>
+    <th>Level</th>
+    {% for maybe_pokemon in party.iter() %}
+      {% if let Some(pokemon) = maybe_pokemon %}
+        {% if let Some(level) = pokemon.level %}
+          <td>{{ level }}</td>
+        {% else %}
+          <td></td>
+        {% endif %}
+      {% else %}
+        <td></td>
+      {% endif %}
+    {% endfor %}
+  </tr>
+  <tr>
+    <th>Held Item</th>
+    {% for maybe_pokemon in party.iter() %}
+      {% if let Some(pokemon) = maybe_pokemon %}
+        {% if let Some(held_item) = pokemon.held_item %}
+          <td>{{ held_item }}</td>
+        {% else %}
+          <td></td>
+        {% endif %}
+      {% else %}
+        <td></td>
+      {% endif %}
+    {% endfor %}
+  </tr>
+  <tr>
+    <th>Ability</th>
+    {% for maybe_pokemon in party.iter() %}
+      {% if let Some(pokemon) = maybe_pokemon %}
+        {% if let Some(ability) = pokemon.ability %}
+          <td>{{ ability }}</td>
+        {% else %}
+          <td></td>
+        {% endif %}
+      {% else %}
+        <td></td>
+      {% endif %}
+    {% endfor %}
+  </tr>
+  <tr>
+    <th>Nature</th>
+    {% for maybe_pokemon in party.iter() %}
+      {% if let Some(pokemon) = maybe_pokemon %}
+        {% if let Some(nature) = pokemon.nature %}
+          <td>{{ nature }}</td>
+        {% else %}
+          <td></td>
+        {% endif %}
+      {% else %}
+        <td></td>
+      {% endif %}
+    {% endfor %}
+  </tr>
+  <tr>
+    <th>Tera Type</th>
+    {% for maybe_pokemon in party.iter() %}
+      {% if let Some(pokemon) = maybe_pokemon %}
+        {% if let Some(tera_type) = pokemon.tera_type %}
+          <td>{{ tera_type }}</td>
+        {% else %}
+          <td></td>
+        {% endif %}
+      {% else %}
+        <td></td>
+      {% endif %}
+    {% endfor %}
+  </tr>
+  <tr>
+    <th rowspan="4">Moves</th>
+    {% for maybe_pokemon in party.iter() %}
+      {% if let Some(pokemon) = maybe_pokemon %}
+        {% if let Some(move_1) = pokemon.move_1 %}
+          <td>{{ move_1 }}</td>
+        {% else %}
+          <td></td>
+        {% endif %}
+      {% else %}
+        <td></td>
+      {% endif %}
+    {% endfor %}
+  </tr>
+  <tr>
+    {% for maybe_pokemon in party.iter() %}
+      {% if let Some(pokemon) = maybe_pokemon %}
+        {% if let Some(move_2) = pokemon.move_2 %}
+          <td>{{ move_2 }}</td>
+        {% else %}
+          <td></td>
+        {% endif %}
+      {% else %}
+        <td></td>
+      {% endif %}
+    {% endfor %}
+  </tr>
+  <tr>
+    {% for maybe_pokemon in party.iter() %}
+      {% if let Some(pokemon) = maybe_pokemon %}
+        {% if let Some(move_3) = pokemon.move_3 %}
+          <td>{{ move_3 }}</td>
+        {% else %}
+          <td></td>
+        {% endif %}
+      {% else %}
+        <td></td>
+      {% endif %}
+    {% endfor %}
+  </tr>
+  <tr>
+    {% for maybe_pokemon in party.iter() %}
+      {% if let Some(pokemon) = maybe_pokemon %}
+        {% if let Some(move_4) = pokemon.move_4 %}
+          <td>{{ move_4 }}</td>
+        {% else %}
+          <td></td>
+        {% endif %}
+      {% else %}
+        <td></td>
+      {% endif %}
+    {% endfor %}
+  </tr>
+</table>

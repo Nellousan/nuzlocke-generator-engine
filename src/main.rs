@@ -1,14 +1,20 @@
-use std::path::Path;
+use std::{fs::File, io::Write, path::Path};
 
+use askama::Template;
 use clap::Parser;
 use rand::{SeedableRng, rngs::SmallRng};
 use tracing_subscriber::{Layer, filter, layer::SubscriberExt};
 
-use crate::{database::pokedex, engine::Engine};
+use crate::{
+    database::pokedex,
+    doc::{TrainerListTemplate, TrainerTemplate},
+    engine::Engine,
+};
 
 mod bundles;
 mod cli;
 mod database;
+mod doc;
 mod encounters;
 mod engine;
 mod parties;
@@ -60,6 +66,15 @@ fn main() -> eyre::Result<()> {
     parties::save_parties(&engine.cli_options.project, &engine.parties)?;
 
     encounters::save_encounter(&engine.cli_options.project, &engine.encounters)?;
+
+    // let test_party = (*engine.parties)[3].clone();
+    // let test_party_template: TrainerTemplate = test_party.into();
+    // let res = test_party_template.render()?;
+    // let mut file = File::create("osef.html")?;
+    // file.write_all(res.as_bytes())?;
+    //
+
+    engine.generate_documentation()?;
 
     Ok(())
 }

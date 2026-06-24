@@ -18,8 +18,8 @@ target/
 
 # Added by cargo
 
-/target
-
 pokeemerald-expansion/
 
 *.log
+
+output/

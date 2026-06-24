@@ -15,6 +15,7 @@ pub struct Cli {
     /// Path to pokedex file
     #[arg(long, default_value = "pokedex.json")]
     pub pokedex: PathBuf,
+    /// List of bundles to use
     #[arg(short, long, default_values = vec![        
         clap::builder::OsStr::from("bundles/default/gen6.bundle.json"),
         clap::builder::OsStr::from("bundles/default/gen7.bundle.json"),
@@ -24,8 +25,12 @@ pub struct Cli {
     pub bundles: Vec<PathBuf>,
     #[arg(long, value_name = "disable-evs", default_value_t = false)]
     pub disable_evs: bool,
+    /// Seed used for the random number generator
     #[arg(long, value_name = "seed")]
     pub seed: Option<u64>,
+    /// Directory to output documentation to
+    #[arg(long, default_value = "output")]
+    pub output_directory: PathBuf,
 }
 
 #[derive(Debug, Copy, Clone, PartialEq, Eq, PartialOrd, Ord, ValueEnum)]
@@ -49,7 +54,7 @@ impl From<LogLevel> for tracing::Level {
     }
 }
 
-#[derive(Args, Debug)]
+#[derive(Args, Debug, Clone)]
 pub struct EmeraldExpansionOption {
         /// Path to the decompilation project
         #[arg(value_name = "path", default_value = "pokeemerald-expansion")]

@@ -1,10 +1,17 @@
-use std::process::exit;
+use std::{
+    fs::File,
+    io::Write,
+    path::{Path, PathBuf},
+};
 
+use askama::Template;
 use rand::Rng;
 
 use crate::{
     bundles::{PokemonBundleSet, SetBundle},
+    cli::EmeraldExpansionOption,
     database::pokedex::{Pokedex, PokemonDatabaseEntry},
+    doc::{TrainerListTemplate, TrainerTemplate},
     encounters::Encounters,
     parties::{Parties, party::PokemonSet},
 };
@@ -108,7 +115,56 @@ impl<R: Rng + ?Sized> Engine<R> {
         );
     }
 
-    pub fn generate_documentation(&mut self) {
-        unimplemented!()
+    fn generate_pokeemerald_documentation(
+        &mut self,
+        option: EmeraldExpansionOption,
+    ) -> eyre::Result<()> {
+        let html_assets_dir = self.cli_options.output_directory.join("assets");
+        let html_assets_pkmn_dir = html_assets_dir.join("pkmn");
+        let html_assets_trainer_dir = html_assets_dir.join("trainer");
+
+        std::fs::create_dir_all(&html_assets_pkmn_dir)?;
+        std::fs::create_dir_all(&html_assets_trainer_dir)?;
+
+        let trainer_pics_dir = option.project_path.join("graphics/trainers/front_pics");
+
+        for trainer in self.parties.iter() {
+            let mut pic_filename = PathBuf::from(trainer.pic.to_lowercase().replace(' ', "_"));
+            pic_filename.add_extension("png");
+
+            if !std::fs::exists(trainer_pics_dir.join(&pic_filename))? {
+                tracing::warn!("{} not found", pic_filename.display());
+                continue;
+            }
+
+            std::fs::copy(
+                trainer_pics_dir.join(&pic_filename),
+                html_assets_trainer_dir.join(&pic_filename),
+            )?;
+        }
+
+        let trainer_templates: Vec<TrainerTemplate> = self
+            .parties
+            .iter()
+            .map(Clone::clone)
+            .map(Into::into)
+            .collect();
+        let trainer_list_template: TrainerListTemplate = trainer_templates.into();
+
+        let res = trainer_list_template.render()?;
+        let mut file = File::create(self.cli_options.output_directory.join("trainers.html"))?;
+        file.write_all(res.as_bytes())?;
+
+        Ok(())
+    }
+
+    pub fn generate_documentation(&mut self) -> eyre::Result<()> {
+        match &self.cli_options.project {
+            crate::cli::ProjectOption::EmeraldExpansion(option) => {
+                self.generate_pokeemerald_documentation(option.clone())?;
+            }
+        }
+
+        Ok(())
     }
 }

@@ -20,7 +20,7 @@ impl From<Trainer> for TrainerTemplate {
                 value.class.unwrap_or("Trainer".to_string()),
                 value.name
             ),
-            pic: value.pic.into(),
+            pic: value.pic.to_lowercase().replace(' ', "_").into(),
             party: value.party,
         }
     }

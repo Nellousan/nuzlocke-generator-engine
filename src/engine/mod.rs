@@ -107,4 +107,8 @@ impl<R: Rng + ?Sized> Engine<R> {
             options.global_encounter_randomization,
         );
     }
+
+    pub fn generate_documentation(&mut self) {
+        unimplemented!()
+    }
 }

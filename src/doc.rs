@@ -5,11 +5,10 @@ use askama::Template;
 use crate::parties::{Trainer, party};
 
 #[derive(Template)]
-#[template(path = "trainer.jinja")]
+#[template(path = "trainer.jinja", escape = "none")]
 pub struct TrainerTemplate {
     name: String,
     pic: PathBuf,
-    // pkmn_count: u8,
     party: [Option<party::PokemonSet>; 6],
 }
 
@@ -22,8 +21,21 @@ impl From<Trainer> for TrainerTemplate {
                 value.name
             ),
             pic: value.pic.into(),
-            // pkmn_count: value.party.iter().count() as u8,
             party: value.party,
+        }
+    }
+}
+
+#[derive(Template)]
+#[template(path = "trainers.jinja", escape = "none")]
+pub struct TrainerListTemplate {
+    trainer_templates: Vec<TrainerTemplate>,
+}
+
+impl From<Vec<TrainerTemplate>> for TrainerListTemplate {
+    fn from(value: Vec<TrainerTemplate>) -> Self {
+        Self {
+            trainer_templates: value,
         }
     }
 }

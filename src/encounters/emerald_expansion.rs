@@ -86,13 +86,10 @@ impl MapEncounterSet {
 
             let mon_db_entry = pokedex.get(&species_normalized).unwrap(); // TODO: Error handling
 
-            // TODO: find a way to avoid ugly code duplication involving the global replace map
-            let candidates = if let Some(map) = global_replace_table {
-                if let Some(mon) = map.get(&species_normalized) {
-                    vec![pokedex.get(mon).unwrap().clone()]
-                } else {
-                    pokedex.get_all_within_bst_range(mon_db_entry.base_stats.total(), 30, 30)
-                }
+            let candidates = if let Some(map) = global_replace_table
+                && let Some(mon) = map.get(&species_normalized)
+            {
+                vec![pokedex.get(mon).unwrap().clone()]
             } else {
                 pokedex.get_all_within_bst_range(mon_db_entry.base_stats.total(), 30, 30)
             };

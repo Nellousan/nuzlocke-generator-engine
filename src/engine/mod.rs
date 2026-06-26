@@ -1,8 +1,4 @@
-use std::{
-    fs::File,
-    io::Write,
-    path::{Path, PathBuf},
-};
+use std::{fs::File, io::Write, path::PathBuf};
 
 use askama::Template;
 use rand::Rng;
@@ -132,6 +128,8 @@ impl<R: Rng + ?Sized> Engine<R> {
             let mut pic_filename = PathBuf::from(trainer.pic.to_lowercase().replace(' ', "_"));
             pic_filename.add_extension("png");
 
+            // Ideally handle properly all the possible sprites.
+            // Right now this is a wrokaround for may and brendan sprites needing an edge case
             if !std::fs::exists(trainer_pics_dir.join(&pic_filename))? {
                 tracing::warn!("{} not found", pic_filename.display());
                 continue;

@@ -138,14 +138,23 @@ impl<R: Rng + ?Sized> Engine<R> {
                 continue;
             }
 
-            std::fs::copy(
-                trainer_pics_dir.join(&trainer_pic_filename),
-                html_assets_trainer_dir.join(&trainer_pic_filename),
-            )?;
+            if !std::fs::exists(html_assets_trainer_dir.join(&trainer_pic_filename))? {
+                std::fs::copy(
+                    trainer_pics_dir.join(&trainer_pic_filename),
+                    html_assets_trainer_dir.join(&trainer_pic_filename),
+                )?;
+            }
 
             // Do the same for each mon in the party
             for maybe_mon in trainer.party.iter() {
                 if let Some(mon) = maybe_mon {
+                    let mut save_path = html_assets_pkmn_dir.join(&mon.species_normalized);
+                    save_path.add_extension("png");
+
+                    if std::fs::exists(&save_path)? {
+                        continue;
+                    }
+
                     let mon_anim_front_pic_path = mons_pics_dir
                         .join(&mon.species_normalized)
                         .join("anim_front.png");
@@ -165,9 +174,6 @@ impl<R: Rng + ?Sized> Engine<R> {
                     let image = image::ImageReader::open(mon_pic)?
                         .decode()?
                         .crop_imm(0, 0, 64, 64);
-
-                    let mut save_path = html_assets_pkmn_dir.join(&mon.species_normalized);
-                    save_path.add_extension("png");
 
                     image.save(save_path)?;
                 }

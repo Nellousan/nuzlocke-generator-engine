@@ -70,10 +70,10 @@ pub mod party {
     pub struct PokemonSet {
         // nickname: String,
         pub species: String,
+        pub species_normalized: String,
         pub gender: PokemonGender,
         pub held_item: Option<String>,
-        pub level: Option<u8>, // Defaults to 100
-        // TODO: This is temporary. Parse ivs and evs properly.
+        pub level: Option<u8>,       // Defaults to 100
         pub ivs: Option<PokemonIVs>, // PokemonIVs,
         pub evs: Option<PokemonEVs>, // PokemonEVs,
         pub ball: Option<String>,    // Defaults to PokeBall

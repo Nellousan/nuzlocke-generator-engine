@@ -6,12 +6,13 @@
   </tr>
   <tr>
     <th rowspan="2">Pokemon</th>
-    <td>-- Image1 --</td>
-    <td>-- Image2 --</td>
-    <td>-- Image3 --</td>
-    <td>-- Image4 --</td>
-    <td>-- Image5 --</td>
-    <td>-- Image6 --</td>
+    {% for maybe_pokemon in party.iter() %}
+      {% if let Some(pokemon) = maybe_pokemon %}
+        <th><img src="assets/pkmn/{{ pokemon.species_normalized }}.png"></th>
+      {% else %}
+        <th></th>
+      {% endif %}
+    {% endfor %}
   </tr>
   <tr>
     {% for maybe_pokemon in party.iter() %}

@@ -122,23 +122,56 @@ impl<R: Rng + ?Sized> Engine<R> {
         std::fs::create_dir_all(&html_assets_pkmn_dir)?;
         std::fs::create_dir_all(&html_assets_trainer_dir)?;
 
+        // Copy trainer and mons sprites
         let trainer_pics_dir = option.project_path.join("graphics/trainers/front_pics");
+        let mons_pics_dir = option.project_path.join("graphics/pokemon");
 
         for trainer in self.parties.iter() {
-            let mut pic_filename = PathBuf::from(trainer.pic.to_lowercase().replace(' ', "_"));
-            pic_filename.add_extension("png");
+            let mut trainer_pic_filename =
+                PathBuf::from(trainer.pic.to_lowercase().replace(' ', "_"));
+            trainer_pic_filename.add_extension("png");
 
             // Ideally handle properly all the possible sprites.
             // Right now this is a wrokaround for may and brendan sprites needing an edge case
-            if !std::fs::exists(trainer_pics_dir.join(&pic_filename))? {
-                tracing::warn!("{} not found", pic_filename.display());
+            if !std::fs::exists(trainer_pics_dir.join(&trainer_pic_filename))? {
+                tracing::warn!("{} not found", trainer_pic_filename.display());
                 continue;
             }
 
             std::fs::copy(
-                trainer_pics_dir.join(&pic_filename),
-                html_assets_trainer_dir.join(&pic_filename),
+                trainer_pics_dir.join(&trainer_pic_filename),
+                html_assets_trainer_dir.join(&trainer_pic_filename),
             )?;
+
+            // Do the same for each mon in the party
+            for maybe_mon in trainer.party.iter() {
+                if let Some(mon) = maybe_mon {
+                    let mon_anim_front_pic_path = mons_pics_dir
+                        .join(&mon.species_normalized)
+                        .join("anim_front.png");
+                    let mon_front_pic_path = mons_pics_dir
+                        .join(&mon.species_normalized)
+                        .join("front.png");
+
+                    let mon_pic = if std::fs::exists(&mon_anim_front_pic_path)? {
+                        mon_anim_front_pic_path
+                    } else if std::fs::exists(&mon_front_pic_path)? {
+                        mon_front_pic_path
+                    } else {
+                        tracing::warn!("cannot find front pic for {}", mon.species_normalized);
+                        continue;
+                    };
+
+                    let image = image::ImageReader::open(mon_pic)?
+                        .decode()?
+                        .crop_imm(0, 0, 64, 64);
+
+                    let mut save_path = html_assets_pkmn_dir.join(&mon.species_normalized);
+                    save_path.add_extension("png");
+
+                    image.save(save_path)?;
+                }
+            }
         }
 
         let trainer_templates: Vec<TrainerTemplate> = self

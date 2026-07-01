@@ -102,6 +102,15 @@ fn parse_mons_fields(
         let species = cap_get_or_none(&cap, "species").ok_or(PartyError::ParsingError(
             "Error parsing Pokemon species.".to_owned(),
         ))?;
+        let species_normalized = unidecode::unidecode(&species)
+            .to_lowercase()
+            .replace('_', "")
+            .replace('\'', "")
+            .replace(". ", "_")
+            .replace('-', "_")
+            .replace(' ', "_")
+            .replace('.', "")
+            .replace(':', "");
         // This is weird, maybe rework the gender field into an option and remove
         // the None variant in PokemonGender
         let gender = cap_get_or_none(&cap, "gender")
@@ -139,6 +148,7 @@ fn parse_mons_fields(
 
         let mon = PokemonSet {
             species,
+            species_normalized,
             gender,
             held_item,
             level,

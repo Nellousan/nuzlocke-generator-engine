@@ -1,15 +1,10 @@
-use std::{fs::File, io::Write, path::Path};
+use std::path::Path;
 
-use askama::Template;
 use clap::Parser;
 use rand::{SeedableRng, rngs::SmallRng};
 use tracing_subscriber::{Layer, filter, layer::SubscriberExt};
 
-use crate::{
-    database::pokedex,
-    doc::{TrainerListTemplate, TrainerTemplate},
-    engine::Engine,
-};
+use crate::{database::pokedex, engine::Engine};
 
 mod bundles;
 mod cli;

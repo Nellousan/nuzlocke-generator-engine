@@ -88,6 +88,15 @@ impl PokemonBundleSet {
 
         PokemonSet {
             species: species.to_owned(),
+            species_normalized: unidecode::unidecode(species)
+                .to_lowercase()
+                .replace('_', "")
+                .replace('\'', "")
+                .replace(". ", "_")
+                .replace('-', "_")
+                .replace(' ', "_")
+                .replace('.', "")
+                .replace(':', ""),
             gender: PokemonGender::None,
             held_item: held_item.cloned(),
             level: Some(level),

@@ -4,12 +4,15 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-<table>
-  {% for trainer_template in trainer_templates %}
-    <tr>
-      {{ trainer_template.render()? }}
-    </tr>
-  {% endfor %}
-</table>
+  <div id="main-container">
+  <div id="drawer">
+    <h2>Navigation talbe</h2>
+  <div>
+  <div id="trainers-container">
+    {% for trainer_template in trainer_templates %}
+        {{ trainer_template.render()? }}
+    {% endfor %}
+  </div>
+  </div>
 </body>
 </html>

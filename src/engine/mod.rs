@@ -202,6 +202,8 @@ impl<R: Rng + ?Sized> Engine<R> {
             }
         }
 
+        std::fs::copy("templates/styles.css", "output/styles.css")?;
+
         Ok(())
     }
 }

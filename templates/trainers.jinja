@@ -5,16 +5,7 @@
 </head>
 <body>
   <div id="main-container">
-    <div id="drawer">
-      <h2>Navigation talbe</h2>
-      <div id="navigation-list">
-        {% for trainer_template in trainer_templates %}
-          <a>
-            {{ trainer_template.name }}
-          </a>
-        {% endfor %}
-      </div>
-    <div>
+
     <div id="trainers-container">
       {% for trainer_template in trainer_templates %}
           {{ trainer_template.render()? }}

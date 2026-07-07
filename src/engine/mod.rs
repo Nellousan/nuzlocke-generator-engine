@@ -1,3 +1,5 @@
+mod trainer_order;
+
 use std::{fs::File, io::Write, path::PathBuf};
 
 use askama::Template;

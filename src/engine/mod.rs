@@ -1,4 +1,4 @@
-mod trainer_order;
+pub mod trainer_order;
 
 use std::{fs::File, io::Write, path::PathBuf};
 
@@ -11,6 +11,7 @@ use crate::{
     database::pokedex::{Pokedex, PokemonDatabaseEntry},
     doc::{TrainerListTemplate, TrainerTemplate},
     encounters::Encounters,
+    engine::trainer_order::TrainerOrder,
     parties::{Parties, party::PokemonSet},
 };
 
@@ -30,6 +31,7 @@ where
     pub set_bundle: SetBundle,
     pub cli_options: crate::cli::Cli,
     pub rng: Box<R>,
+    pub trainer_order: Option<TrainerOrder>,
 }
 
 impl<R: Rng + ?Sized> Engine<R> {

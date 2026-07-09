@@ -4,7 +4,10 @@ use clap::Parser;
 use rand::{SeedableRng, rngs::SmallRng};
 use tracing_subscriber::{Layer, filter, layer::SubscriberExt};
 
-use crate::{database::pokedex, engine::Engine};
+use crate::{
+    database::pokedex,
+    engine::{Engine, trainer_order},
+};
 
 mod bundles;
 mod cli;
@@ -39,6 +42,8 @@ fn main() -> eyre::Result<()> {
 
     let parties = parties::load_parties(&cli.project)?;
 
+    let trainer_order = trainer_order::load_trainer_order(&cli.project)?;
+
     let encounters = encounters::load_encounter(&cli.project)?;
     let rng: SmallRng = if let Some(seed) = cli.seed {
         SmallRng::seed_from_u64(seed)
@@ -53,6 +58,7 @@ fn main() -> eyre::Result<()> {
         set_bundle,
         cli_options: cli,
         rng: Box::new(rng),
+        trainer_order,
     };
 
     engine.randomize_parties();
@@ -61,13 +67,6 @@ fn main() -> eyre::Result<()> {
     parties::save_parties(&engine.cli_options.project, &engine.parties)?;
 
     encounters::save_encounter(&engine.cli_options.project, &engine.encounters)?;
-
-    // let test_party = (*engine.parties)[3].clone();
-    // let test_party_template: TrainerTemplate = test_party.into();
-    // let res = test_party_template.render()?;
-    // let mut file = File::create("osef.html")?;
-    // file.write_all(res.as_bytes())?;
-    //
 
     engine.generate_documentation()?;
 

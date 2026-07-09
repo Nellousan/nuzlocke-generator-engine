@@ -71,6 +71,12 @@ pub struct EmeraldExpansionOption {
         /// Encounters will be replaced globally instead of locally.
         #[arg(long, value_name = "global-encounter-rng", default_value_t = false)]
         pub global_encounter_randomization: bool,
+        /// Path to the file specifying trainer order (relative to project path)
+        #[arg(long, value_name = "trainer-order", default_value = "trainer_order.toml")]
+        pub trainer_order_path: PathBuf,
+        /// If no trainer order file available
+        #[arg(long, value_name = "no-trainer-order", default_value_t = false)]
+        pub no_trainer_order: bool,
 }
 
 #[derive(Subcommand, Debug)]

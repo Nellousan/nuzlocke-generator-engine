@@ -23,3 +23,4 @@ pokeemerald-expansion/
 *.log
 
 output/
+.venv/

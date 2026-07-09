@@ -1,0 +1,2512 @@
+starter_level_cap = 15
+
+[[trainers]]
+id = "TRAINER_MAY_ROUTE_103_MUDKIP"
+location = "Route 103"
+split = "Roxanne"
+
+[[trainers]]
+id = "TRAINER_MAY_ROUTE_103_MUDKIP"
+location = "Route 103"
+split = "Roxanne"
+
+[[trainers]]
+id = "TRAINER_MAY_ROUTE_103_MUDKIP"
+location = "Route 103"
+split = "Roxanne"
+
+[[trainers]]
+id = "TRAINER_BRENDAN_ROUTE_103_MUDKIP"
+location = "Route 103"
+split = "Roxanne"
+
+[[trainers]]
+id = "TRAINER_BRENDAN_ROUTE_103_MUDKIP"
+location = "Route 103"
+split = "Roxanne"
+
+[[trainers]]
+id = "TRAINER_BRENDAN_ROUTE_103_MUDKIP"
+location = "Route 103"
+split = "Roxanne"
+
+[[trainers]]
+id = "TRAINER_CALVIN_1"
+location = "Route 102"
+split = "Roxanne"
+
+[[trainers]]
+id = "TRAINER_RICK"
+location = "Route 102"
+split = "Roxanne"
+
+[[trainers]]
+id = "TRAINER_ALLEN"
+location = "Route 102"
+split = "Roxanne"
+
+[[trainers]]
+id = "TRAINER_TIANA"
+location = "Route 102"
+split = "Roxanne"
+
+[[trainers]]
+id = "TRAINER_BILLY"
+location = "Route 104"
+split = "Roxanne"
+
+[[trainers]]
+id = "TRAINER_DARIAN"
+location = "Route 104"
+split = "Roxanne"
+
+[[trainers]]
+id = "TRAINER_CINDY_1"
+location = "Route 104"
+split = "Roxanne"
+
+[[trainers]]
+id = "TRAINER_LYLE"
+location = "Petalburg Woods"
+split = "Roxanne"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Petalburg Woods"
+split = "Roxanne"
+
+[[trainers]]
+id = "TRAINER_JAMES_1"
+location = "Petalburg Woods"
+split = "Roxanne"
+
+[[trainers]]
+id = "TRAINER_WINSTON_1"
+location = "Route 104"
+split = "Roxanne"
+
+[[trainers]]
+id = "TRAINER_HALEY_1"
+location = "Route 104"
+split = "Roxanne"
+
+[[trainers]]
+id = "TRAINER_GINA_AND_MIA_1"
+location = "Route 104"
+split = "Roxanne"
+
+[[trainers]]
+id = "TRAINER_IVAN"
+location = "Route 104"
+split = "Roxanne"
+
+[[trainers]]
+id = "TRAINER_JOSH"
+location = "Rustboro Gym"
+split = "Roxanne"
+
+[[trainers]]
+id = "TRAINER_TOMMY"
+location = "Rustboro Gym"
+split = "Roxanne"
+
+[[trainers]]
+id = "TRAINER_MARC"
+location = "Rustboro Gym"
+split = "Roxanne"
+
+[[trainers]]
+id = "TRAINER_ROXANNE_1"
+location = "Rustboro Gym"
+split = "Roxanne"
+sets_lvl_cap = 19
+
+[[trainers]]
+id = "TRAINER_JOEY"
+location = "Route 116"
+split = "Brawly"
+
+[[trainers]]
+id = "TRAINER_JOSE"
+location = "Route 116"
+split = "Brawly"
+
+[[trainers]]
+id = "TRAINER_KAREN_1"
+location = "Route 116"
+split = "Brawly"
+
+[[trainers]]
+id = "TRAINER_CLARK"
+location = "Route 116"
+split = "Brawly"
+
+[[trainers]]
+id = "TRAINER_JOHNSON"
+location = "Route 116"
+split = "Brawly"
+
+[[trainers]]
+id = "TRAINER_DEVAN"
+location = "Route 116"
+split = "Brawly"
+
+[[trainers]]
+id = "TRAINER_DAWSON"
+location = "Route 116"
+split = "Brawly"
+
+[[trainers]]
+id = "TRAINER_SARAH"
+location = "Route 116"
+split = "Brawly"
+
+[[trainers]]
+id = "TRAINER_JERRY_1"
+location = "Route 116"
+split = "Brawly"
+
+[[trainers]]
+id = "TRAINER_JANICE"
+location = "Route 116"
+split = "Brawly"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Rusturf Tunnel"
+split = "Brawly"
+
+[[trainers]]
+id = "TRAINER_MAY_RUSTBORO_MUDKIP"
+location = "Rustboro City"
+split = "Brawly"
+
+[[trainers]]
+id = "TRAINER_MAY_RUSTBORO_MUDKIP"
+location = "Rustboro City"
+split = "Brawly"
+
+[[trainers]]
+id = "TRAINER_MAY_RUSTBORO_MUDKIP"
+location = "Rustboro City"
+split = "Brawly"
+
+[[trainers]]
+id = "TRAINER_BRENDAN_RUSTBORO_TREECKO"
+location = "Rustboro City"
+split = "Brawly"
+
+[[trainers]]
+id = "TRAINER_BRENDAN_RUSTBORO_TREECKO"
+location = "Rustboro City"
+split = "Brawly"
+
+[[trainers]]
+id = "TRAINER_BRENDAN_RUSTBORO_TREECKO"
+location = "Rustboro City"
+split = "Brawly"
+
+[[trainers]]
+id = "TRAINER_LAURA"
+location = "Dewford Gym"
+split = "Brawly"
+
+[[trainers]]
+id = "TRAINER_LILITH"
+location = "Dewford Gym"
+split = "Brawly"
+
+[[trainers]]
+id = "TRAINER_BRENDEN"
+location = "Dewford Gym"
+split = "Brawly"
+
+[[trainers]]
+id = "TRAINER_TAKAO"
+location = "Dewford Gym"
+split = "Brawly"
+
+[[trainers]]
+id = "TRAINER_CRISTIAN"
+location = "Dewford Gym"
+split = "Brawly"
+
+[[trainers]]
+id = "TRAINER_JOCELYN"
+location = "Dewford Gym"
+split = "Brawly"
+
+[[trainers]]
+id = "TRAINER_BRAWLY_1"
+location = "Dewford Gym"
+split = "Brawly"
+sets_lvl_cap = 24
+
+[[trainers]]
+id = "TRAINER_NED"
+location = "Route 106"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_ELLIOT_1"
+location = "Route 106"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_HUEY"
+location = "Route 109"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_EDMOND"
+location = "Route 109"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_HAILEY"
+location = "Route 109"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_RICKY_1"
+location = "Route 109"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_LOLA_1"
+location = "Route 109"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_CHANDLER"
+location = "Route 109"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_SIMON"
+location = "Seashore House"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_JOHANNA"
+location = "Seashore House"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_DWAYNE"
+location = "Seashore House"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Oceanic Museum"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_2"
+location = "Oceanic Museum"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_ISABEL_1"
+location = "Route 110"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_KALEB"
+location = "Route 110"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_DAISY"
+location = "Route 103"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_AMY_AND_LIV_1"
+location = "Route 103"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_RHETT"
+location = "Route 103"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_MARCOS"
+location = "Route 103"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_MIGUEL_1"
+location = "Route 103"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_ANDREW"
+location = "Route 103"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_TIMMY"
+location = "Route 110"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_MAY_ROUTE_110_MUDKIP"
+location = "Route 110"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_MAY_ROUTE_110_MUDKIP"
+location = "Route 110"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_MAY_ROUTE_110_MUDKIP"
+location = "Route 110"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_BRENDAN_ROUTE_110_MUDKIP"
+location = "Route 110"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_BRENDAN_ROUTE_110_MUDKIP"
+location = "Route 110"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_BRENDAN_ROUTE_110_MUDKIP"
+location = "Route 110"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_EDWIN_1"
+location = "Route 110"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_JOSEPH"
+location = "Route 110"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_EDWARD"
+location = "Route 110"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_ALYSSA"
+location = "Route 110"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_DALE"
+location = "Route 110"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_WALLY_MAUVILLE"
+location = """
+Mauville City
+"""
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_VIVIAN"
+location = "Mauville Gym"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_KIRK"
+location = "Mauville Gym"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_BEN"
+location = "Mauville Gym"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_ANGELO"
+location = "Mauville Gym"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_SHAWN"
+location = "Mauville Gym"
+split = "Wattson"
+
+[[trainers]]
+id = "TRAINER_WATTSON_1"
+location = "Mauville Gym"
+split = "Wattson"
+sets_lvl_cap = 30
+
+[[trainers]]
+id = "TRAINER_JACLYN"
+location = "Seaside Cycling Road"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_ABIGAIL_1"
+location = "Seaside Cycling Road"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_ANTHONY"
+location = "Seaside Cycling Road"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_BENJAMIN_1"
+location = "Seaside Cycling Road"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_JASMINE"
+location = "Seaside Cycling Road"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_JACOB"
+location = "Seaside Cycling Road"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_DYLAN_1"
+location = "Route 117"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_ISAAC_1"
+location = "Route 117"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_ANNA_AND_MEG_1"
+location = "Route 117"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_MARIA_1"
+location = "Route 117"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_DEREK"
+location = "Route 117"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_BRANDI"
+location = "Route 117"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_MELINA"
+location = "Route 117"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_AISHA"
+location = "Route 117"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_LYDIA_1"
+location = "Route 117"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_MIKE_2"
+location = "Rusturf Tunnel"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_TYRON"
+location = "Route 111"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_CELINA"
+location = "Route 111"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_BIANCA"
+location = "Route 111"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_HAYDEN"
+location = "Route 111"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_VICTOR"
+location = "Route 111"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_VICTORIA"
+location = "Route 111"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_VIVI"
+location = "Route 111"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_VICKY"
+location = "Route 111"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_GABBY_AND_TY_1"
+location = "Route 111"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_IRENE"
+location = "Route 111"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_TRAVIS"
+location = "Route 111"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_LARRY"
+location = "Route 112"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_CAROL"
+location = "Route 112"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_TRENT_1"
+location = "Route 112"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_BRICE"
+location = "Route 112"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_BRYANT"
+location = "Route 112"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_SHAYLA"
+location = "Route 112"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_WILTON_1"
+location = "Route 111"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_BROOKE_1"
+location = "Route 111"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_DAISUKE"
+location = "Route 111"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_JAYLEN"
+location = "Route 113"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_LAWRENCE"
+location = "Route 113"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_LUNG"
+location = "Route 113"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_WYATT"
+location = "Route 113"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_MADELINE_1"
+location = "Route 113"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_TORI_AND_TIA"
+location = "Route 113"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_LAO_1"
+location = "Route 113"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_DILLON"
+location = "Route 113"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_SOPHIE"
+location = "Route 113"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_COBY"
+location = "Route 113"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_NOLAN"
+location = "Route 114"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_CHARLOTTE"
+location = "Route 114"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_KAI"
+location = "Route 114"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_CLAUDE"
+location = "Route 114"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_NANCY"
+location = "Route 114"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_TYRA_AND_IVY"
+location = "Route 114"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_SHANE"
+location = "Route 114"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_STEVE_1"
+location = "Route 114"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_BERNIE_1"
+location = "Route 114"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_LUCAS_1"
+location = "Route 114"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_ANGELINA"
+location = "Route 114"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_LENNY"
+location = "Route 114"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_NOB_1"
+location = "Route 115"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_CYNDY_1"
+location = "Route 115"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_HECTOR"
+location = "Route 115"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_MARLENE"
+location = "Route 115"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Mt. Chimney"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Mt. Chimney"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_TABITHA_MT_CHIMNEY"
+location = "Mt. Chimney"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_MAXIE_MAGMA_HIDEOUT"
+location = "Mt. Chimney"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_ERIC"
+location = "Jagged Pass"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_2"
+location = "Jagged Pass"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_DIANA_1"
+location = "Jagged Pass"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_AUTUMN"
+location = "Jagged Pass"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_JULIO"
+location = "Jagged Pass"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_ETHAN_1"
+location = "Jagged Pass"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_JEFF"
+location = "Lavaridge Gym"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_JACE"
+location = "Lavaridge Gym"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_ELI"
+location = "Lavaridge Gym"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_COLE"
+location = "Lavaridge Gym"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_GERALD"
+location = "Lavaridge Gym"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_AXLE"
+location = "Lavaridge Gym"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_KEEGAN"
+location = "Lavaridge Gym"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_DANIELLE"
+location = "Lavaridge Gym"
+split = "Flannery"
+
+[[trainers]]
+id = "TRAINER_FLANNERY_1"
+location = "Lavaridge Gym"
+split = "Flannery"
+sets_lvl_cap = 31
+
+[[trainers]]
+id = "TRAINER_SHIRLEY"
+location = "Mt. Chimney"
+split = "Norman"
+
+[[trainers]]
+id = "TRAINER_SHEILA"
+location = "Mt. Chimney"
+split = "Norman"
+
+[[trainers]]
+id = "TRAINER_SHELBY_1"
+location = "Mt. Chimney"
+split = "Norman"
+
+[[trainers]]
+id = "TRAINER_SAWYER_1"
+location = "Mt. Chimney"
+split = "Norman"
+
+[[trainers]]
+id = "TRAINER_MELISSA"
+location = "Mt. Chimney"
+split = "Norman"
+
+[[trainers]]
+id = "TRAINER_DREW"
+location = "Route 111"
+split = "Norman"
+
+[[trainers]]
+id = "TRAINER_BEAU"
+location = "Route 111"
+split = "Norman"
+
+[[trainers]]
+id = "TRAINER_HEIDI"
+location = "Route 111"
+split = "Norman"
+
+[[trainers]]
+id = "TRAINER_BECKY"
+location = "Route 111"
+split = "Norman"
+
+[[trainers]]
+id = "TRAINER_DUSTY_1"
+location = "Route 111"
+split = "Norman"
+
+[[trainers]]
+id = "TRAINER_CELIA"
+location = "Route 111"
+split = "Norman"
+
+[[trainers]]
+id = "TRAINER_BRYAN"
+location = "Route 111"
+split = "Norman"
+
+[[trainers]]
+id = "TRAINER_BRANDEN"
+location = "Route 111"
+split = "Norman"
+
+[[trainers]]
+id = "TRAINER_RANDALL"
+location = "Petalburg Gym"
+split = "Norman"
+
+[[trainers]]
+id = "TRAINER_MARY"
+location = "Petalburg Gym"
+split = "Norman"
+
+[[trainers]]
+id = "TRAINER_PARKER"
+location = "Petalburg Gym"
+split = "Norman"
+
+[[trainers]]
+id = "TRAINER_ALEXIA"
+location = "Petalburg Gym"
+split = "Norman"
+
+[[trainers]]
+id = "TRAINER_GEORGE"
+location = "Petalburg Gym"
+split = "Norman"
+
+[[trainers]]
+id = "TRAINER_JODY"
+location = "Petalburg Gym"
+split = "Norman"
+
+[[trainers]]
+id = "TRAINER_BERKE"
+location = "Petalburg Gym"
+split = "Norman"
+
+[[trainers]]
+id = "TRAINER_NORMAN_1"
+location = "Petalburg Gym"
+split = "Norman"
+sets_lvl_cap = 33
+
+[[trainers]]
+id = "TRAINER_ISABELLE"
+location = "Route 103"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_PETE"
+location = "Route 103"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_JAIDEN"
+location = "Route 115"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_TIMOTHY_1"
+location = "Route 115"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_KYRA"
+location = "Route 115"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_KOICHI"
+location = "Route 115"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_HELENE"
+location = "Route 115"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_ALIX"
+location = "Route 115"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_ROSE_1"
+location = "Route 118"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_DEANDRE"
+location = "Route 118"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_WADE"
+location = "Route 118"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_DALTON_1"
+location = "Route 118"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_GABBY_AND_TY_1"
+location = "Route 118"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_BARNY"
+location = "Route 118"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_PERRY"
+location = "Route 118"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_CHESTER"
+location = "Route 118"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_DAVIS"
+location = "Route 123"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_JAZMYN"
+location = "Route 123"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_VIOLET"
+location = "Route 123"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_MIU_AND_YUKI"
+location = "Route 123"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_KENT"
+location = "Route 119"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_DONALD"
+location = "Route 119"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_GREG"
+location = "Route 119"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_TAYLOR"
+location = "Route 119"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_DOUG"
+location = "Route 119"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_BRENT"
+location = "Route 119"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_CHRIS"
+location = "Route 119"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_CATHERINE_1"
+location = "Route 119"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_JACKSON_1"
+location = "Route 119"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_RACHEL"
+location = "Route 119"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_PHIL"
+location = "Route 119"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_HUGH"
+location = "Route 119"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_TAKASHI"
+location = "Route 119"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_DAYTON"
+location = "Route 119"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Weather Institute"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_2"
+location = "Weather Institute"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_2"
+location = "Weather Institute"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_2"
+location = "Weather Institute"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_GRUNT_WEATHER_INST_3"
+location = "Weather Institute"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_SHELLY_WEATHER_INSTITUTE"
+location = "Weather Institute"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_MAY_ROUTE_110_MUDKIP"
+location = "Route 119"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_MAY_ROUTE_110_MUDKIP"
+location = "Route 119"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_MAY_ROUTE_110_MUDKIP"
+location = "Route 119"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_BRENDAN_ROUTE_110_MUDKIP"
+location = "Route 119"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_BRENDAN_ROUTE_110_MUDKIP"
+location = "Route 119"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_BRENDAN_ROUTE_110_MUDKIP"
+location = "Route 119"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_FABIAN"
+location = "Route 119"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_YASU"
+location = "Route 119"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_HIDEO"
+location = "Route 119"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_CLARISSA"
+location = "Route 120"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_GABBY_AND_TY_1"
+location = "Route 120"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_ROBERT_1"
+location = "Route 120"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_HUMBERTO"
+location = "Fortree Gym"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_JARED"
+location = "Fortree Gym"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_ASHLEY"
+location = "Fortree Gym"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_FLINT"
+location = "Fortree Gym"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_EDWARDO"
+location = "Fortree Gym"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_DARIUS"
+location = "Fortree Gym"
+split = "Winona"
+
+[[trainers]]
+id = "TRAINER_WINONA_1"
+location = "Fortree Gym"
+split = "Winona"
+sets_lvl_cap = 42
+
+[[trainers]]
+id = "TRAINER_COLIN"
+location = "Route 120"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_LEONEL"
+location = "Route 120"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_ANGELICA"
+location = "Route 120"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_RILEY"
+location = "Route 120"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_CALLIE"
+location = "Route 120"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_JENNIFER"
+location = "Route 120"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_JENNA"
+location = "Route 120"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_LORENZO"
+location = "Route 120"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_JEFFREY_1"
+location = "Route 120"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_KEIGO"
+location = "Route 120"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_CHIP"
+location = "Route 120"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_CALE"
+location = "Route 121"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_TAMMY"
+location = "Route 121"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_JESSICA_1"
+location = "Route 121"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_KATE_AND_JOY"
+location = "Route 121"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_PAT"
+location = "Route 121"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_MYLES"
+location = "Route 121"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_VANESSA"
+location = "Route 121"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_WALTER_1"
+location = "Route 121"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_MARCEL"
+location = "Route 121"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_CRISTIN_1"
+location = "Route 121"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_MAY_LILYCOVE_MUDKIP"
+location = "Lilycove City"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_MAY_LILYCOVE_MUDKIP"
+location = "Lilycove City"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_MAY_LILYCOVE_MUDKIP"
+location = "Lilycove City"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_BRENDAN_LILYCOVE_MUDKIP"
+location = "Lilycove City"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_BRENDAN_LILYCOVE_MUDKIP"
+location = "Lilycove City"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_BRENDAN_LILYCOVE_MUDKIP"
+location = "Lilycove City"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_MARK"
+location = "Mt. Pyre"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_LEAH"
+location = "Mt. Pyre"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_ZANDER"
+location = "Mt. Pyre"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_DEZ_AND_LUKE"
+location = "Mt. Pyre"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_KAYLA"
+location = "Mt. Pyre"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GABRIELLE_1"
+location = "Mt. Pyre"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_WILLIAM"
+location = "Mt. Pyre"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_TASHA"
+location = "Mt. Pyre"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_ATSUSHI"
+location = "Mt. Pyre"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_VALERIE_1"
+location = "Mt. Pyre"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_CEDRIC"
+location = "Mt. Pyre"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Mt. Pyre"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Mt. Pyre"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_2"
+location = "Mt. Pyre"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_2"
+location = "Mt. Pyre"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_CAMERON_1"
+location = "Route 123"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_JONAS"
+location = "Route 123"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_KAYLEY"
+location = "Route 123"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_ED"
+location = "Route 123"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_KINDRA"
+location = "Route 123"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_WENDY"
+location = "Route 123"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_BRAXTON"
+location = "Route 123"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_FERNANDO_1"
+location = "Route 123"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_ALBERTO"
+location = "Route 123"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_JACKI_1"
+location = "Route 123"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_FREDRICK"
+location = "Route 123"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Magma Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Magma Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Magma Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_2"
+location = "Magma Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_2"
+location = "Magma Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Magma Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Magma Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Magma Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Magma Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Magma Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Magma Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Magma Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Magma Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Magma Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_TABITHA_MT_CHIMNEY"
+location = "Magma Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_MAXIE_MAGMA_HIDEOUT"
+location = "Magma Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Aqua Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Aqua Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_2"
+location = "Aqua Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_2"
+location = "Aqua Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Aqua Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Aqua Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Aqua Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Aqua Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_MATT"
+location = "Aqua Hideout"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_GRACE"
+location = "Route 124"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_DECLAN"
+location = "Route 124"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_LILA_AND_ROY_1"
+location = "Route 124"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_SPENCER"
+location = "Route 124"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_JENNY_1"
+location = "Route 124"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_CHAD"
+location = "Route 124"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_ISABELLA"
+location = "Route 124"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_ROLAND"
+location = "Route 124"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_PRESTON"
+location = "Mossdeep Gym"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_MAURA"
+location = "Mossdeep Gym"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_SAMANTHA"
+location = "Mossdeep Gym"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_BLAKE"
+location = "Mossdeep Gym"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_MACEY"
+location = "Mossdeep Gym"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_CLIFFORD"
+location = "Mossdeep Gym"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_KATHLEEN"
+location = "Mossdeep Gym"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_NICHOLAS"
+location = "Mossdeep Gym"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_NATE"
+location = "Mossdeep Gym"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_VIRGIL"
+location = "Mossdeep Gym"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_SYLVIA"
+location = "Mossdeep Gym"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_HANNAH"
+location = "Mossdeep Gym"
+split = "Tate and Liza"
+
+[[trainers]]
+id = "TRAINER_TATE_AND_LIZA_1"
+location = "Mossdeep Gym"
+split = "Tate and Liza"
+sets_lvl_cap = 46
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_2"
+location = "Mossdeep Space Center"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Mossdeep Space Center"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Mossdeep Space Center"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_GRUNT_WEATHER_INST_3"
+location = "Mossdeep Space Center"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Mossdeep Space Center"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Mossdeep Space Center"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Mossdeep Space Center"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_ERNEST_1"
+location = "Route 125"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_NOLEN"
+location = "Route 125"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_SHARON"
+location = "Route 125"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_TANYA"
+location = "Route 125"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_PRESLEY"
+location = "Route 125"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_AURON"
+location = "Route 125"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_STAN"
+location = "Route 125"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_KIM_AND_IRIS"
+location = "Route 125"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_IMANI"
+location = "Route 105"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_DOMINIK"
+location = "Route 105"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_FOSTER"
+location = "Route 105"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_BEVERLY"
+location = "Route 105"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_ANDRES_1"
+location = "Route 105"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_JOSUE"
+location = "Route 105"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_LUIS"
+location = "Route 105"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_DOUGLAS"
+location = "Route 106"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_KYLA"
+location = "Route 106"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_DENISE"
+location = "Route 107"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_TONY_1"
+location = "Route 107"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_LISA_AND_RAY"
+location = "Route 107"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_DARRIN"
+location = "Route 107"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_BETH"
+location = "Route 107"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_CAMRON"
+location = "Route 107"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_MISSY"
+location = "Route 108"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_MATTHEW"
+location = "Route 108"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_TARA"
+location = "Route 108"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_CAROLINA"
+location = "Route 108"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_CORY_1"
+location = "Route 108"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_JEROME"
+location = "Route 108"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_MEL_AND_PAUL"
+location = "Route 109"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_CARTER"
+location = "Route 109"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_ELIJAH"
+location = "Route 109"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_ALICE"
+location = "Route 109"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_DAVID"
+location = "Route 109"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_AUSTINA"
+location = "Route 109"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_GWEN"
+location = "Route 109"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_THALIA_1"
+location = "Abandoned Ship"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_DEMETRIUS"
+location = "Abandoned Ship"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_DUNCAN"
+location = "Abandoned Ship"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_CHARLIE"
+location = "Abandoned Ship"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_GARRISON"
+location = "Abandoned Ship"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_JANI"
+location = "Abandoned Ship"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_KIRA_AND_DAN_1"
+location = "Abandoned Ship"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_LEONARDO"
+location = "Route 126"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_ISOBEL"
+location = "Route 126"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_DEAN"
+location = "Route 126"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_NIKKI"
+location = "Route 126"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_BARRY"
+location = "Route 126"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_SIENNA"
+location = "Route 126"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_PABLO_1"
+location = "Route 126"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_BRENDA"
+location = "Route 126"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_AIDAN"
+location = "Route 127"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_ATHENA"
+location = "Route 127"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_JONAH"
+location = "Route 127"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_HENRY"
+location = "Route 127"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_ROGER"
+location = "Route 127"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_CAMDEN"
+location = "Route 127"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_KOJI_1"
+location = "Route 127"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_DONNY"
+location = "Route 127"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_ALEXA"
+location = "Route 128"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_RUBEN"
+location = "Route 128"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_WAYNE"
+location = "Route 128"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_ISAIAH_1"
+location = "Route 128"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_KATELYN_1"
+location = "Route 128"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_CARLEE"
+location = "Route 128"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_HARRISON"
+location = "Route 128"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Seafloor Cavern"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Seafloor Cavern"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Seafloor Cavern"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_1"
+location = "Seafloor Cavern"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_GRUNT_AQUA_HIDEOUT_2"
+location = "Seafloor Cavern"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_SHELLY_WEATHER_INSTITUTE"
+location = "Seafloor Cavern"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_ARCHIE"
+location = "Seafloor Cavern"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_REED"
+location = "Route 129"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_CHASE"
+location = "Route 129"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_ALLISON"
+location = "Route 129"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_CLARENCE"
+location = "Route 129"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_TISHA"
+location = "Route 129"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_RODNEY"
+location = "Route 130"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_KATIE"
+location = "Route 130"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_SANTIAGO"
+location = "Route 130"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_KATIE"
+location = "Route 131"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_TALIA"
+location = "Route 131"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_RICHARD"
+location = "Route 131"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_KARA"
+location = "Route 131"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_HERMAN"
+location = "Route 131"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_SUSIE"
+location = "Route 131"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_RELI_AND_IAN"
+location = "Route 131"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_RONALD"
+location = "Route 132"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_PAXTON"
+location = "Route 132"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_DARCY"
+location = "Route 132"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_MAKAYLA"
+location = "Route 132"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_JONATHAN"
+location = "Route 132"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_KIYO"
+location = "Route 132"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_GILBERT"
+location = "Route 132"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_DANA"
+location = "Route 132"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_CONOR"
+location = "Route 133"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_MOLLIE"
+location = "Route 133"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_BECK"
+location = "Route 133"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_HUDSON"
+location = "Route 134"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_LINDA"
+location = "Route 133"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_DEBRA"
+location = "Route 133"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_FRANKLIN"
+location = "Route 133"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_WARREN"
+location = "Route 133"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_LAUREL"
+location = "Route 134"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_JACK"
+location = "Route 134"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_HITOSHI"
+location = "Route 134"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_REYNA"
+location = "Route 134"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_AARON"
+location = "Route 134"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_MARLEY"
+location = "Route 134"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_ALEX"
+location = "Route 134"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_KELVIN"
+location = "Route 134"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_CONNIE"
+location = "Sootopolis Gym"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_ANDREA"
+location = "Sootopolis Gym"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_DAPHNE"
+location = "Sootopolis Gym"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_ANNIKA"
+location = "Sootopolis Gym"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_TIFFANY"
+location = "Sootopolis Gym"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_CRISSY"
+location = "Sootopolis Gym"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_BETHANY"
+location = "Sootopolis Gym"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_OLIVIA"
+location = "Sootopolis Gym"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_BRIANNA"
+location = "Sootopolis Gym"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_BRIDGET"
+location = "Sootopolis Gym"
+split = "Juan"
+
+[[trainers]]
+id = "TRAINER_JUAN_1"
+location = "Sootopolis Gym"
+split = "Juan"
+sets_lvl_cap = 58
+
+[[trainers]]
+id = "TRAINER_WALLY_VR_1"
+location = "Victory Road"
+split = "Elite Four"
+
+[[trainers]]
+id = "TRAINER_ALBERT"
+location = "Victory Road"
+split = "Elite Four"
+
+[[trainers]]
+id = "TRAINER_HOPE"
+location = "Victory Road"
+split = "Elite Four"
+
+[[trainers]]
+id = "TRAINER_SAMUEL"
+location = "Victory Road"
+split = "Elite Four"
+
+[[trainers]]
+id = "TRAINER_SHANNON"
+location = "Victory Road"
+split = "Elite Four"
+
+[[trainers]]
+id = "TRAINER_JULIE"
+location = "Victory Road"
+split = "Elite Four"
+
+[[trainers]]
+id = "TRAINER_VITO"
+location = "Victory Road"
+split = "Elite Four"
+
+[[trainers]]
+id = "TRAINER_CAROLINE"
+location = "Victory Road"
+split = "Elite Four"
+
+[[trainers]]
+id = "TRAINER_DIANNE"
+location = "Victory Road"
+split = "Elite Four"
+
+[[trainers]]
+id = "TRAINER_FELIX"
+location = "Victory Road"
+split = "Elite Four"
+
+[[trainers]]
+id = "TRAINER_OWEN"
+location = "Victory Road"
+split = "Elite Four"
+
+[[trainers]]
+id = "TRAINER_MICHELLE"
+location = "Victory Road"
+split = "Elite Four"
+
+[[trainers]]
+id = "TRAINER_MITCHELL"
+location = "Victory Road"
+split = "Elite Four"
+
+[[trainers]]
+id = "TRAINER_HALLE"
+location = "Victory Road"
+split = "Elite Four"
+
+[[trainers]]
+id = "TRAINER_EDGAR"
+location = "Victory Road"
+split = "Elite Four"
+
+[[trainers]]
+id = "TRAINER_KATELYNN"
+location = "Victory Road"
+split = "Elite Four"
+
+[[trainers]]
+id = "TRAINER_QUINCY"
+location = "Victory Road"
+split = "Elite Four"
+
+[[trainers]]
+id = "TRAINER_SIDNEY"
+location = "Ever Grande City"
+split = "Elite Four"
+
+[[trainers]]
+id = "TRAINER_PHOEBE"
+location = "Ever Grande City"
+split = "Elite Four"
+
+[[trainers]]
+id = "TRAINER_GLACIA"
+location = "Ever Grande City"
+split = "Elite Four"
+
+[[trainers]]
+id = "TRAINER_DRAKE"
+location = "Ever Grande City"
+split = "Elite Four"
+
+[[trainers]]
+id = "TRAINER_WALLACE"
+location = "Ever Grande City"
+split = "Elite Four"
+

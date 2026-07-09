@@ -12,11 +12,11 @@ use super::{Parties, Trainer, error::PartyError, party::PokemonSet};
 //
 
 static DEFAULT_TRAINER_REGEX_DELIMITER: &str =
-    r"=== (?<name>[A-Z0-9_]+) ===\n(?<details>(?:[\w: /]+\n)+)\n+(?<mons>(?:[\w: /@\-\n]+)*)";
+    r"=== (?<name>[A-Z0-9_]+) ===\n(?<details>(?:[\w: &/]+\n)+)\n+(?<mons>(?:[\w: /@\-\n]+)*)";
 
 // TODO: Improve so that trailing spaces before \n are ignored
 /// https://regex101.com/r/tuREWJ
-static DEFAULT_TRAINER_FIELDS_REGEX: &str = r"(?:(?:Name: ?(?<name>[\w ]+)?\n?)|(?:Class: (?<class>[\w ]+)\n?)|(?:Pic: (?<pic>[\w ]+)\n?)|(?:^Gender: (?<gender>[\w ]+)\n?)|(?:Music: (?<music>[\w ]+)\n?)|(?:Items: (?<items>[\w /]+)\n?)|(?:Double Battle: (?<double_battle>[\w ]+)\n?)|(?:AI: (?<ai>[\w ]+)\n?)|(?:Mugshot: (?<mugshot>[\w ]+)\n?)|(?:Starting Status: (?<starting_status>[\w ]+)\n?))+";
+static DEFAULT_TRAINER_FIELDS_REGEX: &str = r"(?:(?:Name: ?(?<name>[\w &]+)?\n?)|(?:Class: (?<class>[\w ]+)\n?)|(?:Pic: (?<pic>[\w ]+)\n?)|(?:^Gender: (?<gender>[\w ]+)\n?)|(?:Music: (?<music>[\w ]+)\n?)|(?:Items: (?<items>[\w /]+)\n?)|(?:Double Battle: (?<double_battle>[\w ]+)\n?)|(?:AI: (?<ai>[\w ]+)\n?)|(?:Mugshot: (?<mugshot>[\w ]+)\n?)|(?:Starting Status: (?<starting_status>[\w ]+)\n?))+";
 
 // TODO: Improve to handle Nicknames and Happiness
 /// https://regex101.com/r/oC2CeP

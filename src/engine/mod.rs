@@ -130,7 +130,17 @@ impl<R: Rng + ?Sized> Engine<R> {
         let trainer_pics_dir = option.project_path.join("graphics/trainers/front_pics");
         let mons_pics_dir = option.project_path.join("graphics/pokemon");
 
-        for trainer in self.parties.iter() {
+        let parties = if let Some(ref trainer_order) = self.trainer_order {
+            let mut res = Vec::new();
+            for trainer in trainer_order.trainers.iter() {
+                res.push(self.parties.get(&trainer.id).unwrap().clone())
+            }
+            Parties::new(res)
+        } else {
+            self.parties.clone()
+        };
+
+        for trainer in parties.iter() {
             let mut trainer_pic_filename =
                 PathBuf::from(trainer.pic.to_lowercase().replace(' ', "_"));
             trainer_pic_filename.add_extension("png");
@@ -184,12 +194,8 @@ impl<R: Rng + ?Sized> Engine<R> {
             }
         }
 
-        let trainer_templates: Vec<TrainerTemplate> = self
-            .parties
-            .iter()
-            .map(Clone::clone)
-            .map(Into::into)
-            .collect();
+        let trainer_templates: Vec<TrainerTemplate> =
+            parties.iter().map(Clone::clone).map(Into::into).collect();
         let trainer_list_template: TrainerListTemplate = trainer_templates.into();
 
         let res = trainer_list_template.render()?;

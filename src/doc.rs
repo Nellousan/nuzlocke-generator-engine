@@ -9,6 +9,8 @@ use crate::parties::{Trainer, party};
 pub struct TrainerTemplate {
     name: String,
     pic: PathBuf,
+    location: Option<String>,
+    split: Option<String>,
     party: [Option<party::PokemonSet>; 6],
 }
 
@@ -21,6 +23,8 @@ impl From<Trainer> for TrainerTemplate {
                 value.name
             ),
             pic: value.pic.to_lowercase().replace(' ', "_").into(),
+            location: None,
+            split: None,
             party: value.party,
         }
     }

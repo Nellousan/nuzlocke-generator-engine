@@ -53,6 +53,7 @@ impl PokemonBundleSet {
         species: &str,
         level: u8,
         rng: &mut R,
+        disable_evs: bool,
     ) -> PokemonSet {
         let mut move_1 = None;
         let mut move_2 = None;
@@ -78,7 +79,11 @@ impl PokemonBundleSet {
             None
         };
 
-        let evs = Self::pick_one_if_some(&self.evs, rng);
+        let evs = if !disable_evs {
+            Self::pick_one_if_some(&self.evs, rng)
+        } else {
+            None
+        };
         let ivs = Self::pick_one_if_some(&self.ivs, rng);
 
         let nature = Self::pick_one_if_some(&self.nature, rng);

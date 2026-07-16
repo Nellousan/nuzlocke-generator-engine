@@ -84,7 +84,7 @@ impl<R: Rng + ?Sized> Engine<R> {
         let random_bundle_set = random_bundle_set.expect("Cannot be None");
 
         random_bundle_set.generate_set(
-            &database_entry.name,
+            &database_entry,
             pkmn_set.level.unwrap(),
             &mut self.rng,
             self.cli_options.disable_evs,

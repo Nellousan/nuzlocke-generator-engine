@@ -6,7 +6,10 @@ use std::{
 use rand::Rng;
 use serde::Deserialize;
 
-use crate::parties::party::{PokemonEVs, PokemonGender, PokemonIVs, PokemonSet};
+use crate::{
+    database::pokedex::PokemonDatabaseEntry,
+    parties::party::{PokemonEVs, PokemonGender, PokemonIVs, PokemonSet},
+};
 
 pub type Species = String;
 
@@ -50,7 +53,7 @@ impl PokemonBundleSet {
 
     pub fn generate_set<R: Rng + ?Sized>(
         &self,
-        species: &str,
+        db_entry: &PokemonDatabaseEntry,
         level: u8,
         rng: &mut R,
         disable_evs: bool,
@@ -87,13 +90,16 @@ impl PokemonBundleSet {
         let ivs = Self::pick_one_if_some(&self.ivs, rng);
 
         let nature = Self::pick_one_if_some(&self.nature, rng);
-        let ability = Self::pick_one_if_some(&self.ability, rng);
+        let mut ability = Self::pick_one_if_some(&self.ability, rng);
+        if let None = ability {
+            ability = Some(db_entry.abilities["0"].clone())
+        }
 
         let tera_type = Self::pick_one_if_some(&self.tera_types, rng);
 
         PokemonSet {
-            species: species.to_owned(),
-            species_normalized: unidecode::unidecode(species)
+            species: db_entry.name.clone(),
+            species_normalized: unidecode::unidecode(&db_entry.name)
                 .to_lowercase()
                 .replace('_', "")
                 .replace('\'', "")

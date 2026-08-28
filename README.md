@@ -34,10 +34,10 @@ the generation/randomization process.
 
 List of available features for now:
 
-[x] Randomize trainer parties
-[x] Randomize wild encounters
-[x] Use a list of pokemon sets as a "bundle" to draw sets from
-[x] Generate trainer documentation (incomplete but usable)
+- [x] Randomize trainer parties
+- [x] Randomize wild encounters
+- [x] Use a list of pokemon sets as a "bundle" to draw sets from
+- [x] Generate trainer documentation (incomplete but usable)
 
 Current default bundle is all the pokemon sets from this [smogon api](https://github.com/pkmn/smogon)
 from gen 6 to 9.

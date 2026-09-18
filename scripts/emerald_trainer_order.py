@@ -72,7 +72,7 @@ def extract_trainers_from_html(html: str) -> list[WalkthroughTrainer]:
                             pkmn_species = card.find(
                                 "a", recursive=False
                             ).b.span.get_text()
-                            pkmn_level = (
+                            pkmn_level = int(
                                 card.find("small", recursive=False)
                                 .find("span", recursive=False)
                                 .get_text()
@@ -166,9 +166,17 @@ def find_from_wt_trainer(
     for trainer in party_file_trainers:
         if len(trainer.party) != len(wt_trainer.party):
             continue
-        for wt_mon, pf_mon in zip(trainer.party, wt_trainer.party):
-            if wt_mon != pf_mon:
-                continue
+        same_team = True
+        if wt_trainer.name.lower() == "grunt":
+            rich.print(f"OUAIS {wt_trainer}")
+            for wt_mon, pf_mon in zip(trainer.party, wt_trainer.party):
+                if wt_mon != pf_mon:
+                    same_team = False
+                    break
+
+        if not same_team:
+            continue
+
         # if trainer.type.lower() != wt_trainer.type.lower():
         #     continue
         if (
